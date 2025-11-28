@@ -44,4 +44,5 @@ export * from "./Timeline";
 export * from "./Toast";
 export * from "./ToggleSwitch";
 export * from "./Tooltip";
+export * from "./Hero";
 
