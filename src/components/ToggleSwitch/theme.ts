@@ -18,7 +18,7 @@ export const toggleSwitchTheme = createTheme<ToggleSwitchTheme>({
       off: "bg-gray-200 after:border-gray-300 dark:bg-gray-700",
       color: {
         default: "bg-primary-700 group-focus:ring-primary-300 dark:group-focus:ring-primary-800",
-        blue: "bg-blue-700 group-focus:ring-blue-300 dark:group-focus:ring-blue-800",
+        blue: "bg-primary-700 group-focus:ring-primary-300 dark:group-focus:ring-primary-800",
         dark: "bg-gray-700 group-focus:ring-gray-300 dark:group-focus:ring-gray-800",
         failure: "bg-red-700 group-focus:ring-red-300 dark:group-focus:ring-red-800",
         gray: "bg-gray-500 group-focus:ring-gray-300 dark:group-focus:ring-gray-800",

@@ -8,7 +8,7 @@ export const progressTheme = createTheme<ProgressTheme>({
   color: {
     default: "bg-primary-600",
     dark: "bg-gray-600 dark:bg-gray-300",
-    blue: "bg-blue-600",
+    blue: "bg-primary-600",
     red: "bg-red-600 dark:bg-red-500",
     green: "bg-green-600 dark:bg-green-500",
     yellow: "bg-yellow-400",

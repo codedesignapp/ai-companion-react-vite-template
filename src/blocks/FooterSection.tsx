@@ -1,20 +1,20 @@
 export function FooterSection() {
   return (
-    <footer className="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+    <footer className="p-4 bg-surface-elevated md:p-8 lg:p-10">
       <div className="mx-auto max-w-screen-xl text-center">
         <a
           href="#"
-          className="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
+          className="flex justify-center items-center text-2xl font-semibold text-text-primary"
         >
           <div className="mr-2 h-8 w-8 rounded-lg bg-primary-600 flex items-center justify-center">
             <span className="text-white font-bold text-lg">L</span>
           </div>
           Logo
         </a>
-        <p className="my-6 text-gray-500 dark:text-gray-400">
+        <p className="my-6 text-text-secondary">
           Open-source library of over 400+ web components and interactive elements built for better web.
         </p>
-        <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+        <ul className="flex flex-wrap justify-center items-center mb-6 text-text-primary">
           <li>
             <a href="#" className="mr-4 hover:underline md:mr-6">
               About
@@ -51,7 +51,7 @@ export function FooterSection() {
             </a>
           </li>
         </ul>
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <span className="text-sm text-text-secondary sm:text-center">
           © 2021-2022 <a href="#" className="hover:underline">Flowbite™</a>. All Rights Reserved.
         </span>
       </div>

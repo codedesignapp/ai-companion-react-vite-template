@@ -3,3 +3,6 @@
 @source "../.flowbite-react/class-list.json";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Import Design System */
+@import "./design-system.css";

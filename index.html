@@ -5,6 +5,43 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flowbite React Template Vite</title>
+    <!-- Theme initialization script - prevents flash of wrong theme -->
+    <!-- React will immediately override this with the correct value from theme.config.ts -->
+    <script>
+      (function() {
+        try {
+          const STORAGE_KEY = "flowbite-theme-mode";
+          
+          // Check localStorage first (user preference)
+          const stored = window.localStorage.getItem(STORAGE_KEY);
+          const isStoredValid = stored === "light" || stored === "dark" || stored === "auto";
+          
+          // Use stored value, or check system preference, or default to light
+          let initialMode = "light";
+          if (isStoredValid) {
+            initialMode = stored;
+          } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            // If no stored preference, check system preference
+            initialMode = "dark";
+          }
+          
+          // Compute final mode (handle "auto")
+          const computedMode = initialMode === "auto"
+            ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+            : initialMode;
+
+          // Apply theme immediately to prevent flash
+          if (computedMode === "dark") {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (e) {
+          // Fallback: light mode
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

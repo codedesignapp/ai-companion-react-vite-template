@@ -80,7 +80,7 @@ export function FAQSection() {
         if (answer.includes(placeholder)) {
           const parts = answer.split(placeholder);
           return (
-            <p key={answerIndex} className="text-gray-500 dark:text-gray-400">
+            <p key={answerIndex} className="text-text-secondary">
               {parts[0]}
               <a
                 href={link.href}
@@ -104,17 +104,17 @@ export function FAQSection() {
   };
 
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-surface">
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-text-primary">
           Frequently asked questions
         </h2>
-        <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+        <div className="grid pt-8 text-left border-t border-border md:gap-16 md:grid-cols-2">
           <div>
             {leftColumn.map((faq, index) => (
               <div key={index} className="mb-10">
-                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                  <HiQuestionMarkCircle className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" />
+                <h3 className="flex items-center mb-4 text-lg font-medium text-text-primary">
+                  <HiQuestionMarkCircle className="flex-shrink-0 mr-2 w-5 h-5 text-text-secondary" />
                   {faq.question}
                 </h3>
                 {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
@@ -124,8 +124,8 @@ export function FAQSection() {
           <div>
             {rightColumn.map((faq, index) => (
               <div key={index} className="mb-10">
-                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                  <HiQuestionMarkCircle className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" />
+                <h3 className="flex items-center mb-4 text-lg font-medium text-text-primary">
+                  <HiQuestionMarkCircle className="flex-shrink-0 mr-2 w-5 h-5 text-text-secondary" />
                   {faq.question}
                 </h3>
                 {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
