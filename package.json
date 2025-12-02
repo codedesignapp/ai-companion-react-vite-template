@@ -17,6 +17,7 @@
     "classnames": "^2.5.1",
     "deepmerge-ts": "^7.1.5",
     "flowbite-react": "^0.12.4",
+    "gsap": "^3.13.0",
     "klona": "^2.0.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

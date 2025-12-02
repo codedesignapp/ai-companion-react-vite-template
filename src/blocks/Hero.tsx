@@ -1,9 +1,17 @@
 import { Button } from "../components";
+import { AnimatedSection } from "../components/AnimatedSection";
 import { FaYoutube, FaProductHunt, FaReddit } from "react-icons/fa";
+import { ANIMATION_CONFIG } from "../animation.config";
 
 export function Hero() {
+  const config = ANIMATION_CONFIG.blockAnimations.hero;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      className="bg-surface"
+    >
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         {/* Banner with Badge */}
         <a
@@ -108,7 +116,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

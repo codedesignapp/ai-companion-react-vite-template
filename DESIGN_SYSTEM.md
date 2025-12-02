@@ -10,7 +10,14 @@ This project uses a **centralized design system** built on Tailwind CSS v4. All 
 src/
   ├── design-system.css    ← ALL DESIGN TOKENS (edit this file)
   ├── index.css            ← Imports design system
-  └── theme.config.ts      ← Theme mode (light/dark) control
+  ├── theme.config.ts      ← Theme mode (light/dark) control
+  ├── animation.config.ts  ← Animation settings (edit this file)
+  ├── utils/
+  │   └── animations.ts    ← Animation utilities
+  ├── hooks/
+  │   └── useAnimation.ts ← Animation hooks
+  └── components/
+      └── AnimatedSection.tsx ← Animation wrapper component
 ```
 
 ## Quick Start
@@ -26,6 +33,164 @@ src/
 1. Edit `src/theme.config.ts` → `defaultMode: "light"` or `"dark"`
 2. Save the file
 3. Entire app switches themes
+
+**To enable/disable animations or change animation settings:**
+
+1. Edit `src/animation.config.ts`
+2. Change `enabled`, `preset`, `duration`, or block-specific settings
+3. Save the file
+4. All blocks automatically use the new animation settings
+
+## Animation Configuration
+
+### Location
+
+The animation configuration is located at:
+```
+src/animation.config.ts
+```
+
+### Quick Configuration
+
+**To disable all animations:**
+```typescript
+export const ANIMATION_CONFIG = {
+  enabled: false,  // Set to false to disable all animations
+  // ... rest of config
+}
+```
+
+**To change animation preset:**
+```typescript
+export const ANIMATION_CONFIG = {
+  preset: "subtle" | "moderate" | "dynamic",  // Choose animation intensity
+  // ... rest of config
+}
+```
+
+**To change animation duration:**
+```typescript
+export const ANIMATION_CONFIG = {
+  duration: {
+    fast: 0.3,      // Quick animations
+    normal: 0.6,    // Standard animations
+    slow: 1.0,      // Slower animations
+    verySlow: 1.5,  // Very slow animations
+  },
+  // ... rest of config
+}
+```
+
+### Available Animation Types
+
+- **`fadeIn`** - Simple fade in
+- **`fadeInUp`** - Fade in from bottom (most common)
+- **`fadeInDown`** - Fade in from top
+- **`fadeInLeft`** - Fade in from left
+- **`fadeInRight`** - Fade in from right
+- **`scaleIn`** - Scale up while fading in
+- **`slideInUp`** - Slide up without fade
+- **`slideInDown`** - Slide down without fade
+- **`slideInLeft`** - Slide in from left
+- **`slideInRight`** - Slide in from right
+
+### Block-Specific Animation Configuration
+
+Each block has its own animation configuration:
+
+```typescript
+blockAnimations: {
+  hero: {
+    type: "fadeInUp",
+    enabled: true,
+  },
+  features: {
+    type: "fadeInUp",
+    enabled: true,
+    stagger: true,  // Stagger child items
+  },
+  // ... other blocks
+}
+```
+
+**To change a specific block's animation:**
+```typescript
+blockAnimations: {
+  hero: {
+    type: "scaleIn",  // Change animation type
+    enabled: true,
+  },
+}
+```
+
+**To disable animation for a specific block:**
+```typescript
+blockAnimations: {
+  hero: {
+    type: "fadeInUp",
+    enabled: false,  // Disable this block's animation
+  },
+}
+```
+
+### Scroll Trigger Settings
+
+Animations trigger when elements enter the viewport:
+
+```typescript
+scrollTrigger: {
+  enabled: true,           // Enable scroll-triggered animations
+  start: "top 80%",        // Start when element is 80% from top
+  end: "bottom 20%",       // End when element is 20% from bottom
+  toggleActions: "play none none reverse", // Play on enter, reverse on leave
+}
+```
+
+### Using AnimatedSection Component
+
+All blocks automatically use the `AnimatedSection` component, which reads from `animation.config.ts`:
+
+```tsx
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
+
+export function MyBlock() {
+  const config = ANIMATION_CONFIG.blockAnimations.myBlock;
+  
+  return (
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      className="bg-surface"
+    >
+      {/* Your content */}
+    </AnimatedSection>
+  );
+}
+```
+
+### Using Animation Hooks
+
+For custom animations, use the hooks:
+
+```tsx
+import { useAnimation } from "../hooks/useAnimation";
+
+function MyComponent() {
+  const elementRef = useAnimation("fadeInUp", {
+    duration: 0.8,
+    delay: 0.2,
+  });
+
+  return <div ref={elementRef}>Animated content</div>;
+}
+```
+
+### Animation Presets
+
+- **`subtle`** - Gentle, minimal animations (0.7x duration multiplier)
+- **`moderate`** - Balanced animations (1.0x duration multiplier) - **Default**
+- **`dynamic`** - More pronounced, energetic animations (1.3x duration multiplier)
 
 ## Theme Mode Configuration
 
@@ -508,3 +673,21 @@ To migrate existing blocks to use design tokens:
 - Ensure Button component theme uses `primary-*` not `blue-*`
 - Check that `color="blue"` prop maps to primary colors
 - Verify all component themes are updated
+
+**Animations not working?**
+- Check `animation.config.ts` → `enabled: true`
+- Verify GSAP is installed: `npm install gsap`
+- Check browser console for errors
+- Ensure ScrollTrigger plugin is registered (automatic)
+- Try disabling scroll trigger: `scrollTrigger: false` in block config
+
+**Animations too fast/slow?**
+- Adjust `duration` values in `animation.config.ts`
+- Change `preset` to "subtle" (slower) or "dynamic" (faster)
+- Override duration per block in `blockAnimations` config
+
+**Animations not triggering on scroll?**
+- Check `scrollTrigger.enabled: true` in config
+- Verify elements are visible in viewport
+- Check `start` and `end` values in scrollTrigger config
+- Try reducing `start` value (e.g., "top 90%")

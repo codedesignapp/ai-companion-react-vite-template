@@ -6,10 +6,20 @@ import {
   HiDesktopComputer,
   HiCog,
 } from "react-icons/hi";
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
 
 export function Features() {
+  const config = ANIMATION_CONFIG.blockAnimations.features;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      stagger={config.stagger}
+      staggerSelector=".space-y-8 > div, .md\\:grid > div"
+      className="bg-surface"
+    >
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div className="max-w-screen-md mb-8 lg:mb-16">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary">
@@ -83,7 +93,7 @@ export function Features() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

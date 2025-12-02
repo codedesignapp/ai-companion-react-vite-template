@@ -1,3 +1,6 @@
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
+
 interface Stat {
   value: string;
   label: string;
@@ -19,8 +22,14 @@ const stats: Stat[] = [
 ];
 
 export function SocialProof() {
+  const config = ANIMATION_CONFIG.blockAnimations.socialProof;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      className="bg-surface"
+    >
       <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
         <dl className="grid max-w-screen-md gap-8 mx-auto text-text-primary sm:grid-cols-3">
           {stats.map((stat, index) => (
@@ -31,7 +40,7 @@ export function SocialProof() {
           ))}
         </dl>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

@@ -1,8 +1,16 @@
 import { Button } from "../components";
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
 
 export function CTA() {
+  const config = ANIMATION_CONFIG.blockAnimations.cta;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      className="bg-surface"
+    >
       <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         <img
           className="w-full dark:hidden"
@@ -45,7 +53,7 @@ export function CTA() {
           </Button>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

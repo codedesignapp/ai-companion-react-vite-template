@@ -1,4 +1,6 @@
 import { FaFacebook, FaTwitter, FaGithub, FaDribbble } from "react-icons/fa";
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
 
 interface TeamMember {
   name: string;
@@ -40,8 +42,16 @@ const teamMembers: TeamMember[] = [
 ];
 
 export function TeamSection() {
+  const config = ANIMATION_CONFIG.blockAnimations.team;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      stagger={config.stagger}
+      staggerSelector="div.grid > div"
+      className="bg-surface"
+    >
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary">
@@ -116,7 +126,7 @@ export function TeamSection() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

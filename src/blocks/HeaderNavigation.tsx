@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { Button } from "../components";
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
 
 export function HeaderNavigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const config = ANIMATION_CONFIG.blockAnimations.header;
 
   return (
-    <header>
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      scrollTrigger={false}
+      as="header"
+    >
       <nav className="bg-surface border-border px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a href="https://flowbite.com" className="flex items-center">
@@ -131,7 +139,7 @@ export function HeaderNavigation() {
           </div>
         </div>
       </nav>
-    </header>
+    </AnimatedSection>
   );
 }
 

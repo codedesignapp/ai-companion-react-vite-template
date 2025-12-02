@@ -1,6 +1,16 @@
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
+
 export function FooterSection() {
+  const config = ANIMATION_CONFIG.blockAnimations.footer;
+  
   return (
-    <footer className="p-4 bg-surface-elevated md:p-8 lg:p-10">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      as="footer"
+      className="p-4 bg-surface-elevated md:p-8 lg:p-10"
+    >
       <div className="mx-auto max-w-screen-xl text-center">
         <a
           href="#"
@@ -55,7 +65,7 @@ export function FooterSection() {
           © 2021-2022 <a href="#" className="hover:underline">Flowbite™</a>. All Rights Reserved.
         </span>
       </div>
-    </footer>
+    </AnimatedSection>
   );
 }
 

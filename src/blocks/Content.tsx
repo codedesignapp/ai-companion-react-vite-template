@@ -1,6 +1,15 @@
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
+
 export function Content() {
+  const config = ANIMATION_CONFIG.blockAnimations.content;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      className="bg-surface"
+    >
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div className="font-light text-text-secondary sm:text-lg">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary">
@@ -30,7 +39,7 @@ export function Content() {
           />
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

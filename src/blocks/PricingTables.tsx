@@ -1,5 +1,7 @@
 import { HiCheck } from "react-icons/hi";
 import { Button } from "../components";
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
 
 interface PricingFeature {
   text: string;
@@ -52,8 +54,16 @@ const pricingPlans: PricingPlan[] = [
 ];
 
 export function PricingTables() {
+  const config = ANIMATION_CONFIG.blockAnimations.pricing;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      stagger={config.stagger}
+      staggerSelector=".space-y-8 > div, .lg\\:grid > div"
+      className="bg-surface"
+    >
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary">
@@ -109,7 +119,7 @@ export function PricingTables() {
           ))}
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

@@ -1,4 +1,6 @@
 import { HiQuestionMarkCircle } from "react-icons/hi";
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
 
 interface FAQ {
   question: string;
@@ -103,8 +105,14 @@ export function FAQSection() {
     );
   };
 
+  const config = ANIMATION_CONFIG.blockAnimations.faq;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      className="bg-surface"
+    >
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-text-primary">
           Frequently asked questions
@@ -134,7 +142,7 @@ export function FAQSection() {
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 

@@ -1,8 +1,16 @@
 import { Button, Label, TextInput, Textarea } from "../components";
+import { AnimatedSection } from "../components/AnimatedSection";
+import { ANIMATION_CONFIG } from "../animation.config";
 
 export function ContactForm() {
+  const config = ANIMATION_CONFIG.blockAnimations.contact;
+  
   return (
-    <section className="bg-surface">
+    <AnimatedSection
+      type={config.type}
+      enabled={config.enabled}
+      className="bg-surface"
+    >
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-text-primary">
           Contact Us
@@ -72,7 +80,7 @@ export function ContactForm() {
           </Button>
         </form>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
 
