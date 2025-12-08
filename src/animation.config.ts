@@ -126,7 +126,7 @@ export const ANIMATION_CONFIG = {
     },
     footer: {
       type: "fadeIn" as AnimationType,
-      enabled: true,
+      enabled: false,
     },
     header: {
       type: "fadeInDown" as AnimationType,

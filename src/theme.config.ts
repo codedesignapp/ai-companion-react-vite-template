@@ -35,7 +35,7 @@ export const THEME_CONFIG = {
    * - TeamSection, PricingTables
    * - SocialProof, FAQSection, ContactForm
    */
-  defaultMode: "dark",
+  defaultMode: "light",
   
   /**
    * Whether to persist theme preference in localStorage
