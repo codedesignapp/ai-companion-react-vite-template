@@ -52,42 +52,42 @@ export function TeamSection() {
       staggerSelector="div.grid > div"
       className="bg-surface"
     >
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary">
+      <div className="py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
+        <div className="mx-auto max-w-screen-md text-center mb-12 lg:mb-20">
+          <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
             Our Team
           </h2>
-          <p className="font-light text-text-secondary lg:mb-16 sm:text-xl">
+          <p className="text-text-secondary text-lg leading-relaxed">
             Explore the whole collection of open-source web components and elements built with the
             utility classes from Tailwind
           </p>
         </div>
-        <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
           {teamMembers.map((member) => (
             <div
               key={member.name}
-              className="items-center bg-surface-elevated rounded-lg shadow sm:flex border border-border"
+              className="items-center bg-surface-elevated rounded-2xl shadow-lg hover:shadow-xl sm:flex border border-border transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700 overflow-hidden group"
             >
-              <a href="#">
+              <a href="#" className="block sm:w-48 flex-shrink-0">
                 <img
-                  className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   src={member.image}
                   alt={member.imageAlt}
                 />
               </a>
-              <div className="p-5">
-                <h3 className="text-xl font-bold tracking-tight text-text-primary">
-                  <a href="#">{member.name}</a>
+              <div className="p-6">
+                <h3 className="text-xl font-bold tracking-tight text-text-primary mb-1">
+                  <a href="#" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{member.name}</a>
                 </h3>
-                <span className="text-text-secondary">{member.role}</span>
-                <p className="mt-3 mb-4 font-light text-text-secondary">
+                <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">{member.role}</span>
+                <p className="mt-4 mb-4 text-text-secondary leading-relaxed">
                   {member.description}
                 </p>
-                <ul className="flex space-x-4 sm:mt-0">
+                <ul className="flex gap-4">
                   <li>
                     <a
                       href="#"
-                      className="text-text-secondary hover:text-text-primary"
+                      className="text-text-secondary hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                       aria-label="Facebook"
                     >
                       <FaFacebook className="w-5 h-5" />
@@ -96,7 +96,7 @@ export function TeamSection() {
                   <li>
                     <a
                       href="#"
-                      className="text-text-secondary hover:text-text-primary"
+                      className="text-text-secondary hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                       aria-label="Twitter"
                     >
                       <FaTwitter className="w-5 h-5" />
@@ -105,7 +105,7 @@ export function TeamSection() {
                   <li>
                     <a
                       href="#"
-                      className="text-text-secondary hover:text-text-primary"
+                      className="text-text-secondary hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                       aria-label="GitHub"
                     >
                       <FaGithub className="w-5 h-5" />
@@ -114,7 +114,7 @@ export function TeamSection() {
                   <li>
                     <a
                       href="#"
-                      className="text-text-secondary hover:text-text-primary"
+                      className="text-text-secondary hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                       aria-label="Dribbble"
                     >
                       <FaDribbble className="w-5 h-5" />

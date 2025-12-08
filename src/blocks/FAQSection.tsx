@@ -82,11 +82,11 @@ export function FAQSection() {
         if (answer.includes(placeholder)) {
           const parts = answer.split(placeholder);
           return (
-            <p key={answerIndex} className="text-text-secondary">
+            <p key={answerIndex} className="text-text-secondary leading-relaxed">
               {parts[0]}
               <a
                 href={link.href}
-                className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+                className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline transition-colors"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -99,7 +99,7 @@ export function FAQSection() {
       }
     }
     return (
-      <p key={answerIndex} className="text-gray-500 dark:text-gray-400">
+      <p key={answerIndex} className="text-text-secondary leading-relaxed">
         {answer}
       </p>
     );
@@ -113,30 +113,34 @@ export function FAQSection() {
       enabled={config.enabled}
       className="bg-surface"
     >
-      <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-text-primary">
+      <div className="py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
+        <h2 className="mb-10 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
           Frequently asked questions
         </h2>
-        <div className="grid pt-8 text-left border-t border-border md:gap-16 md:grid-cols-2">
+        <div className="grid pt-10 text-left border-t border-border md:gap-16 md:grid-cols-2">
           <div>
             {leftColumn.map((faq, index) => (
-              <div key={index} className="mb-10">
-                <h3 className="flex items-center mb-4 text-lg font-medium text-text-primary">
-                  <HiQuestionMarkCircle className="flex-shrink-0 mr-2 w-5 h-5 text-text-secondary" />
+              <div key={index} className="mb-12">
+                <h3 className="flex items-center mb-4 text-xl font-bold text-text-primary">
+                  <HiQuestionMarkCircle className="flex-shrink-0 mr-3 w-6 h-6 text-primary-600 dark:text-primary-400" />
                   {faq.question}
                 </h3>
-                {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
+                <div className="space-y-3">
+                  {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
+                </div>
               </div>
             ))}
           </div>
           <div>
             {rightColumn.map((faq, index) => (
-              <div key={index} className="mb-10">
-                <h3 className="flex items-center mb-4 text-lg font-medium text-text-primary">
-                  <HiQuestionMarkCircle className="flex-shrink-0 mr-2 w-5 h-5 text-text-secondary" />
+              <div key={index} className="mb-12">
+                <h3 className="flex items-center mb-4 text-xl font-bold text-text-primary">
+                  <HiQuestionMarkCircle className="flex-shrink-0 mr-3 w-6 h-6 text-primary-600 dark:text-primary-400" />
                   {faq.question}
                 </h3>
-                {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
+                <div className="space-y-3">
+                  {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
+                </div>
               </div>
             ))}
           </div>

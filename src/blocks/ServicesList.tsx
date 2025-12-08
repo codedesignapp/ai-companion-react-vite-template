@@ -1,53 +1,53 @@
 import {
-  HiClipboard,
-  HiShieldCheck,
-  HiBriefcase,
-  HiCurrencyDollar,
-  HiDesktopComputer,
+  HiCloud,
   HiCog,
+  HiLightningBolt,
+  HiShieldCheck,
+  HiCode,
+  HiChartBar,
 } from "react-icons/hi";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { ANIMATION_CONFIG } from "../animation.config";
 
-export function Features() {
+export function ServicesList() {
   const config = ANIMATION_CONFIG.blockAnimations.features;
 
-  const features = [
+  const services = [
     {
-      icon: HiClipboard,
-      title: "Marketing",
+      icon: HiCloud,
+      title: "Cloud Solutions",
       description:
-        "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
-    },
-    {
-      icon: HiShieldCheck,
-      title: "Legal",
-      description:
-        "Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.",
-    },
-    {
-      icon: HiBriefcase,
-      title: "Business Automation",
-      description:
-        "Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.",
-    },
-    {
-      icon: HiCurrencyDollar,
-      title: "Finance",
-      description:
-        "Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.",
-    },
-    {
-      icon: HiDesktopComputer,
-      title: "Enterprise Design",
-      description:
-        "Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.",
+        "Migrate and manage your infrastructure in the cloud with our expert guidance and comprehensive support services.",
     },
     {
       icon: HiCog,
-      title: "Operations",
+      title: "IT Consulting",
       description:
-        "Keep your company's lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.",
+        "Strategic technology consulting to align your IT infrastructure with business goals and drive growth.",
+    },
+    {
+      icon: HiLightningBolt,
+      title: "Performance Optimization",
+      description:
+        "Enhance your application's speed and efficiency with our comprehensive optimization and tuning services.",
+    },
+    {
+      icon: HiShieldCheck,
+      title: "Security Audits",
+      description:
+        "Comprehensive security assessments and penetration testing to protect your business from emerging threats.",
+    },
+    {
+      icon: HiCode,
+      title: "Custom Development",
+      description:
+        "Bespoke software solutions built to your exact specifications using modern technologies and best practices.",
+    },
+    {
+      icon: HiChartBar,
+      title: "Data Analytics",
+      description:
+        "Turn your data into actionable insights with our advanced analytics and business intelligence services.",
     },
   ];
 
@@ -62,16 +62,16 @@ export function Features() {
       <div className="py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
         <div className="max-w-screen-md mb-12 lg:mb-20">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
-            Designed for business teams like yours
+            What We Offer
           </h2>
           <p className="text-text-secondary text-lg leading-relaxed">
-            Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
-            long-term value and drive economic growth.
+            Explore our comprehensive range of services designed to help your business succeed in
+            the digital age.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+          {services.map((service, index) => {
+            const Icon = service.icon;
             return (
               <div
                 key={index}
@@ -81,10 +81,10 @@ export function Features() {
                   <Icon className="w-7 h-7" />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-text-primary">
-                  {feature.title}
+                  {service.title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed">
-                  {feature.description}
+                  {service.description}
                 </p>
               </div>
             );

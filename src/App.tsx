@@ -1,28 +1,19 @@
+import { Routes, Route } from "react-router-dom";
 import { HeaderNavigation } from "./blocks/HeaderNavigation";
-import { Hero } from "./blocks/Hero";
-import { Features } from "./blocks/Features";
-import { Content } from "./blocks/Content";
-import { TeamSection } from "./blocks/TeamSection";
-import { PricingTables } from "./blocks/PricingTables";
-import { SocialProof } from "./blocks/SocialProof";
-import { FAQSection } from "./blocks/FAQSection";
-import { ContactForm } from "./blocks/ContactForm";
-import { CTA } from "./blocks/CTA";
 import { FooterSection } from "./blocks/FooterSection";
+import { HomePage } from "./pages/HomePage";
+import { AboutPage } from "./pages/AboutPage";
+import { ServicePage } from "./pages/ServicePage";
 
 export default function App() {
   return (
     <>
       <HeaderNavigation />
-      <Hero />
-      <Features />
-      <Content />
-      <TeamSection />
-      <PricingTables />
-      <SocialProof />
-      <FAQSection />
-      <ContactForm />
-      <CTA />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/service" element={<ServicePage />} />
+      </Routes>
       <FooterSection />
     </>
   );

@@ -4,29 +4,36 @@ import { ANIMATION_CONFIG } from "../animation.config";
 
 export function CTA() {
   const config = ANIMATION_CONFIG.blockAnimations.cta;
-  
+
   return (
     <AnimatedSection
       type={config.type}
       enabled={config.enabled}
-      className="bg-surface"
+      className="bg-surface relative overflow-hidden"
     >
-      <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <img
-          className="w-full dark:hidden"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
-          alt="dashboard image"
-        />
-        <img
-          className="w-full hidden dark:block"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg"
-          alt="dashboard image"
-        />
-        <div className="mt-4 md:mt-0">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary">
-            Let's create more tools and ideas that brings us together.
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary-100 dark:bg-primary-900/20 rounded-full blur-3xl opacity-20" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-100 dark:bg-primary-900/20 rounded-full blur-3xl opacity-20" />
+
+      <div className="relative gap-12 items-center py-16 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6">
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-transparent rounded-3xl blur-2xl" />
+          <img
+            className="relative w-full dark:hidden rounded-2xl shadow-2xl"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
+            alt="dashboard image"
+          />
+          <img
+            className="relative w-full hidden dark:block rounded-2xl shadow-2xl"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg"
+            alt="dashboard image"
+          />
+        </div>
+        <div className="mt-8 md:mt-0">
+          <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
+            Let's create more tools and ideas that brings us together
           </h2>
-          <p className="mb-6 font-light text-text-secondary md:text-lg">
+          <p className="mb-8 text-lg text-text-secondary leading-relaxed">
             Flowbite helps you connect with friends and communities of people who share your interests.
             Connecting with your friends and family as well as discovering new ones is easy with features
             like Groups.
@@ -35,19 +42,20 @@ export function CTA() {
             as="a"
             href="#"
             color="blue"
-            className="inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900"
+            className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-primary-600 hover:bg-primary-700 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg shadow-primary-500/25"
           >
             Get started
             <svg
-              className="ml-2 -mr-1 w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
               <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
               />
             </svg>
           </Button>
@@ -56,4 +64,3 @@ export function CTA() {
     </AnimatedSection>
   );
 }
-

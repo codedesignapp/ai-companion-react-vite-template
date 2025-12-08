@@ -1,53 +1,53 @@
 import {
-  HiClipboard,
+  HiLightningBolt,
   HiShieldCheck,
-  HiBriefcase,
-  HiCurrencyDollar,
-  HiDesktopComputer,
-  HiCog,
+  HiHeart,
+  HiUsers,
+  HiLightBulb,
+  HiTrendingUp,
 } from "react-icons/hi";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { ANIMATION_CONFIG } from "../animation.config";
 
-export function Features() {
+export function Values() {
   const config = ANIMATION_CONFIG.blockAnimations.features;
 
-  const features = [
+  const values = [
     {
-      icon: HiClipboard,
-      title: "Marketing",
+      icon: HiLightningBolt,
+      title: "Innovation",
       description:
-        "Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.",
+        "We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions that drive progress.",
     },
     {
       icon: HiShieldCheck,
-      title: "Legal",
+      title: "Integrity",
       description:
-        "Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.",
+        "We conduct business with transparency, honesty, and ethical practices at all times, building trust with every interaction.",
     },
     {
-      icon: HiBriefcase,
-      title: "Business Automation",
+      icon: HiHeart,
+      title: "Customer Focus",
       description:
-        "Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.",
+        "Our customers are at the heart of everything we do, driving our decisions and inspiring our innovations.",
     },
     {
-      icon: HiCurrencyDollar,
-      title: "Finance",
+      icon: HiUsers,
+      title: "Collaboration",
       description:
-        "Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.",
+        "We believe in the power of teamwork and foster a collaborative environment where ideas flourish.",
     },
     {
-      icon: HiDesktopComputer,
-      title: "Enterprise Design",
+      icon: HiLightBulb,
+      title: "Excellence",
       description:
-        "Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.",
+        "We strive for excellence in every project, ensuring the highest quality standards and attention to detail.",
     },
     {
-      icon: HiCog,
-      title: "Operations",
+      icon: HiTrendingUp,
+      title: "Growth",
       description:
-        "Keep your company's lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.",
+        "We are committed to continuous learning and improvement, both as individuals and as an organization.",
     },
   ];
 
@@ -62,16 +62,15 @@ export function Features() {
       <div className="py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
         <div className="max-w-screen-md mb-12 lg:mb-20">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
-            Designed for business teams like yours
+            Our Core Values
           </h2>
           <p className="text-text-secondary text-lg leading-relaxed">
-            Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
-            long-term value and drive economic growth.
+            These principles guide everything we do and shape the culture of our organization.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+          {values.map((value, index) => {
+            const Icon = value.icon;
             return (
               <div
                 key={index}
@@ -81,10 +80,10 @@ export function Features() {
                   <Icon className="w-7 h-7" />
                 </div>
                 <h3 className="mb-3 text-xl font-bold text-text-primary">
-                  {feature.title}
+                  {value.title}
                 </h3>
                 <p className="text-text-secondary leading-relaxed">
-                  {feature.description}
+                  {value.description}
                 </p>
               </div>
             );

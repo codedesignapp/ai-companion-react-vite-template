@@ -11,15 +11,15 @@ export function ContactForm() {
       enabled={config.enabled}
       className="bg-surface"
     >
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-text-primary">
+      <div className="py-16 sm:py-24 px-4 mx-auto max-w-screen-md">
+        <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-center text-text-primary lg:text-5xl">
           Contact Us
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center text-text-secondary sm:text-xl">
+        <p className="mb-12 text-center text-text-secondary text-lg leading-relaxed">
           Got a technical issue? Want to send feedback about a beta feature? Need details about our
           Business plan? Let us know.
         </p>
-        <form action="#" className="space-y-8">
+        <form action="#" className="space-y-6">
           <div>
             <Label htmlFor="email" className="block mb-2 text-sm font-medium text-text-primary">
               Your email
@@ -74,7 +74,7 @@ export function ContactForm() {
           <Button
             type="submit"
             color="blue"
-            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            className="w-full sm:w-auto px-8 py-4 text-base font-semibold text-center text-white rounded-xl bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 transition-all duration-200 hover:scale-105 shadow-lg shadow-primary-500/25"
           >
             Send message
           </Button>
