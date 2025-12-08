@@ -1,7 +1,8 @@
 import { Hero } from "../blocks/Hero";
-import { Features } from "../blocks/Features";
+import { BentoFeatures } from "../blocks/BentoFeatures";
 import { Content } from "../blocks/Content";
-import { SocialProof } from "../blocks/SocialProof";
+import { Stats } from "../blocks/Stats";
+import { Testimonials } from "../blocks/Testimonials";
 import { CTA } from "../blocks/CTA";
 import { PricingTables } from "../blocks/PricingTables";
 import { FAQSection } from "../blocks/FAQSection";
@@ -11,9 +12,10 @@ export function HomePage() {
   return (
     <>
       <Hero />
-      <Features />
+      <BentoFeatures />
       <Content />
-      <SocialProof />
+      <Stats />
+      <Testimonials />
       <CTA />
       <PricingTables />
       <FAQSection />
