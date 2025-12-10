@@ -8,16 +8,21 @@ import { useState, useEffect } from 'react';
  */
 
 const themes = [
-    // 🔥 NEW 2025 THEMES - Dramatically Different
-    { id: 'aurora', name: 'Aurora', emoji: '🌈', description: 'Dreamy gradient mesh' },
+    // 🔥 RADICAL 2025 THEMES - 80% Different
     { id: 'brutalist', name: 'Brutalist', emoji: '🔲', description: 'Raw & bold anti-design' },
-    { id: 'glass-luxe', name: 'Glass Luxe', emoji: '💎', description: 'Premium glassmorphism' },
+    { id: 'cyberpunk', name: 'Cyberpunk', emoji: '🌃', description: 'Neon futuristic' },
+    { id: 'terminal', name: 'Terminal', emoji: '💻', description: 'Hacker green-on-black' },
+    { id: 'vaporwave', name: 'Vaporwave', emoji: '🌅', description: '80s retro sunset' },
+    { id: 'photography', name: 'Photography', emoji: '📷', description: 'Cinematic full-bleed' },
+    { id: 'organic', name: 'Organic', emoji: '🌿', description: 'Earth tones & nature' },
+    // Refined themes
+    { id: 'aurora', name: 'Aurora', emoji: '🌈', description: 'Dreamy gradient mesh' },
     { id: 'noir', name: 'Noir', emoji: '🖤', description: 'Elegant dark + gold' },
+    { id: 'glass-luxe', name: 'Glass Luxe', emoji: '💎', description: 'Premium glassmorphism' },
     // Classic themes
     { id: '', name: 'Corporate', emoji: '🏢', description: 'Professional & balanced' },
-    { id: 'cyberpunk', name: 'Cyberpunk', emoji: '🌃', description: 'Neon & futuristic' },
     { id: 'magazine', name: 'Magazine', emoji: '📰', description: 'Editorial full-bleed' },
-    { id: 'mobile-first', name: 'Mobile-First', emoji: '📱', description: 'Touch-friendly stacked' },
+    { id: 'mobile-first', name: 'Mobile-First', emoji: '📱', description: 'Touch-friendly' },
 ];
 
 export function ThemeSwitcher() {

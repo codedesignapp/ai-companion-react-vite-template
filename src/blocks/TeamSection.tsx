@@ -69,8 +69,8 @@ export function TeamSection() {
           </p>
         </div>
 
-        {/* Team Grid - theme-controlled columns */}
-        <div className="ds-grid-responsive">
+        {/* Team Grid - 4 members: 2x2 layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teamMembers.map((member) => (
             <div
               key={member.name}

@@ -2405,3 +2405,449 @@
 :root[data-theme="noir"] [data-section="stats"] {
    background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%) !important;
 }
+
+/* ============================================
+   📷 PHOTOGRAPHY THEME - Cinematic Full-Bleed
+   Magazine-style with full-width hero images
+   ============================================ */
+:root[data-theme="photography"] {
+   --surface: #0d0d0d;
+   --surface-elevated: #171717;
+   --surface-subtle: #1f1f1f;
+   --text-primary: #ffffff;
+   --text-secondary: rgba(255, 255, 255, 0.7);
+   --border: rgba(255, 255, 255, 0.1);
+   --primary-500: #ffffff;
+   --card-radius: 0;
+   --button-radius: 0;
+}
+
+:root[data-theme="photography"] body {
+   background: #0d0d0d !important;
+}
+
+/* Photography: FULL-BLEED HERO with dramatic image */
+:root[data-theme="photography"] [data-section="hero"] {
+   background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%),
+      url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80') !important;
+   background-size: cover !important;
+   background-position: center !important;
+   min-height: 100vh !important;
+   display: flex !important;
+   align-items: center !important;
+}
+
+:root[data-theme="photography"] [data-section="hero"] * {
+   color: #ffffff !important;
+   -webkit-text-fill-color: #ffffff !important;
+}
+
+:root[data-theme="photography"] [data-section="hero"] h1 {
+   font-size: clamp(3rem, 8vw, 6rem) !important;
+   font-weight: 200 !important;
+   letter-spacing: -0.03em !important;
+   text-shadow: 0 4px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Photography: Film grain overlay on all sections */
+:root[data-theme="photography"] [data-section]::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+   opacity: 0.04;
+   pointer-events: none;
+   z-index: 1;
+}
+
+/* Photography: Features with background image */
+:root[data-theme="photography"] [data-section="features"] {
+   background:
+      linear-gradient(to right, rgba(13, 13, 13, 0.95) 0%, rgba(13, 13, 13, 0.8) 100%),
+      url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80') !important;
+   background-size: cover !important;
+   background-position: center !important;
+}
+
+/* Photography: CTA with stunning background */
+:root[data-theme="photography"] [data-section="cta"] {
+   background:
+      linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%),
+      url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1920&q=80') !important;
+   background-size: cover !important;
+   background-position: center !important;
+}
+
+/* Photography: Minimal borderless cards */
+:root[data-theme="photography"] .ds-card {
+   background: rgba(255, 255, 255, 0.03) !important;
+   border: none !important;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+   border-radius: 0 !important;
+}
+
+/* Photography: Images with cinematic aspect ratio feel */
+:root[data-theme="photography"] img {
+   filter: contrast(1.05) saturate(0.95) !important;
+}
+
+:root[data-theme="photography"] .ds-button {
+   background: transparent !important;
+   border: 2px solid #ffffff !important;
+   color: #ffffff !important;
+   text-transform: uppercase !important;
+   letter-spacing: 0.2em !important;
+   font-weight: 300 !important;
+}
+
+:root[data-theme="photography"] .ds-button:hover {
+   background: #ffffff !important;
+   color: #0d0d0d !important;
+}
+
+:root[data-theme="photography"] .ds-grid-responsive {
+   grid-template-columns: repeat(2, 1fr) !important;
+}
+
+/* ============================================
+   💻 TERMINAL THEME - Hacker Aesthetic
+   Green on black, scanlines, CRT effect
+   ============================================ */
+:root[data-theme="terminal"] {
+   --surface: #0a0a0a;
+   --surface-elevated: #0f1610;
+   --surface-subtle: #111a13;
+   --text-primary: #00ff41;
+   --text-secondary: rgba(0, 255, 65, 0.7);
+   --border: rgba(0, 255, 65, 0.3);
+   --primary-500: #00ff41;
+   --card-radius: 0;
+   --button-radius: 0;
+   --heading-font: 'Courier New', monospace;
+}
+
+:root[data-theme="terminal"] body {
+   background: #0a0a0a !important;
+   font-family: 'Courier New', 'Monaco', monospace !important;
+}
+
+/* Terminal: Scanlines overlay */
+:root[data-theme="terminal"] [data-section="hero"]::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: repeating-linear-gradient(0deg,
+         transparent,
+         transparent 2px,
+         rgba(0, 0, 0, 0.3) 2px,
+         rgba(0, 0, 0, 0.3) 4px);
+   pointer-events: none;
+   z-index: 10;
+}
+
+:root[data-theme="terminal"] [data-section="hero"] {
+   background:
+      radial-gradient(ellipse at center, rgba(0, 255, 65, 0.1) 0%, transparent 70%),
+      #0a0a0a !important;
+}
+
+/* Terminal: ALL text is green */
+:root[data-theme="terminal"] h1,
+:root[data-theme="terminal"] h2,
+:root[data-theme="terminal"] h3,
+:root[data-theme="terminal"] p,
+:root[data-theme="terminal"] span,
+:root[data-theme="terminal"] div {
+   color: #00ff41 !important;
+   -webkit-text-fill-color: #00ff41 !important;
+   font-family: 'Courier New', monospace !important;
+}
+
+:root[data-theme="terminal"] h1 {
+   text-shadow: 0 0 10px rgba(0, 255, 65, 0.5), 0 0 20px rgba(0, 255, 65, 0.3) !important;
+}
+
+/* Terminal: Box-style cards */
+:root[data-theme="terminal"] .ds-card {
+   background: rgba(0, 255, 65, 0.03) !important;
+   border: 1px solid rgba(0, 255, 65, 0.4) !important;
+   border-radius: 0 !important;
+   box-shadow: 0 0 20px rgba(0, 255, 65, 0.1) !important;
+}
+
+:root[data-theme="terminal"] .ds-card:hover {
+   border-color: #00ff41 !important;
+   box-shadow: 0 0 40px rgba(0, 255, 65, 0.2) !important;
+}
+
+:root[data-theme="terminal"] .ds-card::before {
+   content: '> ';
+   position: absolute;
+   top: 1rem;
+   left: 1rem;
+   color: #00ff41;
+   font-family: 'Courier New', monospace;
+}
+
+/* Terminal: Command-line buttons */
+:root[data-theme="terminal"] .ds-button {
+   background: transparent !important;
+   border: 1px solid #00ff41 !important;
+   color: #00ff41 !important;
+   font-family: 'Courier New', monospace !important;
+   text-transform: uppercase !important;
+}
+
+:root[data-theme="terminal"] .ds-button::before {
+   content: '$ ';
+}
+
+:root[data-theme="terminal"] .ds-button:hover {
+   background: #00ff41 !important;
+   color: #0a0a0a !important;
+}
+
+:root[data-theme="terminal"] .ds-grid-responsive {
+   grid-template-columns: repeat(2, 1fr) !important;
+}
+
+:root[data-theme="terminal"] [data-section="stats"] {
+   background: linear-gradient(180deg, #0f1610 0%, #0a0a0a 100%) !important;
+}
+
+/* ============================================
+   🌅 VAPORWAVE THEME - 80s Retro Sunset
+   Pink/purple gradients, grid lines, retro
+   ============================================ */
+:root[data-theme="vaporwave"] {
+   --surface: #1a0a2e;
+   --surface-elevated: #2d1b4e;
+   --surface-subtle: #3d2a5f;
+   --text-primary: #ffffff;
+   --text-secondary: rgba(255, 255, 255, 0.8);
+   --border: rgba(255, 107, 237, 0.3);
+   --primary-500: #ff6bed;
+   --primary-600: #00d4ff;
+   --card-radius: 0;
+   --button-radius: 0;
+}
+
+:root[data-theme="vaporwave"] body {
+   background: linear-gradient(180deg, #1a0a2e 0%, #0d0221 100%) !important;
+}
+
+/* Vaporwave: Sunset gradient hero with grid */
+:root[data-theme="vaporwave"] [data-section="hero"] {
+   background:
+      linear-gradient(180deg,
+         #1a0a2e 0%,
+         #2d1b4e 30%,
+         #ff6b6b 60%,
+         #feca57 80%,
+         #ff6bed 100%) !important;
+   position: relative;
+}
+
+:root[data-theme="vaporwave"] [data-section="hero"]::before {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 50%;
+   background:
+      linear-gradient(90deg, transparent 49%, rgba(255, 107, 237, 0.3) 49%, rgba(255, 107, 237, 0.3) 51%, transparent 51%),
+      linear-gradient(0deg, transparent 49%, rgba(255, 107, 237, 0.3) 49%, rgba(255, 107, 237, 0.3) 51%, transparent 51%);
+   background-size: 60px 60px;
+   transform: perspective(500px) rotateX(60deg);
+   transform-origin: bottom;
+}
+
+:root[data-theme="vaporwave"] [data-section="hero"] h1 {
+   background: linear-gradient(180deg, #00d4ff 0%, #ff6bed 100%) !important;
+   -webkit-background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+   background-clip: text !important;
+   text-shadow: none !important;
+   font-weight: 900 !important;
+   letter-spacing: 0.05em !important;
+}
+
+/* Vaporwave: Neon pink/cyan cards */
+:root[data-theme="vaporwave"] .ds-card {
+   background: rgba(45, 27, 78, 0.8) !important;
+   border: 2px solid transparent !important;
+   border-image: linear-gradient(135deg, #ff6bed, #00d4ff) 1 !important;
+   border-radius: 0 !important;
+   box-shadow: 0 0 30px rgba(255, 107, 237, 0.2), 0 0 60px rgba(0, 212, 255, 0.1) !important;
+}
+
+:root[data-theme="vaporwave"] .ds-card:hover {
+   box-shadow: 0 0 50px rgba(255, 107, 237, 0.4), 0 0 100px rgba(0, 212, 255, 0.2) !important;
+}
+
+/* Vaporwave: Gradient headings */
+:root[data-theme="vaporwave"] h2,
+:root[data-theme="vaporwave"] h3 {
+   background: linear-gradient(90deg, #ff6bed 0%, #00d4ff 100%) !important;
+   -webkit-background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+   background-clip: text !important;
+}
+
+/* Vaporwave: Neon buttons */
+:root[data-theme="vaporwave"] .ds-button {
+   background: linear-gradient(135deg, #ff6bed 0%, #00d4ff 100%) !important;
+   border: none !important;
+   color: #ffffff !important;
+   text-transform: uppercase !important;
+   font-weight: 700 !important;
+   box-shadow: 0 0 30px rgba(255, 107, 237, 0.5) !important;
+}
+
+:root[data-theme="vaporwave"] .ds-button:hover {
+   box-shadow: 0 0 50px rgba(255, 107, 237, 0.8), 0 0 80px rgba(0, 212, 255, 0.5) !important;
+}
+
+:root[data-theme="vaporwave"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr) !important;
+}
+
+:root[data-theme="vaporwave"] [data-section="stats"] {
+   background: linear-gradient(180deg, #2d1b4e 0%, #1a0a2e 100%) !important;
+}
+
+:root[data-theme="vaporwave"] [data-section="features"] {
+   background: #1a0a2e !important;
+}
+
+/* ============================================
+   🌿 ORGANIC THEME - Earth Tones & Nature
+   Warm browns, greens, natural textures
+   ============================================ */
+:root[data-theme="organic"] {
+   --surface: #f5f0e8;
+   --surface-elevated: #ffffff;
+   --surface-subtle: #ebe5db;
+   --text-primary: #2d2416;
+   --text-secondary: #5c4d3c;
+   --border: rgba(92, 77, 60, 0.2);
+   --primary-500: #6b8e4e;
+   --primary-600: #5a7a42;
+   --card-radius: 1.5rem;
+   --button-radius: 9999px;
+   --heading-font: 'Georgia', serif;
+}
+
+:root[data-theme="organic"] body {
+   background: #f5f0e8 !important;
+}
+
+/* Organic: Hero with nature texture */
+:root[data-theme="organic"] [data-section="hero"] {
+   background:
+      linear-gradient(135deg, rgba(245, 240, 232, 0.9) 0%, rgba(235, 229, 219, 0.85) 100%),
+      url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80') !important;
+   background-size: cover !important;
+   background-position: center !important;
+}
+
+:root[data-theme="organic"] [data-section="hero"] h1,
+:root[data-theme="organic"] [data-section="hero"] p {
+   color: #2d2416 !important;
+   -webkit-text-fill-color: #2d2416 !important;
+}
+
+:root[data-theme="organic"] [data-section="hero"] h1 {
+   font-family: 'Georgia', serif !important;
+   font-weight: 400 !important;
+   letter-spacing: 0.02em !important;
+}
+
+/* Organic: ALL headings and text dark */
+:root[data-theme="organic"] h1,
+:root[data-theme="organic"] h2,
+:root[data-theme="organic"] h3 {
+   color: #2d2416 !important;
+   -webkit-text-fill-color: #2d2416 !important;
+   font-family: 'Georgia', serif !important;
+}
+
+:root[data-theme="organic"] p,
+:root[data-theme="organic"] span {
+   color: #5c4d3c !important;
+   -webkit-text-fill-color: #5c4d3c !important;
+}
+
+/* Organic: Soft paper-like cards */
+:root[data-theme="organic"] .ds-card {
+   background: #ffffff !important;
+   border: 1px solid rgba(92, 77, 60, 0.15) !important;
+   border-radius: 1.5rem !important;
+   box-shadow: 0 4px 20px rgba(45, 36, 22, 0.08) !important;
+}
+
+:root[data-theme="organic"] .ds-card *,
+:root[data-theme="organic"] .ds-card h1,
+:root[data-theme="organic"] .ds-card h2,
+:root[data-theme="organic"] .ds-card h3,
+:root[data-theme="organic"] .ds-card p,
+:root[data-theme="organic"] .ds-card span {
+   color: #2d2416 !important;
+   -webkit-text-fill-color: #2d2416 !important;
+}
+
+:root[data-theme="organic"] .ds-card:hover {
+   box-shadow: 0 8px 40px rgba(45, 36, 22, 0.12) !important;
+}
+
+/* Organic: Earthy green buttons */
+:root[data-theme="organic"] .ds-button {
+   background: #6b8e4e !important;
+   color: #ffffff !important;
+   border: none !important;
+   font-weight: 500 !important;
+}
+
+:root[data-theme="organic"] .ds-button:hover {
+   background: #5a7a42 !important;
+}
+
+/* Organic: Stats with nature background */
+:root[data-theme="organic"] [data-section="stats"] {
+   background:
+      linear-gradient(135deg, rgba(107, 142, 78, 0.95) 0%, rgba(90, 122, 66, 0.95) 100%),
+      url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=1920&q=80') !important;
+   background-size: cover !important;
+}
+
+:root[data-theme="organic"] [data-section="stats"] h2,
+:root[data-theme="organic"] [data-section="stats"] p {
+   color: #ffffff !important;
+   -webkit-text-fill-color: #ffffff !important;
+}
+
+:root[data-theme="organic"] [data-section="stats"] .ds-card {
+   background: rgba(255, 255, 255, 0.95) !important;
+}
+
+:root[data-theme="organic"] [data-section="features"] {
+   background: #ebe5db !important;
+}
+
+:root[data-theme="organic"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Organic: Icon containers */
+:root[data-theme="organic"] .ds-icon-container {
+   background: rgba(107, 142, 78, 0.15) !important;
+   color: #6b8e4e !important;
+}
