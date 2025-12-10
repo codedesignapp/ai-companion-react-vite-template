@@ -83,19 +83,34 @@ function applyUpdates(
       return;
     }
 
+    // Skip null or undefined values from AI output
+    if (newText === null || newText === undefined) {
+      console.warn(`⚠️  Skipping null value for: ${key}`);
+      skippedUpdates++;
+      return;
+    }
+
     totalUpdates++;
 
     const oldText = original.text;
     const { file, line } = original._meta;
+
+    // Skip if old text is also null/empty
+    if (!oldText) {
+      skippedUpdates++;
+      return;
+    }
 
     if (oldText === newText) {
       skippedUpdates++;
       return;
     }
 
+    const oldDisplay = String(oldText).substring(0, 60);
+    const newDisplay = String(newText).substring(0, 60);
     console.log(`\n📝 ${key}`);
-    console.log(`   Old: "${oldText.substring(0, 60)}${oldText.length > 60 ? "..." : ""}"`);
-    console.log(`   New: "${newText.substring(0, 60)}${newText.length > 60 ? "..." : ""}"`);
+    console.log(`   Old: "${oldDisplay}${oldText.length > 60 ? "..." : ""}"`);
+    console.log(`   New: "${newDisplay}${newText.length > 60 ? "..." : ""}"`);
 
     const result = replaceTextInFile(file, oldText, newText, line);
     if (result === "updated") {
