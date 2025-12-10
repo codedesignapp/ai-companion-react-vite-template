@@ -1,5 +1,5 @@
 import { HiCheck } from "react-icons/hi";
-import { Button } from "../components";
+import { Button } from "../components/Button";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { ANIMATION_CONFIG } from "../animation.config";
 

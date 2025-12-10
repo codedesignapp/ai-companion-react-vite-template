@@ -1,4 +1,7 @@
-import { Button, Label, TextInput, Textarea } from "../components";
+import { Button } from "../components/Button";
+import { Label } from "../components/Label";
+import { TextInput } from "../components/TextInput";
+import { Textarea } from "../components/Textarea";
 import { AnimatedSection } from "../components/AnimatedSection";
 import { ANIMATION_CONFIG } from "../animation.config";
 
