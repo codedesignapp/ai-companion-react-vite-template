@@ -36,22 +36,22 @@ export function ServicesHero() {
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-center sm:gap-4">
           <Button
             as="a"
-            href="#"
+            href="/about"
             color="blue"
             className="ds-button inline-flex justify-center items-center gap-2 text-white bg-primary-600 hover:bg-primary-700 shadow-lg shadow-primary-500/25 hover:shadow-glow-primary"
           >
-            Get started
+            Learn About Us
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Button>
           <Button
             as="a"
-            href="#"
+            href="/service"
             outline
             className="ds-button inline-flex justify-center items-center gap-2 text-text-primary bg-surface-elevated hover:bg-surface-subtle border border-border"
           >
-            Schedule a demo
+            View All Services
           </Button>
         </div>
       </div>

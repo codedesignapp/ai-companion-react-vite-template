@@ -77,7 +77,7 @@ export function TeamSection() {
               className="ds-card items-center bg-surface/[var(--card-bg-opacity)] sm:flex border border-border hover:border-primary-300 dark:hover:border-primary-700 overflow-hidden group"
             >
               {/* Member Image */}
-              <a href="#" className="block sm:w-48 flex-shrink-0 relative overflow-hidden">
+              <a href="/about" className="block sm:w-48 flex-shrink-0 relative overflow-hidden">
                 <div className="absolute inset-0 bg-primary-600/10 group-hover:bg-transparent ds-transition z-10" />
                 <img
                   className="w-full h-full object-cover group-hover:scale-110 ds-transition"
@@ -95,7 +95,7 @@ export function TeamSection() {
                 />
 
                 <h3 className="ds-heading-3 text-text-primary mb-1 relative">
-                  <a href="#" className="hover:text-primary-600 dark:hover:text-primary-400 ds-transition">{member.name}</a>
+                  <a href="/about" className="hover:text-primary-600 dark:hover:text-primary-400 ds-transition">{member.name}</a>
                 </h3>
                 <span
                   className="text-sm font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-500 uppercase tracking-wider"
@@ -117,7 +117,7 @@ export function TeamSection() {
                   ].map(({ Icon, label }, i) => (
                     <li key={i}>
                       <a
-                        href="#"
+                        href="/about"
                         className="text-text-tertiary hover:text-primary-600 dark:hover:text-primary-400 ds-transition hover:scale-110 block"
                         aria-label={label}
                       >

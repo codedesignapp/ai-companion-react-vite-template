@@ -71,18 +71,18 @@ export function Hero() {
             <div className="ds-hero-actions flex flex-col gap-4 sm:flex-row sm:gap-6">
               <Button
                 as="a"
-                href="#"
+                href="/service"
                 color="blue"
                 className="ds-button inline-flex justify-center items-center gap-2 text-white bg-primary-600 hover:bg-primary-500 hover:shadow-glow-primary shadow-primary-500/20 active:scale-95"
               >
-                Get started
+                View Our Services
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Button>
               <Button
                 as="a"
-                href="#"
+                href="/about"
                 outline
                 className="ds-button inline-flex justify-center items-center gap-2 text-text-primary bg-white/5 backdrop-blur-sm hover:bg-surface-elevated/80 border border-border hover:shadow-lg active:scale-95"
               >
@@ -90,7 +90,7 @@ export function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Watch demo
+                Learn About Us
               </Button>
             </div>
           </div>
@@ -124,8 +124,8 @@ export function Hero() {
           />
         </div>
 
-        {/* Trust indicators - INSIDE wrapper to avoid being affected by parent flex */}
-        <div className="ds-hero-trust mx-auto max-w-screen-xl px-4 w-full">
+        {/* Trust indicators - HIDDEN */}
+        <div className="ds-hero-trust mx-auto max-w-screen-xl px-4 w-full hidden">
           <div className="mt-8 pt-8 border-t border-border">
             <p className="text-sm font-medium text-text-tertiary mb-6 uppercase tracking-wider text-center">
               Trusted by industry leaders

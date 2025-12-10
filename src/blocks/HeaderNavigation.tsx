@@ -21,15 +21,16 @@ export function HeaderNavigation() {
       <nav className="bg-surface border-border px-4 lg:px-6 py-4 mt-2">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center">
-            {/* Stylized Text Logo */}
+            {/* Stylized Text Logo - uses first letter of brand name */}
             <div
-              className="mr-2 h-8 w-8 bg-primary-600 flex items-center justify-center"
+              className="ds-brand-icon mr-2 h-8 w-8 bg-primary-600 flex items-center justify-center"
               style={{ borderRadius: 'var(--icon-container-radius)' }}
+              title="Brand Icon"
             >
-              <span className="text-white font-bold text-lg">S</span>
+              <span className="text-white font-bold text-lg">B</span>
             </div>
             <span
-              className="self-center text-xl font-semibold whitespace-nowrap text-text-primary"
+              className="ds-brand-name self-center text-xl font-semibold whitespace-nowrap text-text-primary"
               style={{ fontFamily: 'var(--heading-font)' }}
             >
               Brand name
@@ -77,7 +78,7 @@ export function HeaderNavigation() {
           </div>
           <div
             className={`${isMenuOpen ? "block" : "hidden"
-              } justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
+              } justify-between items-center w-full lg:flex lg:w-auto lg:order-1 lg:ml-auto`}
             id="mobile-menu-2"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">

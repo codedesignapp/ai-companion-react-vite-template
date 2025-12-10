@@ -50,17 +50,21 @@ function replaceTextInFile(
     let content = fs.readFileSync(filePath, "utf-8");
     const lines = content.split("\n");
 
-    // Helper to escape apostrophes if the string is single-quoted
+    // Helper to escape quotes based on the surrounding quote type
     const escapeForQuoteType = (text: string, contextLine: string): string => {
-      // Check if the old text is within single quotes
+      // Check if the old text is within single or double quotes
       const singleQuotePattern = `'${escapeRegex(oldText)}'`;
       const doubleQuotePattern = `"${escapeRegex(oldText)}"`;
 
       if (new RegExp(singleQuotePattern).test(contextLine)) {
         // Single-quoted string: escape apostrophes with backslash
         return text.replace(/'/g, "\\'");
+      } else if (new RegExp(doubleQuotePattern).test(contextLine)) {
+        // Double-quoted string: escape double quotes with backslash
+        return text.replace(/"/g, '\\"');
       }
-      // Double-quoted strings don't need apostrophe escaping
+
+      // If we can't determine quote type, don't escape (safer default)
       return text;
     };
 

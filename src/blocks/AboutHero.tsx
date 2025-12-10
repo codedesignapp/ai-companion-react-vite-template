@@ -35,11 +35,11 @@ export function AboutHero() {
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-center sm:gap-4">
           <Button
             as="a"
-            href="#"
+            href="/service"
             color="blue"
             className="ds-button inline-flex justify-center items-center gap-2 text-white bg-primary-600 hover:bg-primary-700 shadow-lg shadow-primary-500/25 hover:shadow-glow-primary"
           >
-            Join our team
+            View Our Services
             <svg
               className="w-5 h-5"
               fill="none"

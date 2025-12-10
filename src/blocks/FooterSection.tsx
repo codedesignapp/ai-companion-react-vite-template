@@ -21,12 +21,13 @@ export function FooterSection() {
           style={{ fontFamily: 'var(--heading-font)' }}
         >
           <div
-            className="mr-2 h-8 w-8 bg-primary-600 flex items-center justify-center"
+            className="ds-brand-icon mr-2 h-8 w-8 bg-primary-600 flex items-center justify-center"
             style={{ borderRadius: 'var(--icon-container-radius)' }}
+            title="Brand Icon"
           >
-            <span className="text-white font-bold text-lg">S</span>
+            <span className="text-white font-bold text-lg">B</span>
           </div>
-          Brand name
+          <span className="ds-brand-name">Brand name</span>
         </Link>
         <p className="ds-body my-6 text-text-secondary">
           Open-source library of over 400+ web components and interactive elements built for better web.

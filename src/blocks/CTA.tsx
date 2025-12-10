@@ -57,11 +57,11 @@ export function CTA() {
             </p>
             <Button
               as="a"
-              href="#"
+              href="/service"
               color="blue"
               className="ds-button inline-flex items-center gap-2 text-white bg-primary-600 hover:bg-primary-500 hover:shadow-glow-primary shadow-primary-500/20 active:scale-95"
             >
-              Get started
+              View Our Services
               <svg
                 className="w-5 h-5"
                 fill="none"

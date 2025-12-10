@@ -146,14 +146,14 @@ export function PricingTables() {
               {/* CTA Button */}
               <Button
                 as="a"
-                href="#"
+                href="/about"
                 color={plan.name === "Company" ? "blue" : "gray"}
                 className={`ds-button w-full justify-center mt-auto ${plan.name === "Company"
                   ? "text-white bg-primary-600 hover:bg-primary-500 hover:shadow-glow-primary shadow-primary-500/20"
                   : "text-text-primary bg-surface-elevated hover:bg-surface-subtle border border-border hover:border-primary-300"
                   }`}
               >
-                Get started
+                Learn More
               </Button>
             </div>
           ))}

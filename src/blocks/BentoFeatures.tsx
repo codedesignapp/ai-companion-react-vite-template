@@ -116,10 +116,10 @@ export function BentoFeatures() {
               </p>
             </div>
             <a
-              href="#"
+              href="/service"
               className="ds-button bg-primary-600 hover:bg-primary-700 text-white whitespace-nowrap"
             >
-              Explore Features
+              View Our Services
             </a>
           </div>
         </div>
