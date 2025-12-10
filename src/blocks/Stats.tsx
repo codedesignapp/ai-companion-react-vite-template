@@ -60,8 +60,8 @@ export function Stats() {
           </p>
         </div>
 
-        {/* Stats Grid - theme-controlled columns */}
-        <div className="ds-grid-responsive">
+        {/* Stats Grid - 4 items: 4-col on desktop, 2x2 on tablet, stacked on mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (

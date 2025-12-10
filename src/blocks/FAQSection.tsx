@@ -122,7 +122,7 @@ export function FAQSection() {
           Frequently asked questions
         </h2>
 
-        <div className="ds-grid-responsive pt-10 text-left border-t border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 pt-10 text-left border-t border-border">
           {/* Left Column */}
           <div>
             {leftColumn.map((faq, index) => (

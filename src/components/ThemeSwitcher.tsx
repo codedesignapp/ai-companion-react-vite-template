@@ -8,14 +8,16 @@ import { useState, useEffect } from 'react';
  */
 
 const themes = [
+    // 🔥 NEW 2025 THEMES - Dramatically Different
+    { id: 'aurora', name: 'Aurora', emoji: '🌈', description: 'Dreamy gradient mesh' },
+    { id: 'brutalist', name: 'Brutalist', emoji: '🔲', description: 'Raw & bold anti-design' },
+    { id: 'glass-luxe', name: 'Glass Luxe', emoji: '💎', description: 'Premium glassmorphism' },
+    { id: 'noir', name: 'Noir', emoji: '🖤', description: 'Elegant dark + gold' },
+    // Classic themes
     { id: '', name: 'Corporate', emoji: '🏢', description: 'Professional & balanced' },
-    { id: 'creative', name: 'Creative', emoji: '🎨', description: 'Expressive & dramatic' },
-    { id: 'tech', name: 'Tech', emoji: '💻', description: 'Glassmorphic & modern' },
-    { id: 'luxury', name: 'Luxury', emoji: '✨', description: 'Editorial & refined' },
-    { id: 'bold', name: 'Bold', emoji: '🔥', description: 'Playful & energetic' },
     { id: 'cyberpunk', name: 'Cyberpunk', emoji: '🌃', description: 'Neon & futuristic' },
-    { id: 'magazine', name: 'Magazine', emoji: '📰', description: 'Full-bleed images' },
-    { id: 'mobile-first', name: 'Mobile-First', emoji: '📱', description: 'Touch-friendly' },
+    { id: 'magazine', name: 'Magazine', emoji: '📰', description: 'Editorial full-bleed' },
+    { id: 'mobile-first', name: 'Mobile-First', emoji: '📱', description: 'Touch-friendly stacked' },
 ];
 
 export function ThemeSwitcher() {
@@ -77,8 +79,8 @@ export function ThemeSwitcher() {
                                     key={theme.id || 'default'}
                                     onClick={() => handleThemeChange(theme.id)}
                                     className={`w-full p-3 rounded-xl text-left transition-all duration-150 flex items-center gap-3 ${currentTheme === theme.id
-                                            ? 'bg-primary-100 dark:bg-primary-900/30 ring-2 ring-primary-500'
-                                            : 'hover:bg-surface-subtle'
+                                        ? 'bg-primary-100 dark:bg-primary-900/30 ring-2 ring-primary-500'
+                                        : 'hover:bg-surface-subtle'
                                         }`}
                                 >
                                     <span className="text-2xl">{theme.emoji}</span>
@@ -95,7 +97,7 @@ export function ThemeSwitcher() {
 
                         <div className="p-3 border-t border-border bg-surface-subtle">
                             <p className="text-xs text-text-tertiary text-center">
-                                8 themes • 13 dimensions • {new Date().toLocaleDateString()}
+                                🔥 4 NEW 2025 themes • Try Aurora, Brutalist, Glass Luxe, Noir
                             </p>
                         </div>
                     </div>

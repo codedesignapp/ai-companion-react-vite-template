@@ -1653,8 +1653,24 @@
 }
 
 /* ============================================
-   MOBILE-FIRST THEME - 100% STACKED LAYOUTS
+   MOBILE-FIRST THEME - Clean, Touch-Friendly
+   Light mode with excellent readability
    ============================================ */
+:root[data-theme="mobile-first"] {
+   --surface: #f8fafc;
+   --surface-elevated: #ffffff;
+   --surface-subtle: #f1f5f9;
+   --text-primary: #0f172a;
+   --text-secondary: #475569;
+   --border: #e2e8f0;
+   --primary-500: #6366f1;
+   --primary-600: #4f46e5;
+}
+
+:root[data-theme="mobile-first"] body {
+   background: #f8fafc !important;
+}
+
 :root[data-theme="mobile-first"] .ds-grid-responsive {
    grid-template-columns: 1fr !important;
 }
@@ -1675,12 +1691,52 @@
 :root[data-theme="mobile-first"] [data-section] h1,
 :root[data-theme="mobile-first"] [data-section] h2 {
    text-align: center !important;
+   color: #0f172a !important;
+   -webkit-text-fill-color: #0f172a !important;
 }
 
-/* Mobile-first: Full-width cards */
+/* Mobile-first: Clean white cards with subtle shadows */
 :root[data-theme="mobile-first"] .ds-card {
+   background: #ffffff !important;
+   border: 1px solid #e2e8f0 !important;
    border-radius: 1.5rem !important;
-   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+:root[data-theme="mobile-first"] .ds-card:hover {
+   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Mobile-first: ALL text must be dark for readability */
+:root[data-theme="mobile-first"] .ds-card *,
+:root[data-theme="mobile-first"] .ds-card h1,
+:root[data-theme="mobile-first"] .ds-card h2,
+:root[data-theme="mobile-first"] .ds-card h3,
+:root[data-theme="mobile-first"] .ds-card p,
+:root[data-theme="mobile-first"] .ds-card span {
+   color: #0f172a !important;
+   -webkit-text-fill-color: #0f172a !important;
+}
+
+:root[data-theme="mobile-first"] .ds-card .text-text-secondary,
+:root[data-theme="mobile-first"] .ds-card .ds-body {
+   color: #475569 !important;
+   -webkit-text-fill-color: #475569 !important;
+}
+
+/* Mobile-first: Stats section - use brand color */
+:root[data-theme="mobile-first"] [data-section="stats"] {
+   background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+}
+
+:root[data-theme="mobile-first"] [data-section="stats"] h2,
+:root[data-theme="mobile-first"] [data-section="stats"] p {
+   color: #ffffff !important;
+   -webkit-text-fill-color: #ffffff !important;
+}
+
+:root[data-theme="mobile-first"] [data-section="stats"] .ds-card {
+   background: rgba(255, 255, 255, 0.95) !important;
 }
 
 /* Mobile-first: Larger touch targets */
@@ -1688,6 +1744,8 @@
    padding: 1rem 2rem !important;
    border-radius: 9999px !important;
    font-size: 1rem !important;
+   background: #6366f1 !important;
+   color: #ffffff !important;
 }
 
 /* ============================================
@@ -1907,4 +1965,443 @@
    background: rgba(255, 255, 255, 0.05) !important;
    backdrop-filter: blur(16px) !important;
    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
+   🌈 AURORA THEME - Dreamy Gradient Mesh 2025
+   Soft pastel gradients, floating blobs, ethereal
+   ============================================ */
+:root[data-theme="aurora"] {
+   --surface: #0f0f23;
+   --surface-elevated: #161634;
+   --surface-subtle: #1e1e42;
+   --text-primary: #ffffff;
+   --text-secondary: rgba(255, 255, 255, 0.7);
+   --text-tertiary: rgba(255, 255, 255, 0.5);
+   --border: rgba(255, 255, 255, 0.1);
+   --primary-500: #a855f7;
+   --primary-600: #9333ea;
+   --card-radius: 2rem;
+   --button-radius: 9999px;
+}
+
+:root[data-theme="aurora"] body {
+   background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0f0f23 100%) !important;
+}
+
+/* Aurora: Mesh gradient overlay on hero */
+:root[data-theme="aurora"] [data-section="hero"] {
+   background:
+      radial-gradient(ellipse at 20% 30%, rgba(168, 85, 247, 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.3) 0%, transparent 40%),
+      radial-gradient(ellipse at 40% 80%, rgba(59, 130, 246, 0.35) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 70%, rgba(34, 197, 94, 0.25) 0%, transparent 45%),
+      linear-gradient(180deg, #0f0f23 0%, #1a1a3e 100%) !important;
+   min-height: 90vh;
+}
+
+:root[data-theme="aurora"] [data-section="hero"]::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+   opacity: 0.03;
+   pointer-events: none;
+}
+
+/* Aurora: Glowing glass cards */
+:root[data-theme="aurora"] .ds-card {
+   background: rgba(255, 255, 255, 0.05) !important;
+   backdrop-filter: blur(20px) saturate(180%) !important;
+   border: 1px solid rgba(255, 255, 255, 0.1) !important;
+   box-shadow:
+      0 8px 32px rgba(168, 85, 247, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+   border-radius: 1.5rem !important;
+}
+
+:root[data-theme="aurora"] .ds-card:hover {
+   background: rgba(255, 255, 255, 0.08) !important;
+   box-shadow:
+      0 16px 48px rgba(168, 85, 247, 0.25),
+      0 0 60px rgba(236, 72, 153, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+   transform: translateY(-4px);
+}
+
+/* Aurora: Gradient text ONLY on hero h1 - other headings are solid white */
+:root[data-theme="aurora"] [data-section="hero"] h1 {
+   background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #3b82f6 100%) !important;
+   -webkit-background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+   background-clip: text !important;
+}
+
+:root[data-theme="aurora"] h2,
+:root[data-theme="aurora"] h3 {
+   color: #ffffff !important;
+   -webkit-text-fill-color: #ffffff !important;
+   background: none !important;
+}
+
+/* Aurora: Gradient buttons */
+:root[data-theme="aurora"] .ds-button {
+   background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%) !important;
+   border: none !important;
+   box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4) !important;
+}
+
+:root[data-theme="aurora"] .ds-button:hover {
+   box-shadow: 0 8px 40px rgba(168, 85, 247, 0.6) !important;
+   transform: translateY(-2px);
+}
+
+/* Aurora: Icon containers with glow */
+:root[data-theme="aurora"] .ds-icon-container {
+   background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3)) !important;
+   box-shadow: 0 0 30px rgba(168, 85, 247, 0.3) !important;
+}
+
+:root[data-theme="aurora"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* ============================================
+   🔲 BRUTALIST THEME - Raw, Bold, 2025 Anti-Design
+   Stark contrast, rough edges, unconventional
+   ============================================ */
+:root[data-theme="brutalist"] {
+   --surface: #ffffff;
+   --surface-elevated: #ffffff;
+   --surface-subtle: #f0f0f0;
+   --text-primary: #000000;
+   --text-secondary: #333333;
+   --border: #000000;
+   --primary-500: #ff0000;
+   --primary-600: #cc0000;
+   --card-radius: 0;
+   --button-radius: 0;
+   --heading-font: 'Courier New', monospace;
+}
+
+/* Brutalist: High contrast hero */
+:root[data-theme="brutalist"] [data-section="hero"] {
+   background: #ffffff !important;
+   border-bottom: 8px solid #000000 !important;
+}
+
+:root[data-theme="brutalist"] [data-section="hero"] h1 {
+   font-size: clamp(3rem, 10vw, 8rem) !important;
+   font-weight: 900 !important;
+   text-transform: uppercase !important;
+   letter-spacing: -0.05em !important;
+   line-height: 0.9 !important;
+}
+
+/* Brutalist: Raw cards with thick borders */
+:root[data-theme="brutalist"] .ds-card {
+   background: #ffffff !important;
+   border: 4px solid #000000 !important;
+   border-radius: 0 !important;
+   box-shadow: 8px 8px 0 #000000 !important;
+   padding: 2rem !important;
+}
+
+:root[data-theme="brutalist"] .ds-card:hover {
+   box-shadow: 12px 12px 0 #ff0000 !important;
+   border-color: #ff0000 !important;
+}
+
+/* Brutalist: ENSURE ALL TEXT IS BLACK */
+:root[data-theme="brutalist"] .ds-card *,
+:root[data-theme="brutalist"] .ds-card h1,
+:root[data-theme="brutalist"] .ds-card h2,
+:root[data-theme="brutalist"] .ds-card h3,
+:root[data-theme="brutalist"] .ds-card p,
+:root[data-theme="brutalist"] .ds-card span,
+:root[data-theme="brutalist"] .ds-card div {
+   color: #000000 !important;
+   -webkit-text-fill-color: #000000 !important;
+}
+
+/* Brutalist: Stats section needs different treatment */
+:root[data-theme="brutalist"] [data-section="stats"] {
+   background: #000000 !important;
+}
+
+:root[data-theme="brutalist"] [data-section="stats"] h2 {
+   color: #ffffff !important;
+   -webkit-text-fill-color: #ffffff !important;
+}
+
+:root[data-theme="brutalist"] [data-section="stats"] p {
+   color: #ffffff !important;
+}
+
+/* Brutalist: Raw typography */
+:root[data-theme="brutalist"] h1,
+:root[data-theme="brutalist"] h2,
+:root[data-theme="brutalist"] h3 {
+   font-family: 'Courier New', monospace !important;
+   font-weight: 900 !important;
+   text-transform: uppercase !important;
+   letter-spacing: -0.02em !important;
+}
+
+/* Brutalist: Chunky buttons */
+:root[data-theme="brutalist"] .ds-button {
+   background: #000000 !important;
+   color: #ffffff !important;
+   border: 4px solid #000000 !important;
+   border-radius: 0 !important;
+   font-weight: 900 !important;
+   text-transform: uppercase !important;
+   letter-spacing: 0.1em !important;
+   padding: 1rem 2rem !important;
+}
+
+:root[data-theme="brutalist"] .ds-button:hover {
+   background: #ff0000 !important;
+   border-color: #ff0000 !important;
+   box-shadow: 4px 4px 0 #000000 !important;
+}
+
+/* Brutalist: Square icon containers */
+:root[data-theme="brutalist"] .ds-icon-container {
+   background: #000000 !important;
+   color: #ffffff !important;
+   border-radius: 0 !important;
+}
+
+/* Brutalist: Alternating section backgrounds */
+:root[data-theme="brutalist"] [data-section="features"] {
+   background: #ffff00 !important;
+   border-top: 4px solid #000000 !important;
+   border-bottom: 4px solid #000000 !important;
+}
+
+:root[data-theme="brutalist"] [data-section="features"] .ds-card {
+   background: #ffffff !important;
+}
+
+:root[data-theme="brutalist"] .ds-grid-responsive {
+   grid-template-columns: repeat(2, 1fr) !important;
+   gap: 2rem !important;
+}
+
+/* ============================================
+   💎 GLASS LUXE THEME - Premium Glassmorphism 2025
+   Refined elegance, subtle depth, premium feel
+   FIXED: Better contrast and readability
+   ============================================ */
+:root[data-theme="glass-luxe"] {
+   --surface: #1a1a2e;
+   --surface-elevated: rgba(255, 255, 255, 0.08);
+   --text-primary: #ffffff;
+   --text-secondary: rgba(255, 255, 255, 0.75);
+   --border: rgba(255, 255, 255, 0.15);
+   --primary-500: #818cf8;
+   --primary-600: #6366f1;
+   --card-radius: 1.5rem;
+   --button-radius: 0.75rem;
+   --heading-font: 'Inter', sans-serif;
+}
+
+:root[data-theme="glass-luxe"] body {
+   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+   min-height: 100vh;
+}
+
+/* Glass Luxe: Hero with subtle purple glow */
+:root[data-theme="glass-luxe"] [data-section="hero"] {
+   background:
+      radial-gradient(ellipse at 30% 20%, rgba(99, 102, 241, 0.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+      linear-gradient(180deg, #1a1a2e 0%, #16213e 100%) !important;
+}
+
+/* Glass Luxe: Premium glass cards - DARKER for contrast */
+:root[data-theme="glass-luxe"] .ds-card {
+   background: rgba(255, 255, 255, 0.08) !important;
+   backdrop-filter: blur(20px) saturate(180%) !important;
+   -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+   border: 1px solid rgba(255, 255, 255, 0.12) !important;
+   border-radius: 1.5rem !important;
+   box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+:root[data-theme="glass-luxe"] .ds-card:hover {
+   background: rgba(255, 255, 255, 0.12) !important;
+   border-color: rgba(129, 140, 248, 0.4) !important;
+   transform: translateY(-4px) !important;
+   box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.4),
+      0 0 40px rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Glass Luxe: Elegant white typography */
+:root[data-theme="glass-luxe"] h1,
+:root[data-theme="glass-luxe"] h2,
+:root[data-theme="glass-luxe"] h3 {
+   color: #ffffff !important;
+   font-weight: 300 !important;
+   letter-spacing: -0.02em !important;
+   -webkit-text-fill-color: #ffffff !important;
+}
+
+:root[data-theme="glass-luxe"] p,
+:root[data-theme="glass-luxe"] span {
+   color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Glass Luxe: Glowing indigo buttons */
+:root[data-theme="glass-luxe"] .ds-button {
+   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+   border: none !important;
+   color: #ffffff !important;
+   font-weight: 500 !important;
+   box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4) !important;
+}
+
+:root[data-theme="glass-luxe"] .ds-button:hover {
+   box-shadow: 0 8px 40px rgba(99, 102, 241, 0.6) !important;
+   transform: translateY(-2px);
+}
+
+/* Glass Luxe: Glowing icon containers */
+:root[data-theme="glass-luxe"] .ds-icon-container {
+   background: rgba(99, 102, 241, 0.2) !important;
+   border: 1px solid rgba(99, 102, 241, 0.3) !important;
+   color: #818cf8 !important;
+}
+
+:root[data-theme="glass-luxe"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Glass Luxe: Stats section with dark background for contrast */
+:root[data-theme="glass-luxe"] [data-section="stats"] {
+   background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%) !important;
+}
+
+:root[data-theme="glass-luxe"] [data-section="features"] {
+   background: rgba(15, 15, 26, 0.5) !important;
+}
+
+/* ============================================
+   🖤 NOIR THEME - Elegant Dark Mode 2025
+   Deep blacks, gold accents, sophisticated
+   ============================================ */
+:root[data-theme="noir"] {
+   --surface: #0a0a0a;
+   --surface-elevated: #141414;
+   --surface-subtle: #1f1f1f;
+   --text-primary: #ffffff;
+   --text-secondary: rgba(255, 255, 255, 0.6);
+   --text-tertiary: rgba(255, 255, 255, 0.4);
+   --border: rgba(255, 255, 255, 0.08);
+   --primary-500: #d4af37;
+   --primary-600: #b8962e;
+   --card-radius: 0.5rem;
+   --button-radius: 0.25rem;
+   --heading-font: 'Playfair Display', serif;
+}
+
+:root[data-theme="noir"] body {
+   background: #0a0a0a !important;
+}
+
+/* Noir: Subtle gradient hero */
+:root[data-theme="noir"] [data-section="hero"] {
+   background:
+      radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+      #0a0a0a !important;
+   border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+}
+
+:root[data-theme="noir"] [data-section="hero"] h1 {
+   font-family: 'Playfair Display', serif !important;
+   font-weight: 400 !important;
+   letter-spacing: 0.02em !important;
+}
+
+/* Noir: Minimal elegant cards */
+:root[data-theme="noir"] .ds-card {
+   background: #141414 !important;
+   border: 1px solid rgba(255, 255, 255, 0.06) !important;
+   border-radius: 0.5rem !important;
+   box-shadow: none !important;
+}
+
+:root[data-theme="noir"] .ds-card:hover {
+   border-color: rgba(212, 175, 55, 0.3) !important;
+   box-shadow: 0 0 40px rgba(212, 175, 55, 0.05) !important;
+}
+
+/* Noir: Gold accented headings */
+:root[data-theme="noir"] h1,
+:root[data-theme="noir"] h2 {
+   font-family: 'Playfair Display', serif !important;
+   font-weight: 400 !important;
+   color: #ffffff !important;
+   -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Noir: Testimonial quote marks styling - prevent overlap */
+:root[data-theme="noir"] .ds-card .text-7xl,
+:root[data-theme="noir"] .ds-card [class*="text-primary-200"] {
+   opacity: 0.15 !important;
+   color: #d4af37 !important;
+}
+
+/* Noir: Gold outlined buttons */
+:root[data-theme="noir"] .ds-button {
+   background: transparent !important;
+   border: 1px solid #d4af37 !important;
+   color: #d4af37 !important;
+   font-weight: 400 !important;
+   letter-spacing: 0.1em !important;
+   text-transform: uppercase !important;
+   font-size: 0.875rem !important;
+}
+
+:root[data-theme="noir"] .ds-button:hover {
+   background: #d4af37 !important;
+   color: #0a0a0a !important;
+}
+
+/* Noir: Minimal icon containers */
+:root[data-theme="noir"] .ds-icon-container {
+   background: transparent !important;
+   border: 1px solid rgba(212, 175, 55, 0.3) !important;
+   color: #d4af37 !important;
+}
+
+/* Noir: CTA with gold gradient */
+:root[data-theme="noir"] [data-section="cta"] {
+   background: linear-gradient(135deg, #141414 0%, #1f1f1f 100%) !important;
+   border-top: 1px solid rgba(212, 175, 55, 0.2) !important;
+   border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+}
+
+:root[data-theme="noir"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr) !important;
+}
+
+:root[data-theme="noir"] .ds-layout-split {
+   gap: 6rem !important;
+}
+
+/* Noir: Feature section subtle gold accent */
+:root[data-theme="noir"] [data-section="features"] {
+   background: #0f0f0f !important;
+}
+
+:root[data-theme="noir"] [data-section="stats"] {
+   background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%) !important;
 }
