@@ -106,14 +106,16 @@ export function FAQSection() {
   };
 
   const config = ANIMATION_CONFIG.blockAnimations.faq;
-  
+
   return (
     <AnimatedSection
       type={config.type}
       enabled={config.enabled}
-      className="bg-surface"
+      className="relative overflow-hidden"
     >
-      <div className="py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-500/10 dark:bg-primary-600/10 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="relative py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
         <h2 className="mb-10 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
           Frequently asked questions
         </h2>
@@ -122,10 +124,12 @@ export function FAQSection() {
             {leftColumn.map((faq, index) => (
               <div key={index} className="mb-12">
                 <h3 className="flex items-center mb-4 text-xl font-bold text-text-primary">
-                  <HiQuestionMarkCircle className="flex-shrink-0 mr-3 w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <div className="flex-shrink-0 mr-4 w-8 h-8 rounded-lg bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center">
+                    <HiQuestionMarkCircle className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                  </div>
                   {faq.question}
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-3 pl-12">
                   {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
                 </div>
               </div>
@@ -135,10 +139,12 @@ export function FAQSection() {
             {rightColumn.map((faq, index) => (
               <div key={index} className="mb-12">
                 <h3 className="flex items-center mb-4 text-xl font-bold text-text-primary">
-                  <HiQuestionMarkCircle className="flex-shrink-0 mr-3 w-6 h-6 text-primary-600 dark:text-primary-400" />
+                  <div className="flex-shrink-0 mr-4 w-8 h-8 rounded-lg bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center">
+                    <HiQuestionMarkCircle className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                  </div>
                   {faq.question}
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-3 pl-12">
                   {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
                 </div>
               </div>

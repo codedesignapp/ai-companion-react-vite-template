@@ -57,9 +57,11 @@ export function Features() {
       enabled={config.enabled}
       stagger={config.stagger}
       staggerSelector=".grid > div"
-      className="bg-surface-elevated"
+      className="relative overflow-hidden"
     >
-      <div className="py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
+      <div className="absolute inset-0 bg-gradient-to-b from-surface-elevated to-surface pointer-events-none" />
+
+      <div className="relative py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
         <div className="max-w-screen-md mb-12 lg:mb-20">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
             Designed for business teams like yours
@@ -75,15 +77,17 @@ export function Features() {
             return (
               <div
                 key={index}
-                className="p-8 bg-surface border border-border rounded-2xl hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-300 hover:shadow-lg group"
+                className="relative p-8 bg-surface/50 backdrop-blur-sm border border-border rounded-2xl hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group overflow-hidden"
               >
-                <div className="flex items-center justify-center w-14 h-14 mb-6 rounded-xl bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative flex items-center justify-center w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-primary-100 to-primary-50 dark:from-primary-900/50 dark:to-primary-800/30 text-primary-600 dark:text-primary-400 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-sm">
                   <Icon className="w-7 h-7" />
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-text-primary">
+                <h3 className="relative mb-3 text-xl font-bold text-text-primary group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-text-secondary leading-relaxed">
+                <p className="relative text-text-secondary leading-relaxed">
                   {feature.description}
                 </p>
               </div>

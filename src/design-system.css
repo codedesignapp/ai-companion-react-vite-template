@@ -1,199 +1,728 @@
 /**
  * ============================================
- * DESIGN SYSTEM - CENTRALIZED TOKENS
+ * MULTI-DIMENSIONAL DESIGN SYSTEM
  * ============================================
  * 
- * This file contains all design tokens: colors, typography, spacing, borders, etc.
- * Change values here to update the entire application's design system.
- * 
- * All tokens automatically adapt to light/dark mode.
+ * A comprehensive theming engine with 7 personality dimensions:
+ * 1. Typography Personality - corporate → editorial → expressive
+ * 2. Spatial Rhythm - compact → balanced → expansive → dramatic
+ * 3. Visual Density - minimal → standard → rich → maximal
+ * 4. Surface Treatment - flat → layered → glassmorphic → textured
+ * 5. Border Character - sharp → soft → rounded → pill
+ * 6. Animation Intensity - none → subtle → dynamic → cinematic
+ * 7. Decorative Elements - none → minimal → moderate → elaborate
+ *
+ * Change the personality dimensions to generate completely different visual identities.
  */
 
+/* ============================================
+   THEME PRESETS - Quick personality switches
+   ============================================
+   
+   To switch themes, change the data-theme attribute on <html>:
+   <html data-theme="corporate">
+   <html data-theme="creative">
+   <html data-theme="tech">
+   <html data-theme="luxury">
+   <html data-theme="bold">
+*/
+
 @theme {
-  /* ============================================
+   /* ============================================
      COLOR SYSTEM - SEMANTIC TOKENS
      ============================================ */
-  
-  /* Primary Brand Colors - Deep Purple/Indigo */
-  --color-primary-50: #f5f3ff;
-  --color-primary-100: #ede9fe;
-  --color-primary-200: #ddd6fe;
-  --color-primary-300: #c4b5fd;
-  --color-primary-400: #a78bfa;
-  --color-primary-500: #8b5cf6;
-  --color-primary-600: #7c3aed;
-  --color-primary-700: #6d28d9;
-  --color-primary-800: #5b21b6;
-  --color-primary-900: #4c1d95;
-  --color-primary-950: #2e1065;
 
-  /* Secondary Brand Colors - Teal/Cyan */
-  --color-secondary-50: #f0fdfa;
-  --color-secondary-100: #ccfbf1;
-  --color-secondary-200: #99f6e4;
-  --color-secondary-300: #5eead4;
-  --color-secondary-400: #2dd4bf;
-  --color-secondary-500: #14b8a6;
-  --color-secondary-600: #0d9488;
-  --color-secondary-700: #0f766e;
-  --color-secondary-800: #115e59;
-  --color-secondary-900: #134e4a;
-  --color-secondary-950: #042f2e;
+   /* Primary Brand Colors - Electric Violet */
+   --color-primary-50: #f5f3ff;
+   --color-primary-100: #ede9fe;
+   --color-primary-200: #ddd6fe;
+   --color-primary-300: #c4b5fd;
+   --color-primary-400: #a78bfa;
+   --color-primary-500: #8b5cf6;
+   --color-primary-600: #7c3aed;
+   --color-primary-700: #6d28d9;
+   --color-primary-800: #5b21b6;
+   --color-primary-900: #4c1d95;
+   --color-primary-950: #2e1065;
 
-  /* Semantic Surface Colors - These adapt to light/dark via CSS variables */
-  --color-surface: var(--surface);
-  --color-surface-elevated: var(--surface-elevated);
-  --color-surface-subtle: var(--surface-subtle);
-  
-  /* Semantic Text Colors */
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-tertiary: var(--text-tertiary);
-  
-  /* Semantic Border Colors */
-  --color-border: var(--border);
-  --color-border-subtle: var(--border-subtle);
+   /* Secondary Brand Colors - Neon Cyan/Teal */
+   --color-secondary-50: #ecfeff;
+   --color-secondary-100: #cffafe;
+   --color-secondary-200: #a5f3fc;
+   --color-secondary-300: #67e8f9;
+   --color-secondary-400: #22d3ee;
+   --color-secondary-500: #06b6d4;
+   --color-secondary-600: #0891b2;
+   --color-secondary-700: #0e7490;
+   --color-secondary-800: #155e75;
+   --color-secondary-900: #164e63;
+   --color-secondary-950: #083344;
 
-  /* Semantic Interactive Colors */
-  --color-interactive: var(--color-primary-600);
-  --color-interactive-hover: var(--color-primary-700);
-  --color-interactive-active: var(--color-primary-800);
-  --color-interactive-focus: var(--color-primary-500);
+   /* Semantic Surface Colors */
+   --color-surface: var(--surface);
+   --color-surface-elevated: var(--surface-elevated);
+   --color-surface-subtle: var(--surface-subtle);
 
-  /* ============================================
-     TYPOGRAPHY SYSTEM
+   /* Semantic Text Colors */
+   --color-text-primary: var(--text-primary);
+   --color-text-secondary: var(--text-secondary);
+   --color-text-tertiary: var(--text-tertiary);
+
+   /* Semantic Border Colors */
+   --color-border: var(--border);
+   --color-border-subtle: var(--border-subtle);
+
+   /* Semantic Interactive Colors */
+   --color-interactive: var(--color-primary-600);
+   --color-interactive-hover: var(--color-primary-500);
+   --color-interactive-active: var(--color-primary-700);
+   --color-interactive-focus: var(--color-primary-500);
+
+   /* ============================================
+     FONT FAMILIES
      ============================================ */
-  
-  /* Font Families */
-  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-  /* Font Sizes */
-  --font-size-xs: 0.75rem;      /* 12px */
-  --font-size-sm: 0.875rem;     /* 14px */
-  --font-size-base: 1rem;       /* 16px */
-  --font-size-lg: 1.125rem;     /* 18px */
-  --font-size-xl: 1.25rem;      /* 20px */
-  --font-size-2xl: 1.5rem;      /* 24px */
-  --font-size-3xl: 1.875rem;     /* 30px */
-  --font-size-4xl: 2.25rem;     /* 36px */
-  --font-size-5xl: 3rem;        /* 48px */
-  --font-size-6xl: 3.75rem;     /* 60px */
+   --font-family-sans: "Inter", "Outfit", ui-sans-serif, system-ui, sans-serif;
+   --font-family-serif: "Playfair Display", ui-serif, serif;
+   --font-family-mono: "Fira Code", ui-monospace, monospace;
 
-  /* Font Weights */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-
-  /* Line Heights */
-  --line-height-tight: 1.25;
-  --line-height-snug: 1.375;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.625;
-  --line-height-loose: 2;
-
-  /* Letter Spacing */
-  --letter-spacing-tighter: -0.05em;
-  --letter-spacing-tight: -0.025em;
-  --letter-spacing-normal: 0em;
-  --letter-spacing-wide: 0.025em;
-  --letter-spacing-wider: 0.05em;
-  --letter-spacing-widest: 0.1em;
-
-  /* ============================================
-     SPACING SYSTEM
+   /* ============================================
+     BASE SPACING SCALE
      ============================================ */
-  
-  /* Base spacing unit: 0.25rem (4px) */
-  --spacing-0: 0;
-  --spacing-1: 0.25rem;   /* 4px */
-  --spacing-2: 0.5rem;    /* 8px */
-  --spacing-3: 0.75rem;   /* 12px */
-  --spacing-4: 1rem;      /* 16px */
-  --spacing-5: 1.25rem;   /* 20px */
-  --spacing-6: 1.5rem;    /* 24px */
-  --spacing-8: 2rem;      /* 32px */
-  --spacing-10: 2.5rem;   /* 40px */
-  --spacing-12: 3rem;     /* 48px */
-  --spacing-16: 4rem;     /* 64px */
-  --spacing-20: 5rem;     /* 80px */
-  --spacing-24: 6rem;     /* 96px */
 
-  /* ============================================
-     BORDER SYSTEM
+   --spacing-0: 0;
+   --spacing-1: 0.25rem;
+   --spacing-2: 0.5rem;
+   --spacing-3: 0.75rem;
+   --spacing-4: 1rem;
+   --spacing-5: 1.25rem;
+   --spacing-6: 1.5rem;
+   --spacing-8: 2rem;
+   --spacing-10: 2.5rem;
+   --spacing-12: 3rem;
+   --spacing-16: 4rem;
+   --spacing-20: 5rem;
+   --spacing-24: 6rem;
+   --spacing-32: 8rem;
+   --spacing-40: 10rem;
+   --spacing-48: 12rem;
+
+   /* ============================================
+     BASE RADIUS SCALE
      ============================================ */
-  
-  /* Border Radius */
-  --radius-none: 0;
-  --radius-sm: 0.125rem;    /* 2px */
-  --radius-base: 0.25rem;   /* 4px */
-  --radius-md: 0.375rem;     /* 6px */
-  --radius-lg: 0.5rem;      /* 8px */
-  --radius-xl: 0.75rem;     /* 12px */
-  --radius-2xl: 1rem;       /* 16px */
-  --radius-3xl: 1.5rem;     /* 24px */
-  --radius-full: 9999px;
 
-  /* Border Width */
-  --border-width-0: 0;
-  --border-width-1: 1px;
-  --border-width-2: 2px;
-  --border-width-4: 4px;
-  --border-width-8: 8px;
+   --radius-none: 0;
+   --radius-sm: 0.375rem;
+   --radius-base: 0.5rem;
+   --radius-md: 0.75rem;
+   --radius-lg: 1rem;
+   --radius-xl: 1.5rem;
+   --radius-2xl: 2rem;
+   --radius-3xl: 2.5rem;
+   --radius-full: 9999px;
 
-  /* ============================================
-     SHADOW SYSTEM
+   /* ============================================
+     BASE SHADOW SCALE
      ============================================ */
-  
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
-  --shadow-none: 0 0 #0000;
+
+   --shadow-none: 0 0 #0000;
+   --shadow-sm: 0 2px 4px rgb(0 0 0 / 0.02), 0 1px 2px rgb(0 0 0 / 0.03);
+   --shadow-base: 0 4px 6px -1px rgb(0 0 0 / 0.04), 0 2px 4px -2px rgb(0 0 0 / 0.03);
+   --shadow-md: 0 12px 16px -4px rgb(0 0 0 / 0.06), 0 4px 6px -2px rgb(0 0 0 / 0.03);
+   --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.07), 0 10px 10px -5px rgb(0 0 0 / 0.03);
+   --shadow-xl: 0 32px 40px -10px rgb(0 0 0 / 0.08), 0 16px 20px -8px rgb(0 0 0 / 0.04);
+   --shadow-2xl: 0 45px 60px -15px rgb(0 0 0 / 0.12);
+   --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+   /* Glow effects */
+   --shadow-glow-primary: 0 0 20px var(--color-primary-500);
+   --shadow-glow-secondary: 0 0 20px var(--color-secondary-500);
+
+   /* ============================================
+     SEMANTIC BLOCK TOKENS (Computed)
+     These are controlled by personality dimensions
+     ============================================ */
+
+   /* Section Spacing */
+   --section-padding-y: var(--ds-section-padding);
+   --section-padding-x: var(--spacing-4);
+   --section-gap: var(--ds-section-gap);
+
+   /* Card Tokens */
+   --card-padding: var(--ds-card-padding);
+   --card-radius: var(--ds-card-radius);
+   --card-shadow: var(--ds-card-shadow);
+   --card-shadow-hover: var(--ds-card-shadow-hover);
+   --card-border-width: var(--ds-card-border-width);
+   --card-backdrop-blur: var(--ds-card-backdrop-blur);
+   --card-bg-opacity: var(--ds-card-bg-opacity);
+
+   /* Heading Tokens */
+   --heading-1-size: var(--ds-heading-1-size);
+   --heading-1-size-md: var(--ds-heading-1-size-md);
+   --heading-1-size-lg: var(--ds-heading-1-size-lg);
+   --heading-2-size: var(--ds-heading-2-size);
+   --heading-2-size-lg: var(--ds-heading-2-size-lg);
+   --heading-3-size: var(--ds-heading-3-size);
+   --heading-weight: var(--ds-heading-weight);
+   --heading-tracking: var(--ds-heading-tracking);
+   --heading-leading: var(--ds-heading-leading);
+   --heading-gap: var(--ds-heading-gap);
+   --heading-font: var(--ds-heading-font);
+
+   /* Body Text Tokens */
+   --body-size: var(--ds-body-size);
+   --body-size-lg: var(--ds-body-size-lg);
+   --body-leading: var(--ds-body-leading);
+   --body-font: var(--ds-body-font);
+
+   /* Button Tokens */
+   --button-padding-x: var(--ds-button-padding-x);
+   --button-padding-y: var(--ds-button-padding-y);
+   --button-radius: var(--ds-button-radius);
+   --button-font-weight: var(--ds-button-font-weight);
+   --button-hover-scale: var(--ds-button-hover-scale);
+   --button-shadow: var(--ds-button-shadow);
+
+   /* Motion Tokens */
+   --transition-duration: var(--ds-transition-duration);
+   --transition-timing: var(--ds-transition-timing);
+   --hover-lift: var(--ds-hover-lift);
+   --hover-scale: var(--ds-hover-scale);
+
+   /* Decorative Tokens */
+   --deco-gradient-opacity: var(--ds-deco-gradient-opacity);
+   --deco-glow-opacity: var(--ds-deco-glow-opacity);
+   --deco-blob-opacity: var(--ds-deco-blob-opacity);
+   --deco-blob-blur: var(--ds-deco-blob-blur);
+   --deco-blob-size: var(--ds-deco-blob-size);
+
+   /* Icon Container Tokens */
+   --icon-container-size: var(--ds-icon-container-size);
+   --icon-container-radius: var(--ds-icon-container-radius);
+   --icon-size: var(--ds-icon-size);
+
+   /* Badge Tokens */
+   --badge-padding-x: var(--ds-badge-padding-x);
+   --badge-padding-y: var(--ds-badge-padding-y);
+   --badge-radius: var(--ds-badge-radius);
+
+   /* Grid Tokens */
+   --grid-gap: var(--ds-grid-gap);
 }
 
 /* ============================================
-   SEMANTIC COLOR DEFINITIONS
+   SEMANTIC COLOR DEFINITIONS (Light/Dark)
    ============================================ */
-/* These CSS custom properties change based on light/dark mode */
 
 :root {
-  /* Light Mode - Surface Colors */
-  --surface: #ffffff;
-  --surface-elevated: #f9fafb;
-  --surface-subtle: #f3f4f6;
-  
-  /* Light Mode - Text Colors */
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --text-tertiary: #9ca3af;
-  
-  /* Light Mode - Border Colors */
-  --border: #e5e7eb;
-  --border-subtle: #f3f4f6;
+   /* Light Mode - Surface Colors */
+   --surface: #ffffff;
+   --surface-elevated: #f9fafb;
+   --surface-subtle: #f3f4f6;
+
+   /* Light Mode - Text Colors */
+   --text-primary: #111827;
+   --text-secondary: #6b7280;
+   --text-tertiary: #9ca3af;
+
+   /* Light Mode - Border Colors */
+   --border: #e5e7eb;
+   --border-subtle: #f3f4f6;
 }
 
 :root.dark {
-  /* Dark Mode - Surface Colors */
-  /* Deep charcoal/slate theme - sophisticated dark palette */
-  --surface: #0f172a;              /* Slate 900 - Deep dark blue-gray */
-  --surface-elevated: #1e293b;     /* Slate 800 - Elevated surfaces */
-  --surface-subtle: #334155;        /* Slate 700 - Subtle backgrounds */
-  
-  /* Dark Mode - Text Colors */
-  --text-primary: #f1f5f9;         /* Slate 100 - High contrast text */
-  --text-secondary: #cbd5e1;       /* Slate 300 - Secondary text */
-  --text-tertiary: #94a3b8;         /* Slate 400 - Tertiary text */
-  
-  /* Dark Mode - Border Colors */
-  --border: #475569;                /* Slate 600 - Borders */
-  --border-subtle: #64748b;         /* Slate 500 - Subtle borders */
+   /* Dark Mode - Surface Colors */
+   --surface: #0f172a;
+   --surface-elevated: #1e293b;
+   --surface-subtle: #334155;
+
+   /* Dark Mode - Text Colors */
+   --text-primary: #f1f5f9;
+   --text-secondary: #cbd5e1;
+   --text-tertiary: #94a3b8;
+
+   /* Dark Mode - Border Colors */
+   --border: #475569;
+   --border-subtle: #64748b;
 }
 
+/* ============================================
+   DEFAULT THEME (CORPORATE)
+   ============================================ */
+
+:root {
+   /* Typography Personality: Corporate */
+   --ds-heading-font: var(--font-family-sans);
+   --ds-body-font: var(--font-family-sans);
+   --ds-heading-1-size: 3rem;
+   --ds-heading-1-size-md: 3.75rem;
+   --ds-heading-1-size-lg: 4.5rem;
+   --ds-heading-2-size: 2.25rem;
+   --ds-heading-2-size-lg: 3rem;
+   --ds-heading-3-size: 1.25rem;
+   --ds-heading-weight: 800;
+   --ds-heading-tracking: -0.02em;
+   --ds-heading-leading: 1.2;
+   --ds-heading-gap: 2rem;
+   --ds-body-size: 1.125rem;
+   --ds-body-size-lg: 1.25rem;
+   --ds-body-leading: 1.7;
+
+   /* Spatial Rhythm: Balanced */
+   --ds-section-padding: 5rem;
+   --ds-section-gap: 3rem;
+   --ds-card-padding: 2rem;
+   --ds-grid-gap: 2rem;
+   --ds-button-padding-x: 2rem;
+   --ds-button-padding-y: 1rem;
+   --ds-badge-padding-x: 1rem;
+   --ds-badge-padding-y: 0.5rem;
+   --ds-icon-container-size: 3.5rem;
+   --ds-icon-size: 1.75rem;
+
+   /* Surface Treatment: Layered */
+   --ds-card-shadow: var(--shadow-lg);
+   --ds-card-shadow-hover: var(--shadow-xl);
+   --ds-card-border-width: 1px;
+   --ds-card-backdrop-blur: 0;
+   --ds-card-bg-opacity: 0.5;
+   --ds-button-shadow: var(--shadow-lg);
+
+   /* Border Character: Soft */
+   --ds-card-radius: 1rem;
+   --ds-button-radius: 0.75rem;
+   --ds-badge-radius: 9999px;
+   --ds-icon-container-radius: 0.75rem;
+
+   /* Animation Intensity: Subtle */
+   --ds-transition-duration: 200ms;
+   --ds-transition-timing: ease-out;
+   --ds-hover-lift: -0.25rem;
+   --ds-hover-scale: 1.02;
+   --ds-button-hover-scale: 1.05;
+   --ds-button-font-weight: 600;
+
+   /* Decorative Elements: Minimal */
+   --ds-deco-gradient-opacity: 0.1;
+   --ds-deco-glow-opacity: 0.2;
+   --ds-deco-blob-opacity: 0.2;
+   --ds-deco-blob-blur: 100px;
+   --ds-deco-blob-size: 500px;
+}
+
+/* ============================================
+   THEME: CREATIVE AGENCY
+   ============================================ */
+
+:root[data-theme="creative"] {
+   /* Typography Personality: Expressive */
+   --ds-heading-font: var(--font-family-sans);
+   --ds-body-font: var(--font-family-sans);
+   --ds-heading-1-size: 3.5rem;
+   --ds-heading-1-size-md: 5rem;
+   --ds-heading-1-size-lg: 6rem;
+   --ds-heading-2-size: 2.5rem;
+   --ds-heading-2-size-lg: 3.5rem;
+   --ds-heading-3-size: 1.5rem;
+   --ds-heading-weight: 900;
+   --ds-heading-tracking: -0.04em;
+   --ds-heading-leading: 1.1;
+   --ds-heading-gap: 2.5rem;
+   --ds-body-size: 1.125rem;
+   --ds-body-size-lg: 1.25rem;
+   --ds-body-leading: 1.8;
+
+   /* Spatial Rhythm: Dramatic */
+   --ds-section-padding: 8rem;
+   --ds-section-gap: 5rem;
+   --ds-card-padding: 2.5rem;
+   --ds-grid-gap: 2.5rem;
+   --ds-button-padding-x: 2.5rem;
+   --ds-button-padding-y: 1.25rem;
+   --ds-badge-padding-x: 1.25rem;
+   --ds-badge-padding-y: 0.625rem;
+   --ds-icon-container-size: 4rem;
+   --ds-icon-size: 2rem;
+
+   /* Surface Treatment: Flat */
+   --ds-card-shadow: var(--shadow-none);
+   --ds-card-shadow-hover: var(--shadow-lg);
+   --ds-card-border-width: 2px;
+   --ds-card-backdrop-blur: 0;
+   --ds-card-bg-opacity: 1;
+   --ds-button-shadow: var(--shadow-none);
+
+   /* Border Character: Rounded */
+   --ds-card-radius: 1.5rem;
+   --ds-button-radius: 1rem;
+   --ds-badge-radius: 9999px;
+   --ds-icon-container-radius: 1rem;
+
+   /* Animation Intensity: Dynamic */
+   --ds-transition-duration: 300ms;
+   --ds-transition-timing: cubic-bezier(0.34, 1.56, 0.64, 1);
+   --ds-hover-lift: -0.5rem;
+   --ds-hover-scale: 1.05;
+   --ds-button-hover-scale: 1.1;
+   --ds-button-font-weight: 700;
+
+   /* Decorative Elements: Elaborate */
+   --ds-deco-gradient-opacity: 0.3;
+   --ds-deco-glow-opacity: 0.5;
+   --ds-deco-blob-opacity: 0.4;
+   --ds-deco-blob-blur: 120px;
+   --ds-deco-blob-size: 600px;
+}
+
+/* ============================================
+   THEME: TECH STARTUP
+   ============================================ */
+
+:root[data-theme="tech"] {
+   /* Typography Personality: Technical */
+   --ds-heading-font: var(--font-family-sans);
+   --ds-body-font: var(--font-family-sans);
+   --ds-heading-1-size: 2.5rem;
+   --ds-heading-1-size-md: 3.5rem;
+   --ds-heading-1-size-lg: 4rem;
+   --ds-heading-2-size: 2rem;
+   --ds-heading-2-size-lg: 2.5rem;
+   --ds-heading-3-size: 1.25rem;
+   --ds-heading-weight: 700;
+   --ds-heading-tracking: -0.01em;
+   --ds-heading-leading: 1.25;
+   --ds-heading-gap: 1.5rem;
+   --ds-body-size: 1rem;
+   --ds-body-size-lg: 1.125rem;
+   --ds-body-leading: 1.6;
+
+   /* Spatial Rhythm: Balanced */
+   --ds-section-padding: 5rem;
+   --ds-section-gap: 3rem;
+   --ds-card-padding: 1.5rem;
+   --ds-grid-gap: 1.5rem;
+   --ds-button-padding-x: 1.5rem;
+   --ds-button-padding-y: 0.75rem;
+   --ds-badge-padding-x: 0.875rem;
+   --ds-badge-padding-y: 0.375rem;
+   --ds-icon-container-size: 3rem;
+   --ds-icon-size: 1.5rem;
+
+   /* Surface Treatment: Glassmorphic */
+   --ds-card-shadow: var(--shadow-md);
+   --ds-card-shadow-hover: var(--shadow-xl);
+   --ds-card-border-width: 1px;
+   --ds-card-backdrop-blur: 16px;
+   --ds-card-bg-opacity: 0.3;
+   --ds-button-shadow: var(--shadow-md);
+
+   /* Border Character: Soft */
+   --ds-card-radius: 0.75rem;
+   --ds-button-radius: 0.5rem;
+   --ds-badge-radius: 0.375rem;
+   --ds-icon-container-radius: 0.5rem;
+
+   /* Animation Intensity: Dynamic */
+   --ds-transition-duration: 250ms;
+   --ds-transition-timing: ease-in-out;
+   --ds-hover-lift: -0.25rem;
+   --ds-hover-scale: 1.03;
+   --ds-button-hover-scale: 1.05;
+   --ds-button-font-weight: 600;
+
+   /* Decorative Elements: Moderate */
+   --ds-deco-gradient-opacity: 0.2;
+   --ds-deco-glow-opacity: 0.4;
+   --ds-deco-blob-opacity: 0.25;
+   --ds-deco-blob-blur: 80px;
+   --ds-deco-blob-size: 400px;
+}
+
+/* ============================================
+   THEME: LUXURY BRAND
+   ============================================ */
+
+:root[data-theme="luxury"] {
+   /* Typography Personality: Editorial */
+   --ds-heading-font: var(--font-family-serif);
+   --ds-body-font: var(--font-family-sans);
+   --ds-heading-1-size: 3rem;
+   --ds-heading-1-size-md: 4rem;
+   --ds-heading-1-size-lg: 5rem;
+   --ds-heading-2-size: 2.25rem;
+   --ds-heading-2-size-lg: 3rem;
+   --ds-heading-3-size: 1.375rem;
+   --ds-heading-weight: 500;
+   --ds-heading-tracking: -0.01em;
+   --ds-heading-leading: 1.15;
+   --ds-heading-gap: 2rem;
+   --ds-body-size: 1.0625rem;
+   --ds-body-size-lg: 1.1875rem;
+   --ds-body-leading: 1.8;
+
+   /* Spatial Rhythm: Expansive */
+   --ds-section-padding: 7rem;
+   --ds-section-gap: 4rem;
+   --ds-card-padding: 2.5rem;
+   --ds-grid-gap: 2rem;
+   --ds-button-padding-x: 2.5rem;
+   --ds-button-padding-y: 1.125rem;
+   --ds-badge-padding-x: 1.25rem;
+   --ds-badge-padding-y: 0.5rem;
+   --ds-icon-container-size: 3.5rem;
+   --ds-icon-size: 1.5rem;
+
+   /* Surface Treatment: Textured (subtle) */
+   --ds-card-shadow: var(--shadow-sm);
+   --ds-card-shadow-hover: var(--shadow-md);
+   --ds-card-border-width: 1px;
+   --ds-card-backdrop-blur: 0;
+   --ds-card-bg-opacity: 0.7;
+   --ds-button-shadow: var(--shadow-none);
+
+   /* Border Character: Sharp */
+   --ds-card-radius: 0.25rem;
+   --ds-button-radius: 0.125rem;
+   --ds-badge-radius: 0.125rem;
+   --ds-icon-container-radius: 0.25rem;
+
+   /* Animation Intensity: Subtle */
+   --ds-transition-duration: 400ms;
+   --ds-transition-timing: ease;
+   --ds-hover-lift: -0.125rem;
+   --ds-hover-scale: 1.01;
+   --ds-button-hover-scale: 1.02;
+   --ds-button-font-weight: 500;
+
+   /* Decorative Elements: Minimal */
+   --ds-deco-gradient-opacity: 0.05;
+   --ds-deco-glow-opacity: 0.1;
+   --ds-deco-blob-opacity: 0.1;
+   --ds-deco-blob-blur: 150px;
+   --ds-deco-blob-size: 700px;
+}
+
+/* ============================================
+   THEME: BOLD & PLAYFUL
+   ============================================ */
+
+:root[data-theme="bold"] {
+   /* Typography Personality: Expressive + Heavy */
+   --ds-heading-font: var(--font-family-sans);
+   --ds-body-font: var(--font-family-sans);
+   --ds-heading-1-size: 3.5rem;
+   --ds-heading-1-size-md: 4.5rem;
+   --ds-heading-1-size-lg: 5.5rem;
+   --ds-heading-2-size: 2.5rem;
+   --ds-heading-2-size-lg: 3.25rem;
+   --ds-heading-3-size: 1.5rem;
+   --ds-heading-weight: 900;
+   --ds-heading-tracking: -0.03em;
+   --ds-heading-leading: 1.1;
+   --ds-heading-gap: 2rem;
+   --ds-body-size: 1.125rem;
+   --ds-body-size-lg: 1.25rem;
+   --ds-body-leading: 1.65;
+
+   /* Spatial Rhythm: Balanced with punch */
+   --ds-section-padding: 5rem;
+   --ds-section-gap: 3.5rem;
+   --ds-card-padding: 2rem;
+   --ds-grid-gap: 2rem;
+   --ds-button-padding-x: 2.5rem;
+   --ds-button-padding-y: 1.25rem;
+   --ds-badge-padding-x: 1.25rem;
+   --ds-badge-padding-y: 0.625rem;
+   --ds-icon-container-size: 4rem;
+   --ds-icon-size: 2rem;
+
+   /* Surface Treatment: Layered with depth */
+   --ds-card-shadow: var(--shadow-xl);
+   --ds-card-shadow-hover: var(--shadow-2xl);
+   --ds-card-border-width: 2px;
+   --ds-card-backdrop-blur: 8px;
+   --ds-card-bg-opacity: 0.6;
+   --ds-button-shadow: var(--shadow-lg);
+
+   /* Border Character: Pill/Organic */
+   --ds-card-radius: 2rem;
+   --ds-button-radius: 9999px;
+   --ds-badge-radius: 9999px;
+   --ds-icon-container-radius: 1rem;
+
+   /* Animation Intensity: Cinematic */
+   --ds-transition-duration: 400ms;
+   --ds-transition-timing: cubic-bezier(0.22, 1, 0.36, 1);
+   --ds-hover-lift: -0.5rem;
+   --ds-hover-scale: 1.08;
+   --ds-button-hover-scale: 1.12;
+   --ds-button-font-weight: 800;
+
+   /* Decorative Elements: Elaborate */
+   --ds-deco-gradient-opacity: 0.4;
+   --ds-deco-glow-opacity: 0.6;
+   --ds-deco-blob-opacity: 0.5;
+   --ds-deco-blob-blur: 100px;
+   --ds-deco-blob-size: 550px;
+}
+
+/* ============================================
+   UTILITY CLASSES FOR BLOCKS
+   ============================================
+   These classes apply the semantic tokens directly.
+   Use these in your components for design-system-aware styling.
+*/
+
+/* Section Utilities */
+.ds-section {
+   padding-top: var(--section-padding-y);
+   padding-bottom: var(--section-padding-y);
+   padding-left: var(--section-padding-x);
+   padding-right: var(--section-padding-x);
+}
+
+.ds-section-gap {
+   gap: var(--section-gap);
+}
+
+/* Card Utilities */
+.ds-card {
+   padding: var(--card-padding);
+   border-radius: var(--card-radius);
+   box-shadow: var(--card-shadow);
+   border-width: var(--card-border-width);
+   backdrop-filter: blur(var(--card-backdrop-blur));
+   transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.ds-card:hover {
+   box-shadow: var(--card-shadow-hover);
+   transform: translateY(var(--hover-lift));
+}
+
+/* Typography Utilities */
+.ds-heading-1 {
+   font-family: var(--heading-font);
+   font-size: var(--heading-1-size);
+   font-weight: var(--heading-weight);
+   letter-spacing: var(--heading-tracking);
+   line-height: var(--heading-leading);
+}
+
+.ds-heading-2 {
+   font-family: var(--heading-font);
+   font-size: var(--heading-2-size);
+   font-weight: var(--heading-weight);
+   letter-spacing: var(--heading-tracking);
+   line-height: var(--heading-leading);
+}
+
+.ds-heading-3 {
+   font-family: var(--heading-font);
+   font-size: var(--heading-3-size);
+   font-weight: var(--heading-weight);
+   letter-spacing: var(--heading-tracking);
+   line-height: var(--heading-leading);
+}
+
+.ds-body {
+   font-family: var(--body-font);
+   font-size: var(--body-size);
+   line-height: var(--body-leading);
+}
+
+.ds-body-lg {
+   font-family: var(--body-font);
+   font-size: var(--body-size-lg);
+   line-height: var(--body-leading);
+}
+
+/* Button Utilities */
+.ds-button {
+   padding: var(--button-padding-y) var(--button-padding-x);
+   border-radius: var(--button-radius);
+   font-weight: var(--button-font-weight);
+   box-shadow: var(--button-shadow);
+   transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.ds-button:hover {
+   transform: scale(var(--button-hover-scale));
+}
+
+.ds-button:active {
+   transform: scale(0.95);
+}
+
+/* Badge Utilities */
+.ds-badge {
+   padding: var(--badge-padding-y) var(--badge-padding-x);
+   border-radius: var(--badge-radius);
+}
+
+/* Icon Container Utilities */
+.ds-icon-container {
+   width: var(--icon-container-size);
+   height: var(--icon-container-size);
+   border-radius: var(--icon-container-radius);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.ds-icon {
+   width: var(--icon-size);
+   height: var(--icon-size);
+}
+
+/* Grid Utilities */
+.ds-grid {
+   gap: var(--grid-gap);
+}
+
+/* Motion Utilities */
+.ds-transition {
+   transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.ds-hover-lift:hover {
+   transform: translateY(var(--hover-lift));
+}
+
+.ds-hover-scale:hover {
+   transform: scale(var(--hover-scale));
+}
+
+/* Decorative Utilities */
+.ds-gradient-overlay {
+   opacity: var(--deco-gradient-opacity);
+}
+
+.ds-glow {
+   opacity: var(--deco-glow-opacity);
+}
+
+.ds-blob {
+   width: var(--deco-blob-size);
+   height: var(--deco-blob-size);
+   filter: blur(var(--deco-blob-blur));
+   opacity: var(--deco-blob-opacity);
+}
+
+/* Responsive Heading Sizes (controlled by tokens) */
+@media (min-width: 768px) {
+   .ds-heading-1 {
+      font-size: var(--heading-1-size-md);
+   }
+}
+
+@media (min-width: 1024px) {
+   .ds-heading-1 {
+      font-size: var(--heading-1-size-lg);
+   }
+
+   .ds-heading-2 {
+      font-size: var(--heading-2-size-lg);
+   }
+}
