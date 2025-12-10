@@ -1,122 +1,10 @@
 {
-  "global.headernavigation.text": {
-    "text": "S",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/HeaderNavigation.tsx",
-      "line": 29,
-      "column": 61
-    }
-  },
-  "global.headernavigation.text_2": {
-    "text": "Brand name",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/HeaderNavigation.tsx",
-      "line": 34,
-      "column": 13
-    }
-  },
-  "global.headernavigation.text_3": {
-    "text": "Open main menu",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/HeaderNavigation.tsx",
-      "line": 48,
-      "column": 40
-    }
-  },
-  "global.headernavigation.Link": {
-    "text": "Home",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/HeaderNavigation.tsx",
-      "line": 93,
-      "column": 17
-    }
-  },
-  "global.headernavigation.Link_2": {
-    "text": "About",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/HeaderNavigation.tsx",
-      "line": 106,
-      "column": 17
-    }
-  },
-  "global.headernavigation.Link_3": {
-    "text": "Service",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/HeaderNavigation.tsx",
-      "line": 119,
-      "column": 17
-    }
-  },
-  "global.footersection.text": {
-    "text": "S",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
-      "line": 27,
-      "column": 59
-    }
-  },
-  "global.footersection.Link": {
-    "text": "Brand name",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
-      "line": 28,
-      "column": 16
-    }
-  },
   "global.footersection.paragraph": {
     "text": "Open-source library of over 400+ web components and interactive elements built for better web.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
       "line": 31,
       "column": 56
-    }
-  },
-  "global.footersection.Link_2": {
-    "text": "Home",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
-      "line": 36,
-      "column": 103
-    }
-  },
-  "global.footersection.Link_3": {
-    "text": "About",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
-      "line": 41,
-      "column": 108
-    }
-  },
-  "global.footersection.Link_4": {
-    "text": "Service",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
-      "line": 46,
-      "column": 110
-    }
-  },
-  "global.footersection.text_2": {
-    "text": "© 2024-2025",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
-      "line": 51,
-      "column": 69
-    }
-  },
-  "global.footersection.Link_5": {
-    "text": "Starter™",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
-      "line": 52,
-      "column": 77
-    }
-  },
-  "global.footersection.text_3": {
-    "text": ". All Rights Reserved.",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
-      "line": 52,
-      "column": 92
     }
   },
   "about.abouthero.text": {
@@ -2588,14 +2476,6 @@
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/index.html",
       "line": 8,
-      "column": 0
-    }
-  },
-  "meta.description": {
-    "text": "Build stunning websites with our modern, customizable template. Features 18+ themes, responsive design, and AI-powered content management.",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/index.html",
-      "line": 9,
       "column": 0
     }
   },

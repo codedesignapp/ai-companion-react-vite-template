@@ -334,6 +334,7 @@ function extractContent(): ContentMap {
   const allContent: ContentMap = {};
 
   // ✅ Extract from global layout components first (App.tsx imports)
+  // But skip navigation links and static elements
   const globalBlocks = ['HeaderNavigation', 'FooterSection'];
   globalBlocks.forEach((blockName) => {
     const blockFile = `${blockName}.tsx`;
@@ -345,7 +346,21 @@ function extractContent(): ContentMap {
         'global',  // Use 'global' as the page name
         blockName.toLowerCase()
       );
-      Object.assign(allContent, blockContent);
+
+      // Filter out nav links and static elements from global blocks
+      const skipPatterns = [
+        /\.Link/, // Skip all Link elements (nav links)
+        /\.text$/, // Skip single letter logo text like "S"
+        /\.text_3$/, // Skip "Open main menu", ". All Rights Reserved."
+        /\.text_2$/, // Skip copyright year
+      ];
+
+      Object.entries(blockContent).forEach(([key, value]) => {
+        const shouldSkip = skipPatterns.some(pattern => pattern.test(key));
+        if (!shouldSkip) {
+          allContent[key] = value;
+        }
+      });
     }
   });
 
