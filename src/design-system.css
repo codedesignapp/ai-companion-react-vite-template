@@ -1593,16 +1593,41 @@
    Not just variable tweaks - actual structural changes.
 */
 
-/* NEW UTILITY CLASSES */
+/* NEW UTILITY CLASSES - MOBILE-FIRST */
 .ds-grid-responsive {
    display: grid;
    gap: var(--grid-gap);
+   grid-template-columns: 1fr;
+   /* Mobile: single column */
+}
+
+/* Tablet and up: 2 columns */
+@media (min-width: 640px) {
+   .ds-grid-responsive {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+/* Desktop and up: 3 columns (default) */
+@media (min-width: 1024px) {
+   .ds-grid-responsive {
+      grid-template-columns: repeat(3, 1fr);
+   }
 }
 
 .ds-layout-split {
    display: flex;
+   flex-direction: column;
+   /* Mobile: stack */
    align-items: center;
    gap: var(--grid-gap);
+}
+
+@media (min-width: 768px) {
+   .ds-layout-split {
+      flex-direction: row;
+      /* Tablet+: side by side */
+   }
 }
 
 .ds-layout-split>* {
@@ -1618,24 +1643,12 @@
    --theme-grid-base: 3;
 }
 
-:root:not([data-theme]) .ds-grid-responsive,
-:root[data-theme="corporate"] .ds-grid-responsive {
-   grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 768px) {
+/* Corporate: Override to 3 columns on desktop */
+@media (min-width: 1024px) {
 
    :root:not([data-theme]) .ds-grid-responsive,
    :root[data-theme="corporate"] .ds-grid-responsive {
-      grid-template-columns: repeat(2, 1fr);
-   }
-}
-
-@media (max-width: 480px) {
-
-   :root:not([data-theme]) .ds-grid-responsive,
-   :root[data-theme="corporate"] .ds-grid-responsive {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
    }
 }
 
@@ -1777,8 +1790,7 @@
    background-size: cover;
    background-position: center;
    min-height: 80vh;
-   display: flex;
-   align-items: center;
+   /* Removed display:flex - wrapper handles layout */
 }
 
 :root[data-theme="magazine"] [data-section="hero"] * {
@@ -2434,8 +2446,7 @@
    background-size: cover !important;
    background-position: center !important;
    min-height: 100vh !important;
-   display: flex !important;
-   align-items: center !important;
+   /* Removed display:flex - wrapper handles layout */
 }
 
 :root[data-theme="photography"] [data-section="hero"] * {
@@ -2850,4 +2861,1200 @@
 :root[data-theme="organic"] .ds-icon-container {
    background: rgba(107, 142, 78, 0.15) !important;
    color: #6b8e4e !important;
+}
+
+/* ============================================
+   🪷 ZEN THEME - Ultra-Minimal White Space
+   Pure minimalism with generous whitespace
+   ============================================ */
+
+:root[data-theme="zen"] {
+   --surface: #ffffff;
+   --surface-elevated: #fafafa;
+   --surface-subtle: #f5f5f5;
+   --text-primary: #374151;
+   --text-secondary: #6b7280;
+   --text-tertiary: #9ca3af;
+   --border: #e5e7eb;
+   --border-subtle: #f3f4f6;
+   --heading-font: 'Playfair Display', Georgia, serif;
+   --body-font: 'Inter', -apple-system, sans-serif;
+   --card-radius: 0px;
+   --button-radius: 0px;
+   --badge-radius: 0px;
+   --section-gap: 6rem;
+   --heading-gap: 2.5rem;
+   --deco-gradient-opacity: 0;
+   --card-bg-opacity: 1;
+}
+
+:root[data-theme="zen"] body {
+   background: #ffffff !important;
+   color: #374151 !important;
+}
+
+:root[data-theme="zen"] [data-section="hero"] {
+   background: #ffffff !important;
+   min-height: 90vh !important;
+   /* Removed display:flex - wrapper handles layout */
+}
+
+:root[data-theme="zen"] [data-section="hero"] h1 {
+   font-size: 4.5rem !important;
+   font-weight: 300 !important;
+   letter-spacing: -0.03em !important;
+   color: #1f2937 !important;
+   background: none !important;
+   -webkit-background-clip: unset !important;
+   background-clip: unset !important;
+   -webkit-text-fill-color: #1f2937 !important;
+}
+
+:root[data-theme="zen"] [data-section="hero"] h1 span {
+   color: inherit !important;
+   background: none !important;
+   -webkit-background-clip: unset !important;
+   background-clip: unset !important;
+   -webkit-text-fill-color: inherit !important;
+}
+
+:root[data-theme="zen"] h1,
+:root[data-theme="zen"] h2,
+:root[data-theme="zen"] h3 {
+   font-family: 'Playfair Display', Georgia, serif !important;
+   font-weight: 400 !important;
+   color: #1f2937 !important;
+}
+
+:root[data-theme="zen"] p,
+:root[data-theme="zen"] span {
+   color: #6b7280 !important;
+}
+
+/* Zen: Ultra-minimal cards - just hairline borders */
+:root[data-theme="zen"] .ds-card {
+   background: transparent !important;
+   border: 1px solid #e5e7eb !important;
+   border-radius: 0 !important;
+   box-shadow: none !important;
+   padding: 3rem !important;
+}
+
+:root[data-theme="zen"] .ds-card:hover {
+   border-color: #9ca3af !important;
+}
+
+/* Zen: Minimal buttons */
+:root[data-theme="zen"] .ds-button {
+   background: transparent !important;
+   color: #1f2937 !important;
+   border: 1px solid #1f2937 !important;
+   border-radius: 0 !important;
+   font-weight: 400 !important;
+   text-transform: uppercase !important;
+   letter-spacing: 0.1em !important;
+   font-size: 0.75rem !important;
+}
+
+:root[data-theme="zen"] .ds-button:hover {
+   background: #1f2937 !important;
+   color: #ffffff !important;
+}
+
+/* Zen: Generous section spacing */
+:root[data-theme="zen"] .ds-section {
+   padding-top: 8rem !important;
+   padding-bottom: 8rem !important;
+}
+
+:root[data-theme="zen"] .ds-grid-responsive {
+   grid-template-columns: repeat(2, 1fr) !important;
+   gap: 4rem !important;
+}
+
+/* Zen: Hide decorative elements */
+:root[data-theme="zen"] .ds-blob,
+:root[data-theme="zen"] .ds-gradient-overlay {
+   display: none !important;
+}
+
+/* Zen: Stats section - light background needs dark text */
+:root[data-theme="zen"] [data-section="stats"] {
+   background: #f9fafb !important;
+}
+
+:root[data-theme="zen"] [data-section="stats"] h2 {
+   color: #1f2937 !important;
+}
+
+:root[data-theme="zen"] [data-section="stats"]>div>p {
+   color: #6b7280 !important;
+}
+
+:root[data-theme="zen"] [data-section="stats"] .ds-card {
+   text-align: center !important;
+   background: #ffffff !important;
+   border: 1px solid #e5e7eb !important;
+}
+
+/* Zen: ALL text inside stats cards - force dark gray */
+:root[data-theme="zen"] [data-section="stats"] .ds-card * {
+   color: #1f2937 !important;
+   -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Zen: Stats icon containers - visible with border */
+:root[data-theme="zen"] [data-section="stats"] .ds-card>div>div>div {
+   background: #f9fafb !important;
+   border: 1px solid #d1d5db !important;
+}
+
+/* Zen: Stats icons - dark gray */
+:root[data-theme="zen"] [data-section="stats"] .ds-card svg,
+:root[data-theme="zen"] [data-section="stats"] .ds-card .ds-icon {
+   color: #374151 !important;
+   -webkit-text-fill-color: #374151 !important;
+}
+
+/* Zen: ALL cards need dark text */
+:root[data-theme="zen"] .ds-card * {
+   color: #1f2937 !important;
+}
+
+/* Zen: Icon containers */
+:root[data-theme="zen"] .ds-icon-container {
+   background: transparent !important;
+   border: 1px solid #e5e7eb !important;
+   border-radius: 0 !important;
+}
+
+/* Zen: Icons inside containers - dark gray */
+:root[data-theme="zen"] .ds-icon-container svg,
+:root[data-theme="zen"] .ds-icon-container .ds-icon {
+   color: #374151 !important;
+}
+
+/* ============================================
+   🎀 PASTEL THEME - Soft & Playful
+   Gentle gradients, bubbly cards, approachable
+   ============================================ */
+
+:root[data-theme="pastel"] {
+   --surface: #fef7ff;
+   --surface-elevated: #ffffff;
+   --surface-subtle: #fdf4ff;
+   --text-primary: #581c87;
+   --text-secondary: #7e22ce;
+   --text-tertiary: #a855f7;
+   --border: #e9d5ff;
+   --border-subtle: #f3e8ff;
+   --heading-font: 'Outfit', -apple-system, sans-serif;
+   --body-font: 'Inter', -apple-system, sans-serif;
+   --card-radius: 2rem;
+   --button-radius: 9999px;
+   --badge-radius: 9999px;
+}
+
+:root[data-theme="pastel"] body {
+   background: linear-gradient(135deg, #fdf4ff 0%, #fef3c7 50%, #d1fae5 100%) !important;
+   background-attachment: fixed !important;
+   color: #581c87 !important;
+}
+
+:root[data-theme="pastel"] [data-section="hero"] {
+   background: linear-gradient(180deg,
+         rgba(253, 244, 255, 0.8) 0%,
+         rgba(254, 243, 199, 0.6) 50%,
+         rgba(209, 250, 229, 0.8) 100%) !important;
+   min-height: 80vh !important;
+}
+
+:root[data-theme="pastel"] [data-section="hero"] h1 {
+   font-size: 4rem !important;
+   font-weight: 700 !important;
+   background: linear-gradient(135deg, #c026d3 0%, #7c3aed 50%, #06b6d4 100%) !important;
+   -webkit-background-clip: text !important;
+   background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+}
+
+:root[data-theme="pastel"] [data-section="hero"] h1 span {
+   background: linear-gradient(135deg, #c026d3 0%, #7c3aed 50%, #06b6d4 100%) !important;
+   -webkit-background-clip: text !important;
+   background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+}
+
+:root[data-theme="pastel"] h1,
+:root[data-theme="pastel"] h2,
+:root[data-theme="pastel"] h3 {
+   font-family: 'Outfit', -apple-system, sans-serif !important;
+   font-weight: 600 !important;
+   color: #581c87 !important;
+}
+
+:root[data-theme="pastel"] p,
+:root[data-theme="pastel"] span {
+   color: #7e22ce !important;
+}
+
+/* Pastel: Bubbly floating cards */
+:root[data-theme="pastel"] .ds-card {
+   background: rgba(255, 255, 255, 0.9) !important;
+   border: none !important;
+   border-radius: 2rem !important;
+   box-shadow:
+      0 10px 40px -10px rgba(192, 38, 211, 0.15),
+      0 4px 6px -2px rgba(192, 38, 211, 0.05) !important;
+   backdrop-filter: blur(10px) !important;
+}
+
+:root[data-theme="pastel"] .ds-card:hover {
+   transform: translateY(-8px) scale(1.02) !important;
+   box-shadow:
+      0 25px 50px -12px rgba(192, 38, 211, 0.25),
+      0 8px 15px -5px rgba(192, 38, 211, 0.1) !important;
+}
+
+/* Pastel: Pill buttons with gradient */
+:root[data-theme="pastel"] .ds-button {
+   background: linear-gradient(135deg, #c026d3 0%, #7c3aed 100%) !important;
+   color: #ffffff !important;
+   border: none !important;
+   border-radius: 9999px !important;
+   font-weight: 600 !important;
+   box-shadow: 0 8px 20px -5px rgba(192, 38, 211, 0.4) !important;
+}
+
+:root[data-theme="pastel"] .ds-button:hover {
+   background: linear-gradient(135deg, #d946ef 0%, #8b5cf6 100%) !important;
+   transform: translateY(-2px) !important;
+}
+
+/* Pastel: Stats section - comprehensive visibility fix */
+:root[data-theme="pastel"] [data-section="stats"] {
+   background: linear-gradient(135deg, #fae8ff 0%, #ede9fe 50%, #f0fdf4 100%) !important;
+}
+
+:root[data-theme="pastel"] [data-section="stats"] h2 {
+   color: #581c87 !important;
+}
+
+:root[data-theme="pastel"] [data-section="stats"]>div>p {
+   color: #7e22ce !important;
+}
+
+/* Pastel: Stats cards - white background */
+:root[data-theme="pastel"] [data-section="stats"] .ds-card {
+   background: rgba(255, 255, 255, 0.95) !important;
+   border: none !important;
+}
+
+/* Pastel: ALL text inside stats cards - force dark purple */
+:root[data-theme="pastel"] [data-section="stats"] .ds-card * {
+   color: #581c87 !important;
+   -webkit-text-fill-color: #581c87 !important;
+}
+
+/* Pastel: Stats icon containers - visible with gradient */
+:root[data-theme="pastel"] [data-section="stats"] .ds-card>div>div>div {
+   background: linear-gradient(135deg, #e879f9 0%, #a78bfa 100%) !important;
+}
+
+/* Pastel: Stats icons - white on gradient background */
+:root[data-theme="pastel"] [data-section="stats"] .ds-card svg,
+:root[data-theme="pastel"] [data-section="stats"] .ds-card .ds-icon {
+   color: #ffffff !important;
+   -webkit-text-fill-color: #ffffff !important;
+}
+
+:root[data-theme="pastel"] [data-section="features"] {
+   background: rgba(253, 244, 255, 0.6) !important;
+}
+
+/* Pastel: ALL cards with light backgrounds need dark text */
+:root[data-theme="pastel"] .ds-card * {
+   color: #581c87 !important;
+}
+
+/* Pastel: Icon containers - visible gradient */
+:root[data-theme="pastel"] .ds-icon-container {
+   background: linear-gradient(135deg, #e879f9 0%, #a78bfa 100%) !important;
+   border-radius: 1.5rem !important;
+}
+
+/* Pastel: Icons inside containers - white */
+:root[data-theme="pastel"] .ds-icon-container svg,
+:root[data-theme="pastel"] .ds-icon-container .ds-icon {
+   color: #ffffff !important;
+}
+
+/* Pastel: Mobile responsive grids - single column on mobile */
+:root[data-theme="pastel"] .ds-grid-responsive {
+   grid-template-columns: 1fr !important;
+   gap: 1.5rem !important;
+}
+
+@media (min-width: 640px) {
+   :root[data-theme="pastel"] .ds-grid-responsive {
+      grid-template-columns: repeat(2, 1fr) !important;
+   }
+}
+
+@media (min-width: 1024px) {
+   :root[data-theme="pastel"] .ds-grid-responsive {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 2rem !important;
+   }
+}
+
+/* Pastel: Badge styling */
+:root[data-theme="pastel"] .ds-badge {
+   background: linear-gradient(135deg, rgba(192, 38, 211, 0.15) 0%, rgba(124, 58, 237, 0.15) 100%) !important;
+   border: none !important;
+   color: #7c3aed !important;
+}
+
+/* ============================================
+   📖 EDITORIAL THEME - Magazine-Inspired
+   Large serif headlines, columned layouts, refined
+   ============================================ */
+
+:root[data-theme="editorial"] {
+   --surface: #fafaf9;
+   --surface-elevated: #ffffff;
+   --surface-subtle: #f5f5f4;
+   --text-primary: #0c0a09;
+   --text-secondary: #44403c;
+   --text-tertiary: #78716c;
+   --border: #d6d3d1;
+   --border-subtle: #e7e5e4;
+   --heading-font: 'Playfair Display', Georgia, serif;
+   --body-font: 'Inter', -apple-system, sans-serif;
+   --card-radius: 0px;
+   --button-radius: 0px;
+   --badge-radius: 0px;
+}
+
+:root[data-theme="editorial"] body {
+   background: #fafaf9 !important;
+   color: #0c0a09 !important;
+}
+
+:root[data-theme="editorial"] [data-section="hero"] {
+   background: #ffffff !important;
+   border-bottom: 1px solid #0c0a09 !important;
+   padding-top: 6rem !important;
+   padding-bottom: 6rem !important;
+}
+
+:root[data-theme="editorial"] [data-section="hero"] h1 {
+   font-size: 6rem !important;
+   font-weight: 400 !important;
+   font-family: 'Playfair Display', Georgia, serif !important;
+   letter-spacing: -0.04em !important;
+   line-height: 1 !important;
+   color: #0c0a09 !important;
+   background: none !important;
+   -webkit-background-clip: unset !important;
+   background-clip: unset !important;
+   -webkit-text-fill-color: #0c0a09 !important;
+}
+
+:root[data-theme="editorial"] [data-section="hero"] h1 span {
+   color: inherit !important;
+   background: none !important;
+   -webkit-background-clip: unset !important;
+   background-clip: unset !important;
+   -webkit-text-fill-color: inherit !important;
+}
+
+:root[data-theme="editorial"] h1 {
+   font-family: 'Playfair Display', Georgia, serif !important;
+   font-weight: 400 !important;
+   font-size: 4rem !important;
+   letter-spacing: -0.03em !important;
+   color: #0c0a09 !important;
+}
+
+:root[data-theme="editorial"] h2 {
+   font-family: 'Playfair Display', Georgia, serif !important;
+   font-weight: 400 !important;
+   font-size: 2.5rem !important;
+   letter-spacing: -0.02em !important;
+   color: #0c0a09 !important;
+   border-bottom: 2px solid #0c0a09 !important;
+   padding-bottom: 0.5rem !important;
+   margin-bottom: 2rem !important;
+}
+
+:root[data-theme="editorial"] h3 {
+   font-family: 'Playfair Display', Georgia, serif !important;
+   font-weight: 400 !important;
+   font-style: italic !important;
+   color: #0c0a09 !important;
+}
+
+:root[data-theme="editorial"] p {
+   font-family: 'Inter', -apple-system, sans-serif !important;
+   font-size: 1.125rem !important;
+   line-height: 1.8 !important;
+   color: #44403c !important;
+}
+
+/* Editorial: No-border cards with rule separators */
+:root[data-theme="editorial"] .ds-card {
+   background: transparent !important;
+   border: none !important;
+   border-bottom: 1px solid #d6d3d1 !important;
+   border-radius: 0 !important;
+   box-shadow: none !important;
+   padding: 2rem 0 !important;
+}
+
+:root[data-theme="editorial"] .ds-card:hover {
+   background: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Editorial: Simple text buttons */
+:root[data-theme="editorial"] .ds-button {
+   background: #0c0a09 !important;
+   color: #fafaf9 !important;
+   border: none !important;
+   border-radius: 0 !important;
+   font-family: 'Inter', -apple-system, sans-serif !important;
+   font-weight: 500 !important;
+   text-transform: uppercase !important;
+   letter-spacing: 0.15em !important;
+   font-size: 0.75rem !important;
+   padding: 1rem 2rem !important;
+}
+
+:root[data-theme="editorial"] .ds-button:hover {
+   background: #44403c !important;
+}
+
+/* Editorial: Stats with large numbers */
+:root[data-theme="editorial"] [data-section="stats"] {
+   background: #0c0a09 !important;
+}
+
+:root[data-theme="editorial"] [data-section="stats"] h2 {
+   color: #fafaf9 !important;
+   border-bottom-color: #fafaf9 !important;
+}
+
+:root[data-theme="editorial"] [data-section="stats"] p,
+:root[data-theme="editorial"] [data-section="stats"] span {
+   color: #a8a29e !important;
+}
+
+:root[data-theme="editorial"] [data-section="stats"] .ds-card {
+   border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+:root[data-theme="editorial"] [data-section="stats"] .text-4xl,
+:root[data-theme="editorial"] [data-section="stats"] .text-5xl {
+   font-family: 'Playfair Display', Georgia, serif !important;
+   font-size: 5rem !important;
+   color: #fafaf9 !important;
+}
+
+:root[data-theme="editorial"] [data-section="features"] {
+   background: #ffffff !important;
+}
+
+/* Editorial: 2-column layout for editorial feel */
+:root[data-theme="editorial"] .ds-grid-responsive {
+   grid-template-columns: repeat(2, 1fr) !important;
+   gap: 3rem !important;
+}
+
+/* Editorial: Icon containers */
+:root[data-theme="editorial"] .ds-icon-container {
+   background: transparent !important;
+   border: 2px solid #0c0a09 !important;
+   border-radius: 0 !important;
+   color: #0c0a09 !important;
+}
+
+/* Editorial: Testimonials with large quotes */
+:root[data-theme="editorial"] [data-section="testimonials"] .ds-card {
+   border-bottom: none !important;
+   border-left: 4px solid #0c0a09 !important;
+   padding-left: 2rem !important;
+}
+
+/* Editorial: Hide blobs */
+:root[data-theme="editorial"] .ds-blob,
+:root[data-theme="editorial"] .ds-gradient-overlay {
+   display: none !important;
+}
+
+/* ============================================
+   🎭 ARTISTIC THEME - Full-Bleed No Container
+   Edge-to-edge, asymmetric, gallery-like
+   ============================================ */
+
+:root[data-theme="artistic"] {
+   --surface: #0a0a0a;
+   --surface-elevated: #171717;
+   --surface-subtle: #262626;
+   --text-primary: #fafafa;
+   --text-secondary: #a3a3a3;
+   --text-tertiary: #737373;
+   --border: #404040;
+   --border-subtle: #262626;
+   --heading-font: 'Outfit', -apple-system, sans-serif;
+   --body-font: 'Inter', -apple-system, sans-serif;
+   --card-radius: 0px;
+   --button-radius: 0px;
+   --badge-radius: 0px;
+}
+
+:root[data-theme="artistic"] body {
+   background: #0a0a0a !important;
+   color: #fafafa !important;
+}
+
+/* Artistic: Full-bleed hero with dramatic type */
+:root[data-theme="artistic"] [data-section="hero"] {
+   background: linear-gradient(180deg, #0a0a0a 0%, #171717 100%) !important;
+   min-height: 100vh !important;
+   /* Removed display:flex - wrapper handles layout */
+}
+
+:root[data-theme="artistic"] [data-section="hero"] .ds-section {
+   max-width: 100% !important;
+   padding-left: 5vw !important;
+   padding-right: 5vw !important;
+}
+
+:root[data-theme="artistic"] [data-section="hero"] h1 {
+   font-size: 12vw !important;
+   font-weight: 900 !important;
+   font-family: 'Outfit', -apple-system, sans-serif !important;
+   letter-spacing: -0.05em !important;
+   line-height: 0.9 !important;
+   text-transform: uppercase !important;
+   color: #fafafa !important;
+   background: none !important;
+   -webkit-background-clip: unset !important;
+   background-clip: unset !important;
+   -webkit-text-fill-color: #fafafa !important;
+}
+
+:root[data-theme="artistic"] [data-section="hero"] h1 span {
+   color: inherit !important;
+   background: none !important;
+   -webkit-background-clip: unset !important;
+   background-clip: unset !important;
+   -webkit-text-fill-color: inherit !important;
+}
+
+:root[data-theme="artistic"] h1,
+:root[data-theme="artistic"] h2 {
+   font-family: 'Outfit', -apple-system, sans-serif !important;
+   font-weight: 800 !important;
+   text-transform: uppercase !important;
+   letter-spacing: -0.03em !important;
+   color: #fafafa !important;
+}
+
+:root[data-theme="artistic"] h2 {
+   font-size: 4rem !important;
+}
+
+:root[data-theme="artistic"] h3 {
+   font-family: 'Inter', -apple-system, sans-serif !important;
+   font-weight: 300 !important;
+   color: #fafafa !important;
+}
+
+:root[data-theme="artistic"] p,
+:root[data-theme="artistic"] span {
+   color: #a3a3a3 !important;
+}
+
+/* Artistic: Remove all containers - full bleed */
+:root[data-theme="artistic"] .ds-section {
+   max-width: 100% !important;
+   padding-left: 5vw !important;
+   padding-right: 5vw !important;
+}
+
+/* Artistic: Cards as floating elements */
+:root[data-theme="artistic"] .ds-card {
+   background: #171717 !important;
+   border: none !important;
+   border-radius: 0 !important;
+   box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5) !important;
+   padding: 3rem !important;
+   transform: rotate(-1deg) !important;
+}
+
+:root[data-theme="artistic"] .ds-card:nth-child(even) {
+   transform: rotate(1deg) !important;
+}
+
+:root[data-theme="artistic"] .ds-card:hover {
+   transform: rotate(0deg) scale(1.02) !important;
+   box-shadow: 0 60px 120px -25px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Artistic: Bold buttons */
+:root[data-theme="artistic"] .ds-button {
+   background: #fafafa !important;
+   color: #0a0a0a !important;
+   border: none !important;
+   border-radius: 0 !important;
+   font-weight: 700 !important;
+   text-transform: uppercase !important;
+   letter-spacing: 0.1em !important;
+   padding: 1.25rem 2.5rem !important;
+}
+
+:root[data-theme="artistic"] .ds-button:hover {
+   background: #f5f5f5 !important;
+   transform: translateX(5px) !important;
+}
+
+/* Artistic: Full-bleed stats with dramatic numbers */
+:root[data-theme="artistic"] [data-section="stats"] {
+   background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #be185d 100%) !important;
+   padding-top: 10rem !important;
+   padding-bottom: 10rem !important;
+}
+
+:root[data-theme="artistic"] [data-section="stats"] h2,
+:root[data-theme="artistic"] [data-section="stats"] p,
+:root[data-theme="artistic"] [data-section="stats"] span {
+   color: #ffffff !important;
+}
+
+:root[data-theme="artistic"] [data-section="stats"] .ds-card {
+   background: rgba(255, 255, 255, 0.1) !important;
+   backdrop-filter: blur(20px) !important;
+   transform: none !important;
+}
+
+:root[data-theme="artistic"] [data-section="stats"] .text-4xl,
+:root[data-theme="artistic"] [data-section="stats"] .text-5xl {
+   font-size: 6rem !important;
+   font-weight: 900 !important;
+}
+
+:root[data-theme="artistic"] [data-section="features"] {
+   background: #0a0a0a !important;
+}
+
+/* Artistic: Asymmetric grid */
+:root[data-theme="artistic"] .ds-grid-responsive {
+   display: grid !important;
+   grid-template-columns: repeat(4, 1fr) !important;
+   gap: 2rem !important;
+}
+
+/* Artistic: Feature span variations for asymmetry */
+:root[data-theme="artistic"] .ds-grid-responsive>div:nth-child(1) {
+   grid-column: span 2 !important;
+}
+
+:root[data-theme="artistic"] .ds-grid-responsive>div:nth-child(4) {
+   grid-column: span 2 !important;
+}
+
+/* Artistic: Icon containers */
+:root[data-theme="artistic"] .ds-icon-container {
+   background: rgba(255, 255, 255, 0.1) !important;
+   border: 1px solid rgba(255, 255, 255, 0.2) !important;
+   border-radius: 0 !important;
+   color: #fafafa !important;
+}
+
+/* Artistic: Hide standard decorative elements */
+:root[data-theme="artistic"] .ds-blob {
+   width: 80vw !important;
+   height: 80vw !important;
+   background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, transparent 70%) !important;
+   top: -40vw !important;
+   left: 50% !important;
+   transform: translateX(-50%) !important;
+}
+
+/* Artistic: Testimonials - dramatic styling */
+:root[data-theme="artistic"] [data-section="testimonials"] {
+   background: #171717 !important;
+}
+
+:root[data-theme="artistic"] [data-section="testimonials"] .ds-card {
+   background: transparent !important;
+   border-left: 4px solid #7c3aed !important;
+   transform: none !important;
+   box-shadow: none !important;
+}
+
+/* ============================================
+   HERO LAYOUT SYSTEM - 5 DESIGN MODES
+   
+   data-hero-layout attribute on :root controls mode:
+   - off: Full-width centered text, no images
+   - split: 50/50 text & images side-by-side (contained)
+   - fullbleed: Edge-to-edge image below text
+   - background: Full background image with text overlay
+   - offset: Images break out of container (dramatic overlap)
+   ============================================ */
+
+/* === HERO WRAPPER - Handles vertical centering === */
+.ds-hero-wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: inherit;
+   justify-content: center;
+}
+
+/* Trust section at bottom of wrapper */
+.ds-hero-trust {
+   flex-shrink: 0;
+   margin-top: auto;
+   padding-bottom: 2rem;
+}
+
+/* === HIDE ALL IMAGE ELEMENTS BY DEFAULT === */
+.ds-hero-bg-image,
+.ds-hero-images,
+.ds-hero-fullbleed-image {
+   display: none;
+}
+
+/* === DEFAULT (OFF): Full Width Centered Text === */
+.ds-hero-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.ds-hero-content {
+   text-align: center;
+   max-width: 900px;
+   margin: 0 auto;
+   padding: 4rem 0;
+}
+
+.ds-hero-heading {
+   max-width: 100%;
+}
+
+.ds-hero-description {
+   max-width: 700px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.ds-hero-actions {
+   justify-content: center;
+}
+
+/* ============================================
+   LAYOUT: SPLIT - 50/50 Text & Images
+   ============================================ */
+:root[data-hero-layout="split"] .ds-hero-images {
+   display: block;
+}
+
+:root[data-hero-layout="split"] .ds-hero-container {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 3rem;
+   align-items: center;
+}
+
+@media (min-width: 1024px) {
+   :root[data-hero-layout="split"] .ds-hero-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+   }
+
+   :root[data-hero-layout="split"] .ds-hero-content {
+      text-align: left;
+      max-width: 100%;
+      padding: 6rem 0;
+   }
+
+   :root[data-hero-layout="split"] .ds-hero-heading,
+   :root[data-hero-layout="split"] .ds-hero-description {
+      margin-left: 0;
+      margin-right: 0;
+   }
+
+   :root[data-hero-layout="split"] .ds-hero-actions {
+      justify-content: flex-start;
+   }
+}
+
+/* Split: Image Stack Styling */
+.ds-hero-image-stack {
+   position: relative;
+}
+
+.ds-hero-image-main {
+   width: 100%;
+   height: 400px;
+   border-radius: var(--card-radius, 1rem);
+   overflow: hidden;
+   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.ds-hero-image-main img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.6s ease;
+}
+
+.ds-hero-image-main:hover img {
+   transform: scale(1.05);
+}
+
+.ds-hero-image-accent {
+   position: absolute;
+   bottom: -2rem;
+   left: -2rem;
+   width: 50%;
+   height: 180px;
+   border-radius: var(--card-radius, 0.75rem);
+   overflow: hidden;
+   box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+   border: 4px solid var(--surface, #fff);
+}
+
+.ds-hero-image-accent img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+   .ds-hero-image-main {
+      height: 500px;
+   }
+
+   .ds-hero-image-accent {
+      width: 45%;
+      height: 220px;
+      bottom: -3rem;
+      left: -3rem;
+   }
+}
+
+/* ============================================
+   LAYOUT: LEFT - Images Left, Text Right
+   ============================================ */
+:root[data-hero-layout="left"] .ds-hero-images {
+   display: block;
+}
+
+:root[data-hero-layout="left"] .ds-hero-container {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 3rem;
+   align-items: center;
+}
+
+@media (min-width: 1024px) {
+   :root[data-hero-layout="left"] .ds-hero-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+   }
+
+   :root[data-hero-layout="left"] .ds-hero-images {
+      order: -1;
+   }
+
+   :root[data-hero-layout="left"] .ds-hero-content {
+      order: 1;
+      text-align: left;
+      max-width: 100%;
+      padding: 6rem 0;
+   }
+
+   :root[data-hero-layout="left"] .ds-hero-heading,
+   :root[data-hero-layout="left"] .ds-hero-description {
+      margin-left: 0;
+      margin-right: 0;
+   }
+
+   :root[data-hero-layout="left"] .ds-hero-actions {
+      justify-content: flex-start;
+   }
+
+   /* Flip the accent image to right side for left layout */
+   :root[data-hero-layout="left"] .ds-hero-image-accent {
+      left: auto;
+      right: -3rem;
+   }
+}
+
+/* ============================================
+   LAYOUT: FULLBLEED - Edge-to-Edge Image
+   ============================================ */
+:root[data-hero-layout="fullbleed"] .ds-hero-fullbleed-image {
+   display: block;
+   width: 100vw;
+   margin-left: calc(-50vw + 50%);
+   margin-top: 3rem;
+}
+
+:root[data-hero-layout="fullbleed"] .ds-hero-fullbleed-image img {
+   width: 100%;
+   height: 400px;
+   object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+   :root[data-hero-layout="fullbleed"] .ds-hero-fullbleed-image img {
+      height: 500px;
+   }
+}
+
+:root[data-hero-layout="fullbleed"] .ds-hero-content {
+   padding-bottom: 0;
+}
+
+/* ============================================
+   LAYOUT: BACKGROUND - Image Behind Text
+   ============================================ */
+:root[data-hero-layout="background"] .ds-hero-bg-image {
+   display: block;
+   position: absolute;
+   inset: 0;
+   z-index: 0;
+}
+
+:root[data-hero-layout="background"] .ds-hero-bg-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+:root[data-hero-layout="background"] .ds-hero-bg-overlay {
+   position: absolute;
+   inset: 0;
+   background: linear-gradient(180deg,
+         rgba(0, 0, 0, 0.7) 0%,
+         rgba(0, 0, 0, 0.5) 50%,
+         rgba(0, 0, 0, 0.8) 100%);
+}
+
+:root[data-hero-layout="background"] .ds-hero-gradient {
+   display: none;
+}
+
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-content {
+   padding: 8rem 0;
+   position: relative;
+   z-index: 1;
+}
+
+/* Background: Force white text ONLY in hero section */
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-heading,
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-heading span,
+:root[data-hero-layout="background"] [data-section="hero"] h1,
+:root[data-hero-layout="background"] [data-section="hero"] h1 span {
+   color: #ffffff !important;
+   background: none !important;
+   background-image: none !important;
+   -webkit-background-clip: unset !important;
+   background-clip: unset !important;
+   -webkit-text-fill-color: #ffffff !important;
+   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-description,
+:root[data-hero-layout="background"] [data-section="hero"] .ds-body-lg,
+:root[data-hero-layout="background"] [data-section="hero"] p {
+   color: rgba(255, 255, 255, 0.9) !important;
+   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-badge {
+   background: rgba(255, 255, 255, 0.15) !important;
+   border-color: rgba(255, 255, 255, 0.3) !important;
+   color: #ffffff !important;
+}
+
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-badge span,
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-badge svg {
+   color: #ffffff !important;
+}
+
+/* Background: Style buttons ONLY in hero section */
+:root[data-hero-layout="background"] [data-section="hero"] .ds-button {
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-trust {
+   position: relative;
+   z-index: 1;
+}
+
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-trust p,
+:root[data-hero-layout="background"] [data-section="hero"] .ds-hero-trust div {
+   color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ============================================
+   LAYOUT: OFFSET - Images Break Out of Container
+   Creates dramatic overlap effect
+   ============================================ */
+:root[data-hero-layout="offset"] .ds-hero-images {
+   display: block;
+}
+
+:root[data-hero-layout="offset"] .ds-hero-container {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 3rem;
+   align-items: center;
+}
+
+@media (min-width: 1024px) {
+   :root[data-hero-layout="offset"] .ds-hero-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+   }
+
+   :root[data-hero-layout="offset"] .ds-hero-content {
+      text-align: left;
+      max-width: 100%;
+      padding: 6rem 0;
+      padding-right: 4rem;
+   }
+
+   :root[data-hero-layout="offset"] .ds-hero-heading,
+   :root[data-hero-layout="offset"] .ds-hero-description {
+      margin-left: 0;
+      margin-right: 0;
+   }
+
+   :root[data-hero-layout="offset"] .ds-hero-actions {
+      justify-content: flex-start;
+   }
+
+   /* The magic: Images break out of container */
+   :root[data-hero-layout="offset"] .ds-hero-images {
+      position: relative;
+      margin-right: calc(-50vw + 50%);
+      padding-right: calc(50vw - 50%);
+   }
+
+   :root[data-hero-layout="offset"] .ds-hero-image-main {
+      width: 100%;
+      height: 600px;
+      border-radius: var(--card-radius, 1rem) 0 0 var(--card-radius, 1rem);
+   }
+
+   :root[data-hero-layout="offset"] .ds-hero-image-accent {
+      left: auto;
+      right: 2rem;
+      bottom: -2rem;
+      width: 300px;
+      height: 200px;
+   }
+}
+
+/* ============================================
+   THEME-SPECIFIC AUTO-LAYOUTS
+   Some themes auto-enable certain layouts
+   ============================================ */
+:root[data-theme="photography"] .ds-hero-images,
+:root[data-theme="magazine"] .ds-hero-images {
+   display: block;
+}
+
+:root[data-theme="photography"] .ds-hero-container,
+:root[data-theme="magazine"] .ds-hero-container {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 3rem;
+   align-items: center;
+}
+
+@media (min-width: 1024px) {
+
+   :root[data-theme="photography"] .ds-hero-container,
+   :root[data-theme="magazine"] .ds-hero-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+   }
+
+   :root[data-theme="photography"] .ds-hero-content,
+   :root[data-theme="magazine"] .ds-hero-content {
+      text-align: left;
+      max-width: 100%;
+   }
+
+   :root[data-theme="photography"] .ds-hero-actions,
+   :root[data-theme="magazine"] .ds-hero-actions {
+      justify-content: flex-start;
+   }
+}
+
+/* Backwards compatibility */
+.ds-image-grid {
+   display: none;
+}
+
+/* ============================================
+   HERO TRUST SECTION - Always below hero content
+   ============================================ */
+.ds-hero-trust {
+   clear: both;
+}
+
+/* For split layouts, reduce excessive top margin */
+:root[data-hero-layout="split"] .ds-hero-trust,
+:root[data-hero-layout="left"] .ds-hero-trust,
+:root[data-hero-layout="offset"] .ds-hero-trust {
+   margin-top: 2rem;
+}
+
+:root[data-hero-layout="split"] .ds-hero-trust>div,
+:root[data-hero-layout="left"] .ds-hero-trust>div,
+:root[data-hero-layout="offset"] .ds-hero-trust>div {
+   margin-top: 0;
+}
+
+/* ============================================
+   THEME-SPECIFIC HERO FIXES
+   ============================================ */
+
+/* Zen: Reduce padding to prevent excess space */
+:root[data-theme="zen"] .ds-hero-content {
+   padding: 4rem 0 !important;
+}
+
+:root[data-theme="zen"] .ds-hero-trust>div {
+   margin-top: 3rem;
+   padding-top: 2rem;
+}
+
+/* Pastel: Fix trust section spacing */
+:root[data-theme="pastel"] .ds-hero-trust>div {
+   margin-top: 3rem;
+   padding-top: 2rem;
+}
+
+/* Pastel: Ensure text is visible in split mode */
+:root[data-theme="pastel"] .ds-hero-heading span {
+   color: #581c87 !important;
+   -webkit-text-fill-color: #581c87 !important;
+   background: linear-gradient(135deg, #581c87 0%, #7c3aed 50%, #c026d3 100%) !important;
+   -webkit-background-clip: text !important;
+   background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+}
+
+:root[data-theme="pastel"] .ds-hero-description {
+   color: #7e22ce !important;
 }

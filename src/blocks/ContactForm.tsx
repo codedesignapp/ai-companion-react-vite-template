@@ -53,7 +53,7 @@ export function ContactForm() {
                     },
                   },
                 }}
-                style={{ borderRadius: 'var(--button-radius)' }}
+                style={{ borderRadius: 'var(--card-radius, 0.75rem)' }}
               />
             </div>
             <div>
@@ -79,7 +79,7 @@ export function ContactForm() {
                     },
                   },
                 }}
-                style={{ borderRadius: 'var(--button-radius)' }}
+                style={{ borderRadius: 'var(--card-radius, 0.75rem)' }}
               />
             </div>
             <div className="sm:col-span-2">
@@ -93,7 +93,7 @@ export function ContactForm() {
                 theme={{
                   base: "block p-4 w-full text-sm text-text-primary bg-surface-elevated shadow-sm border border-border focus:ring-2 focus:ring-primary-500 focus:border-transparent ds-transition placeholder:text-text-tertiary resize-y",
                 }}
-                style={{ borderRadius: 'var(--button-radius)' }}
+                style={{ borderRadius: 'var(--card-radius, 0.75rem)' }}
               />
             </div>
             <Button
