@@ -1,10 +1,50 @@
 {
+  "global.headernavigation.text_2": {
+    "text": "Brand name",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/HeaderNavigation.tsx",
+      "line": 34,
+      "column": 13
+    }
+  },
+  "global.headernavigation.text_3": {
+    "text": "Open main menu",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/HeaderNavigation.tsx",
+      "line": 48,
+      "column": 40
+    }
+  },
+  "global.footersection.Link": {
+    "text": "Brand name",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
+      "line": 28,
+      "column": 16
+    }
+  },
   "global.footersection.paragraph": {
     "text": "Open-source library of over 400+ web components and interactive elements built for better web.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
       "line": 31,
       "column": 56
+    }
+  },
+  "global.footersection.text_2": {
+    "text": "© 2024-2025",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
+      "line": 51,
+      "column": 69
+    }
+  },
+  "global.footersection.text_3": {
+    "text": ". All Rights Reserved.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FooterSection.tsx",
+      "line": 52,
+      "column": 92
     }
   },
   "about.abouthero.text": {

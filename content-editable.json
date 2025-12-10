@@ -1,5 +1,10 @@
 {
+  "global.headernavigation.text_2": "Brand name",
+  "global.headernavigation.text_3": "Open main menu",
+  "global.footersection.Link": "Brand name",
   "global.footersection.paragraph": "Open-source library of over 400+ web components and interactive elements built for better web.",
+  "global.footersection.text_2": "© 2024-2025",
+  "global.footersection.text_3": ". All Rights Reserved.",
   "about.abouthero.text": "Meet the team behind the innovation",
   "about.abouthero.mainHeading": "About Our Company",
   "about.abouthero.paragraph": "We are a team of passionate professionals dedicated to delivering innovative solutions\n          that empower businesses to thrive in the digital age.",

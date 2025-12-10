@@ -347,12 +347,11 @@ function extractContent(): ContentMap {
         blockName.toLowerCase()
       );
 
-      // Filter out nav links and static elements from global blocks
+      // Filter out ONLY nav links from global blocks (keep brand name, paragraphs, etc.)
       const skipPatterns = [
-        /\.Link/, // Skip all Link elements (nav links)
-        /\.text$/, // Skip single letter logo text like "S"
-        /\.text_3$/, // Skip "Open main menu", ". All Rights Reserved."
-        /\.text_2$/, // Skip copyright year
+        /headernavigation\.Link/, // Skip header nav links (Home, About, Service)
+        /footersection\.Link_\d+$/, // Skip footer nav links (Link_2, Link_3, Link_4)
+        /\.text$/, // Skip single letter logo icon "S"
       ];
 
       Object.entries(blockContent).forEach(([key, value]) => {
