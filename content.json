@@ -3,7 +3,7 @@
     "text": "Meet the team behind the innovation",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/AboutHero.tsx",
-      "line": 22,
+      "line": 23,
       "column": 16
     }
   },
@@ -11,23 +11,23 @@
     "text": "About Our Company",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/AboutHero.tsx",
-      "line": 25,
-      "column": 142
+      "line": 26,
+      "column": 78
     }
   },
   "about.abouthero.paragraph": {
     "text": "We are a team of passionate professionals dedicated to delivering innovative solutions\n          that empower businesses to thrive in the digital age.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/AboutHero.tsx",
-      "line": 29,
-      "column": 114
+      "line": 30,
+      "column": 78
     }
   },
   "about.abouthero.buttonText": {
     "text": "Join our team",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/AboutHero.tsx",
-      "line": 40,
+      "line": 41,
       "column": 11
     }
   },
@@ -35,119 +35,455 @@
     "text": "Our Mission",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Mission.tsx",
-      "line": 15,
-      "column": 100
+      "line": 16,
+      "column": 62
     }
   },
   "about.mission.paragraph": {
     "text": "Our mission is to create technology that empowers organizations to reach their full\n            potential. We believe in building sustainable, innovative solutions that make a real\n            difference in people's lives and businesses.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Mission.tsx",
-      "line": 18,
-      "column": 54
+      "line": 19,
+      "column": 41
     }
   },
   "about.mission.paragraph_2": {
     "text": "Through dedication, expertise, and a commitment to excellence, we strive to be the\n            trusted partner that helps our clients navigate the complexities of the digital\n            landscape and achieve their strategic objectives.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Mission.tsx",
-      "line": 23,
-      "column": 49
+      "line": 24,
+      "column": 36
+    }
+  },
+  "about.values.values.0.title": {
+    "text": "Innovation",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 18,
+      "column": 13
+    }
+  },
+  "about.values.values.0.description": {
+    "text": "We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions that drive progress.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 20,
+      "column": 8
+    }
+  },
+  "about.values.values.1.title": {
+    "text": "Integrity",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 24,
+      "column": 13
+    }
+  },
+  "about.values.values.1.description": {
+    "text": "We conduct business with transparency, honesty, and ethical practices at all times, building trust with every interaction.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 26,
+      "column": 8
+    }
+  },
+  "about.values.values.2.title": {
+    "text": "Customer Focus",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 30,
+      "column": 13
+    }
+  },
+  "about.values.values.2.description": {
+    "text": "Our customers are at the heart of everything we do, driving our decisions and inspiring our innovations.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 32,
+      "column": 8
+    }
+  },
+  "about.values.values.3.title": {
+    "text": "Collaboration",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 36,
+      "column": 13
+    }
+  },
+  "about.values.values.3.description": {
+    "text": "We believe in the power of teamwork and foster a collaborative environment where ideas flourish.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 38,
+      "column": 8
+    }
+  },
+  "about.values.values.4.title": {
+    "text": "Excellence",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 42,
+      "column": 13
+    }
+  },
+  "about.values.values.4.description": {
+    "text": "We strive for excellence in every project, ensuring the highest quality standards and attention to detail.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 44,
+      "column": 8
+    }
+  },
+  "about.values.values.5.title": {
+    "text": "Growth",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 48,
+      "column": 13
+    }
+  },
+  "about.values.values.5.description": {
+    "text": "We are committed to continuous learning and improvement, both as individuals and as an organization.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
+      "line": 50,
+      "column": 8
     }
   },
   "about.values.heading": {
     "text": "Our Core Values",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
-      "line": 64,
-      "column": 100
+      "line": 66,
+      "column": 62
     }
   },
   "about.values.paragraph": {
     "text": "These principles guide everything we do and shape the culture of our organization.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Values.tsx",
-      "line": 67,
-      "column": 69
+      "line": 69,
+      "column": 56
+    }
+  },
+  "about.stats.stats.0.value": {
+    "text": "50K+",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 11,
+      "column": 13
+    }
+  },
+  "about.stats.stats.0.label": {
+    "text": "Active Users",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 12,
+      "column": 13
+    }
+  },
+  "about.stats.stats.0.description": {
+    "text": "Growing every day",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 13,
+      "column": 19
+    }
+  },
+  "about.stats.stats.1.value": {
+    "text": "120+",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 17,
+      "column": 13
+    }
+  },
+  "about.stats.stats.1.label": {
+    "text": "Countries",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 18,
+      "column": 13
+    }
+  },
+  "about.stats.stats.1.description": {
+    "text": "Worldwide reach",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 19,
+      "column": 19
+    }
+  },
+  "about.stats.stats.2.value": {
+    "text": "99.9%",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 23,
+      "column": 13
+    }
+  },
+  "about.stats.stats.2.label": {
+    "text": "Uptime",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 24,
+      "column": 13
+    }
+  },
+  "about.stats.stats.2.description": {
+    "text": "Reliable service",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 25,
+      "column": 19
+    }
+  },
+  "about.stats.stats.3.value": {
+    "text": "2.5x",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 29,
+      "column": 13
+    }
+  },
+  "about.stats.stats.3.label": {
+    "text": "Faster",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 30,
+      "column": 13
+    }
+  },
+  "about.stats.stats.3.description": {
+    "text": "Than competitors",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 31,
+      "column": 19
     }
   },
   "about.stats.heading": {
     "text": "Trusted by Thousands",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
-      "line": 47,
-      "column": 108
+      "line": 55,
+      "column": 70
     }
   },
   "about.stats.paragraph": {
     "text": "Our platform powers businesses worldwide with enterprise-grade reliability.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
-      "line": 50,
-      "column": 106
+      "line": 58,
+      "column": 93
+    }
+  },
+  "about.teamsection.teamMembers.0.name": {
+    "text": "Bonnie Green",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 15,
+      "column": 10
+    }
+  },
+  "about.teamsection.teamMembers.0.role": {
+    "text": "CEO & Web Developer",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 16,
+      "column": 10
+    }
+  },
+  "about.teamsection.teamMembers.0.description": {
+    "text": "Bonnie drives the technical strategy of the flowbite platform and brand.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 17,
+      "column": 17
+    }
+  },
+  "about.teamsection.teamMembers.1.name": {
+    "text": "Jese Leos",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 22,
+      "column": 10
+    }
+  },
+  "about.teamsection.teamMembers.1.role": {
+    "text": "CTO",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 23,
+      "column": 10
+    }
+  },
+  "about.teamsection.teamMembers.1.description": {
+    "text": "Jese drives the technical strategy of the flowbite platform and brand.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 24,
+      "column": 17
+    }
+  },
+  "about.teamsection.teamMembers.2.name": {
+    "text": "Michael Gough",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 29,
+      "column": 10
+    }
+  },
+  "about.teamsection.teamMembers.2.role": {
+    "text": "Senior Front-end Developer",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 30,
+      "column": 10
+    }
+  },
+  "about.teamsection.teamMembers.2.description": {
+    "text": "Michael drives the technical strategy of the flowbite platform and brand.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 31,
+      "column": 17
+    }
+  },
+  "about.teamsection.teamMembers.3.name": {
+    "text": "Lana Byrd",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 36,
+      "column": 10
+    }
+  },
+  "about.teamsection.teamMembers.3.role": {
+    "text": "Marketing & Sale",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 37,
+      "column": 10
+    }
+  },
+  "about.teamsection.teamMembers.3.description": {
+    "text": "Lana drives the technical strategy of the flowbite platform and brand.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
+      "line": 38,
+      "column": 17
     }
   },
   "about.teamsection.heading": {
     "text": "Our Team",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
-      "line": 62,
-      "column": 100
+      "line": 63,
+      "column": 62
     }
   },
   "about.teamsection.paragraph": {
     "text": "Explore the whole collection of open-source web components and elements built with the\n            utility classes from Tailwind",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/TeamSection.tsx",
-      "line": 65,
-      "column": 69
+      "line": 66,
+      "column": 56
     }
   },
   "about.history.heading": {
     "text": "Our Journey",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/History.tsx",
-      "line": 27,
-      "column": 100
+      "line": 30,
+      "column": 62
     }
   },
   "about.history.paragraph": {
     "text": "Founded with a vision to transform how businesses operate in the digital landscape, we\n            have grown from a small startup to a trusted partner for organizations worldwide. Our\n            journey began with a simple idea: technology should empower, not complicate.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/History.tsx",
-      "line": 30,
-      "column": 54
+      "line": 33,
+      "column": 41
     }
   },
   "about.history.paragraph_2": {
     "text": "Over the years, we have helped hundreds of companies achieve their goals through\n            innovative solutions and dedicated support. Our story is one of perseverance,\n            innovation, and an unwavering commitment to our clients' success.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/History.tsx",
-      "line": 35,
-      "column": 49
+      "line": 38,
+      "column": 36
+    }
+  },
+  "about.testimonials.testimonials.0.quote": {
+    "text": "This platform has completely transformed how we operate. The efficiency gains have been remarkable, and our team couldn't be happier with the results.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 10,
+      "column": 13
+    }
+  },
+  "about.testimonials.testimonials.0.author": {
+    "text": "Sarah Johnson",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 11,
+      "column": 14
+    }
+  },
+  "about.testimonials.testimonials.0.role": {
+    "text": "CEO, TechCorp",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 12,
+      "column": 12
+    }
+  },
+  "about.testimonials.testimonials.1.quote": {
+    "text": "Outstanding service and support. They went above and beyond to ensure our success. I would recommend them to anyone looking for a reliable partner.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 17,
+      "column": 13
+    }
+  },
+  "about.testimonials.testimonials.1.author": {
+    "text": "Michael Chen",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 18,
+      "column": 14
+    }
+  },
+  "about.testimonials.testimonials.1.role": {
+    "text": "CTO, InnovateLabs",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 19,
+      "column": 12
     }
   },
   "about.testimonials.heading": {
     "text": "What Our Clients Say",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 35,
-      "column": 100
+      "line": 38,
+      "column": 62
     }
   },
   "about.testimonials.paragraph": {
     "text": "Don't just take our word for it - hear from some of our satisfied customers.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 38,
-      "column": 87
+      "line": 41,
+      "column": 74
     }
   },
   "about.testimonials.div": {
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 50,
+      "line": 54,
       "column": 143
     }
   },
@@ -155,15 +491,15 @@
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 61,
-      "column": 102
+      "line": 72,
+      "column": 17
     }
   },
   "about.testimonials.paragraph_3": {
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 62,
+      "line": 73,
       "column": 38
     }
   },
@@ -171,47 +507,47 @@
     "text": "Let's create more tools and ideas that brings us together",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 35,
-      "column": 100
+      "line": 50,
+      "column": 64
     }
   },
   "about.cta.paragraph": {
-    "text": "Flowbite helps you connect with friends and communities of people who share your interests.\n            Connecting with your friends and family as well as discovering new ones is easy with features\n            like Groups.",
+    "text": "Our platform helps you connect with friends and communities of people who share your interests.\n              Connecting with your friends and family as well as discovering new ones is easy with features\n              like Groups.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 38,
-      "column": 74
+      "line": 53,
+      "column": 63
     }
   },
   "about.cta.buttonText": {
     "text": "Get started",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 48,
-      "column": 11
+      "line": 63,
+      "column": 13
     }
   },
   "about.contactform.heading": {
     "text": "Contact Us",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 17,
-      "column": 110
+      "line": 20,
+      "column": 72
     }
   },
   "about.contactform.paragraph": {
     "text": "Got a technical issue? Want to send feedback about a beta feature? Need details about our\n          Business plan? Let us know.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 20,
-      "column": 85
+      "line": 23,
+      "column": 72
     }
   },
   "about.contactform.fieldLabel": {
     "text": "Your email",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 28,
+      "line": 34,
       "column": 98
     }
   },
@@ -219,7 +555,7 @@
     "text": "Subject",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 47,
+      "line": 60,
       "column": 100
     }
   },
@@ -227,7 +563,7 @@
     "text": "Your message",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 66,
+      "line": 86,
       "column": 100
     }
   },
@@ -235,7 +571,7 @@
     "text": "Send message",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 82,
+      "line": 103,
       "column": 13
     }
   },
@@ -243,159 +579,135 @@
     "text": "Introducing our latest innovation",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Hero.tsx",
-      "line": 23,
-      "column": 16
+      "line": 54,
+      "column": 20
     }
   },
   "home.hero.text_2": {
     "text": "We invest in the world's potential",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Hero.tsx",
-      "line": 28,
-      "column": 145
+      "line": 59,
+      "column": 149
     }
   },
   "home.hero.paragraph": {
-    "text": "Here at Flowbite we focus on markets where technology, innovation, and capital can unlock\n          long-term value and drive economic growth.",
+    "text": "Here at Flowbite we focus on markets where technology, innovation, and capital can unlock\n              long-term value and drive economic growth.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Hero.tsx",
-      "line": 34,
-      "column": 114
+      "line": 65,
+      "column": 83
     }
   },
   "home.hero.buttonText": {
     "text": "Get started",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Hero.tsx",
-      "line": 46,
-      "column": 11
+      "line": 77,
+      "column": 15
     }
   },
   "home.hero.buttonText_2": {
     "text": "Watch demo",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Hero.tsx",
-      "line": 86,
-      "column": 18
+      "line": 92,
+      "column": 22
     }
   },
   "home.hero.paragraph_2": {
     "text": "Trusted by industry leaders",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Hero.tsx",
-      "line": 93,
-      "column": 94
+      "line": 130,
+      "column": 108
     }
   },
   "home.bentofeatures.heading": {
     "text": "Everything You Need",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 16,
-      "column": 100
+      "line": 18,
+      "column": 62
     }
   },
   "home.bentofeatures.paragraph": {
     "text": "Powerful features designed to help your business thrive.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 19,
-      "column": 87
+      "line": 21,
+      "column": 74
     }
   },
   "home.bentofeatures.subheading": {
     "text": "Enterprise Security",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 33,
-      "column": 77
+      "line": 51,
+      "column": 15
     }
   },
   "home.bentofeatures.paragraph_2": {
     "text": "Bank-level encryption and security protocols to keep your data safe.\n                Compliance with industry standards including SOC 2, GDPR, and HIPAA.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 36,
-      "column": 78
-    }
-  },
-  "home.bentofeatures.text": {
-    "text": "256-bit Encryption",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 41,
-      "column": 142
-    }
-  },
-  "home.bentofeatures.text_2": {
-    "text": "SOC 2 Certified",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 44,
-      "column": 142
-    }
-  },
-  "home.bentofeatures.text_3": {
-    "text": "GDPR Compliant",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 47,
-      "column": 142
+      "line": 54,
+      "column": 65
     }
   },
   "home.bentofeatures.subheading_2": {
     "text": "Lightning Fast",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 59,
-      "column": 70
+      "line": 76,
+      "column": 64
     }
   },
   "home.bentofeatures.paragraph_3": {
     "text": "Optimized for speed with sub-100ms response times globally.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 62,
-      "column": 63
+      "line": 79,
+      "column": 55
     }
   },
   "home.bentofeatures.subheading_3": {
     "text": "Real-time Analytics",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 72,
-      "column": 70
+      "line": 89,
+      "column": 64
     }
   },
   "home.bentofeatures.paragraph_4": {
     "text": "Comprehensive insights and metrics updated in real-time.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 75,
-      "column": 63
+      "line": 92,
+      "column": 55
     }
   },
   "home.bentofeatures.subheading_4": {
     "text": "Fully Customizable",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 88,
-      "column": 72
+      "line": 111,
+      "column": 66
     }
   },
   "home.bentofeatures.paragraph_5": {
     "text": "Tailor every aspect of the platform to match your unique workflow and branding requirements.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 91,
-      "column": 73
+      "line": 114,
+      "column": 60
     }
   },
   "home.bentofeatures.linkText": {
     "text": "Explore Features",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 98,
+      "line": 121,
       "column": 13
     }
   },
@@ -403,63 +715,207 @@
     "text": "We didn't reinvent the wheel",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Content.tsx",
-      "line": 15,
-      "column": 100
+      "line": 16,
+      "column": 62
     }
   },
   "home.content.paragraph": {
     "text": "We are strategists, designers and developers. Innovators and problem solvers. Small enough to\n            be simple and quick, but big enough to deliver the scope you want at the pace you need.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Content.tsx",
-      "line": 18,
-      "column": 54
+      "line": 19,
+      "column": 41
     }
   },
   "home.content.paragraph_2": {
     "text": "Our approach combines deep expertise with agile methodology, ensuring you get results that\n            matter without the overhead of traditional agencies.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Content.tsx",
-      "line": 22,
-      "column": 49
+      "line": 23,
+      "column": 36
+    }
+  },
+  "home.stats.stats.0.value": {
+    "text": "50K+",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 11,
+      "column": 13
+    }
+  },
+  "home.stats.stats.0.label": {
+    "text": "Active Users",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 12,
+      "column": 13
+    }
+  },
+  "home.stats.stats.0.description": {
+    "text": "Growing every day",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 13,
+      "column": 19
+    }
+  },
+  "home.stats.stats.1.value": {
+    "text": "120+",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 17,
+      "column": 13
+    }
+  },
+  "home.stats.stats.1.label": {
+    "text": "Countries",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 18,
+      "column": 13
+    }
+  },
+  "home.stats.stats.1.description": {
+    "text": "Worldwide reach",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 19,
+      "column": 19
+    }
+  },
+  "home.stats.stats.2.value": {
+    "text": "99.9%",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 23,
+      "column": 13
+    }
+  },
+  "home.stats.stats.2.label": {
+    "text": "Uptime",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 24,
+      "column": 13
+    }
+  },
+  "home.stats.stats.2.description": {
+    "text": "Reliable service",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 25,
+      "column": 19
+    }
+  },
+  "home.stats.stats.3.value": {
+    "text": "2.5x",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 29,
+      "column": 13
+    }
+  },
+  "home.stats.stats.3.label": {
+    "text": "Faster",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 30,
+      "column": 13
+    }
+  },
+  "home.stats.stats.3.description": {
+    "text": "Than competitors",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 31,
+      "column": 19
     }
   },
   "home.stats.heading": {
     "text": "Trusted by Thousands",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
-      "line": 47,
-      "column": 108
+      "line": 55,
+      "column": 70
     }
   },
   "home.stats.paragraph": {
     "text": "Our platform powers businesses worldwide with enterprise-grade reliability.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
-      "line": 50,
-      "column": 106
+      "line": 58,
+      "column": 93
+    }
+  },
+  "home.testimonials.testimonials.0.quote": {
+    "text": "This platform has completely transformed how we operate. The efficiency gains have been remarkable, and our team couldn't be happier with the results.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 10,
+      "column": 13
+    }
+  },
+  "home.testimonials.testimonials.0.author": {
+    "text": "Sarah Johnson",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 11,
+      "column": 14
+    }
+  },
+  "home.testimonials.testimonials.0.role": {
+    "text": "CEO, TechCorp",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 12,
+      "column": 12
+    }
+  },
+  "home.testimonials.testimonials.1.quote": {
+    "text": "Outstanding service and support. They went above and beyond to ensure our success. I would recommend them to anyone looking for a reliable partner.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 17,
+      "column": 13
+    }
+  },
+  "home.testimonials.testimonials.1.author": {
+    "text": "Michael Chen",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 18,
+      "column": 14
+    }
+  },
+  "home.testimonials.testimonials.1.role": {
+    "text": "CTO, InnovateLabs",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 19,
+      "column": 12
     }
   },
   "home.testimonials.heading": {
     "text": "What Our Clients Say",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 35,
-      "column": 100
+      "line": 38,
+      "column": 62
     }
   },
   "home.testimonials.paragraph": {
     "text": "Don't just take our word for it - hear from some of our satisfied customers.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 38,
-      "column": 87
+      "line": 41,
+      "column": 74
     }
   },
   "home.testimonials.div": {
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 50,
+      "line": 54,
       "column": 143
     }
   },
@@ -467,15 +923,15 @@
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 61,
-      "column": 102
+      "line": 72,
+      "column": 17
     }
   },
   "home.testimonials.paragraph_3": {
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 62,
+      "line": 73,
       "column": 38
     }
   },
@@ -483,47 +939,239 @@
     "text": "Let's create more tools and ideas that brings us together",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 35,
-      "column": 100
+      "line": 50,
+      "column": 64
     }
   },
   "home.cta.paragraph": {
-    "text": "Flowbite helps you connect with friends and communities of people who share your interests.\n            Connecting with your friends and family as well as discovering new ones is easy with features\n            like Groups.",
+    "text": "Our platform helps you connect with friends and communities of people who share your interests.\n              Connecting with your friends and family as well as discovering new ones is easy with features\n              like Groups.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 38,
-      "column": 74
+      "line": 53,
+      "column": 63
     }
   },
   "home.cta.buttonText": {
     "text": "Get started",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 48,
+      "line": 63,
+      "column": 13
+    }
+  },
+  "home.pricingtables.pricingPlans.0.name": {
+    "text": "Starter",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 19,
+      "column": 10
+    }
+  },
+  "home.pricingtables.pricingPlans.0.description": {
+    "text": "Best option for personal use & for your next project.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 20,
+      "column": 17
+    }
+  },
+  "home.pricingtables.pricingPlans.0.price": {
+    "text": "$29",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 21,
       "column": 11
+    }
+  },
+  "home.pricingtables.pricingPlans.0.features.0.text": {
+    "text": "Individual configuration",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 23,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.0.features.1.text": {
+    "text": "No setup, or hidden fees",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 24,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.0.features.2.text": {
+    "text": "Team size: <span class=\"font-semibold\">1 developer</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 25,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.0.features.3.text": {
+    "text": "Premium support: <span class=\"font-semibold\">6 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 26,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.0.features.4.text": {
+    "text": "Free updates: <span class=\"font-semibold\">6 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 27,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.1.name": {
+    "text": "Company",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 31,
+      "column": 10
+    }
+  },
+  "home.pricingtables.pricingPlans.1.description": {
+    "text": "Relevant for multiple users, extended & premium support.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 32,
+      "column": 17
+    }
+  },
+  "home.pricingtables.pricingPlans.1.price": {
+    "text": "$99",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 33,
+      "column": 11
+    }
+  },
+  "home.pricingtables.pricingPlans.1.features.0.text": {
+    "text": "Individual configuration",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 35,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.1.features.1.text": {
+    "text": "No setup, or hidden fees",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 36,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.1.features.2.text": {
+    "text": "Team size: <span class=\"font-semibold\">10 developers</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 37,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.1.features.3.text": {
+    "text": "Premium support: <span class=\"font-semibold\">24 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 38,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.1.features.4.text": {
+    "text": "Free updates: <span class=\"font-semibold\">24 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 39,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.2.name": {
+    "text": "Enterprise",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 43,
+      "column": 10
+    }
+  },
+  "home.pricingtables.pricingPlans.2.description": {
+    "text": "Best for large scale uses and extended redistribution rights.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 44,
+      "column": 17
+    }
+  },
+  "home.pricingtables.pricingPlans.2.price": {
+    "text": "$499",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 45,
+      "column": 11
+    }
+  },
+  "home.pricingtables.pricingPlans.2.features.0.text": {
+    "text": "Individual configuration",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 47,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.2.features.1.text": {
+    "text": "No setup, or hidden fees",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 48,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.2.features.2.text": {
+    "text": "Team size: <span class=\"font-semibold\">100+ developers</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 49,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.2.features.3.text": {
+    "text": "Premium support: <span class=\"font-semibold\">36 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 50,
+      "column": 14
+    }
+  },
+  "home.pricingtables.pricingPlans.2.features.4.text": {
+    "text": "Free updates: <span class=\"font-semibold\">36 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 51,
+      "column": 14
     }
   },
   "home.pricingtables.heading": {
     "text": "Designed for business teams like yours",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
-      "line": 72,
-      "column": 100
+      "line": 77,
+      "column": 62
     }
   },
   "home.pricingtables.paragraph": {
     "text": "Here at Flowbite we focus on markets where technology, innovation, and capital can unlock\n            long-term value and drive economic growth.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
-      "line": 75,
-      "column": 69
+      "line": 80,
+      "column": 56
     }
   },
   "home.pricingtables.text": {
     "text": "/month",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
-      "line": 98,
+      "line": 117,
       "column": 62
     }
   },
@@ -531,39 +1179,255 @@
     "text": "Get started",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
-      "line": 129,
+      "line": 155,
       "column": 15
+    }
+  },
+  "home.faqsection.faqs.0.question": {
+    "text": "What do you mean by \"Figma assets\"?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 13,
+      "column": 14
+    }
+  },
+  "home.faqsection.faqs.0.answers.0": {
+    "text": "You will have access to download the full Figma project including all of the pages, the components, responsive pages, and also the icons, illustrations, and images included in the screens.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 15,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.1.question": {
+    "text": "What does \"lifetime access\" exactly mean?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 19,
+      "column": 14
+    }
+  },
+  "home.faqsection.faqs.1.answers.0": {
+    "text": "Once you have purchased either the design, code, or both packages, you will have access to all of the future updates based on the roadmap, free of charge.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 21,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.2.question": {
+    "text": "How does support work?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 25,
+      "column": 14
+    }
+  },
+  "home.faqsection.faqs.2.answers.0": {
+    "text": "We're aware of the importance of well qualified support, that is why we decided that support will only be provided by the authors that actually worked on this project.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 27,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.2.answers.1": {
+    "text": "Feel free to {contact us} and we'll help you out as soon as we can.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 28,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.2.links.0.text": {
+    "text": "contact us",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 30,
+      "column": 20
+    }
+  },
+  "home.faqsection.faqs.3.question": {
+    "text": "I want to build more than one project. Is that allowed?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 33,
+      "column": 14
+    }
+  },
+  "home.faqsection.faqs.3.answers.0": {
+    "text": "You can use Windster for an unlimited amount of projects, whether it's a personal website, a SaaS app, or a website for a client. As long as you don't build a product that will directly compete with Windster either as a UI kit, theme, or template, it's fine.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 35,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.3.answers.1": {
+    "text": "Find out more information by {reading the license}.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 36,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.3.links.0.text": {
+    "text": "reading the license",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 38,
+      "column": 20
+    }
+  },
+  "home.faqsection.faqs.4.question": {
+    "text": "What does \"free updates\" include?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 41,
+      "column": 14
+    }
+  },
+  "home.faqsection.faqs.4.answers.0": {
+    "text": "The free updates that will be provided is based on the {roadmap} that we have laid out for this project. It is also possible that we will provide extra updates outside of the roadmap as well.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 43,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.4.links.0.text": {
+    "text": "roadmap",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 45,
+      "column": 20
+    }
+  },
+  "home.faqsection.faqs.5.question": {
+    "text": "What does the free version include?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 48,
+      "column": 14
+    }
+  },
+  "home.faqsection.faqs.5.answers.0": {
+    "text": "The {free version} of Windster includes a minimal style guidelines, component variants, and a dashboard page with the mobile version alongside it.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 50,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.5.answers.1": {
+    "text": "You can use this version for any purposes, because it is open-source under the MIT license.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 51,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.5.links.0.text": {
+    "text": "free version",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 53,
+      "column": 20
+    }
+  },
+  "home.faqsection.faqs.6.question": {
+    "text": "What is the difference between Windster and Tailwind UI?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 56,
+      "column": 14
+    }
+  },
+  "home.faqsection.faqs.6.answers.0": {
+    "text": "Although both Windster and Tailwind UI are built for integration with Tailwind CSS, the main difference is in the design, the pages, the extra components and UI elements that Windster includes.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 58,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.6.answers.1": {
+    "text": "Additionally, Windster is a project that is still in development, and later it will include both the application, marketing, and e-commerce UI interfaces.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 59,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.7.question": {
+    "text": "Can I use Windster in open-source projects?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 63,
+      "column": 14
+    }
+  },
+  "home.faqsection.faqs.7.answers.0": {
+    "text": "Generally, it is accepted to use Windster in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to Windster itself.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 65,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.7.answers.1": {
+    "text": "With that being said, feel free to use this design kit for your open-source projects.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 66,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.7.answers.2": {
+    "text": "Find out more information by {reading the license}.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 67,
+      "column": 6
+    }
+  },
+  "home.faqsection.faqs.7.links.0.text": {
+    "text": "reading the license",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 69,
+      "column": 20
     }
   },
   "home.faqsection.heading": {
     "text": "Frequently asked questions",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
-      "line": 119,
-      "column": 99
+      "line": 121,
+      "column": 61
     }
   },
   "home.contactform.heading": {
     "text": "Contact Us",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 17,
-      "column": 110
+      "line": 20,
+      "column": 72
     }
   },
   "home.contactform.paragraph": {
     "text": "Got a technical issue? Want to send feedback about a beta feature? Need details about our\n          Business plan? Let us know.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 20,
-      "column": 85
+      "line": 23,
+      "column": 72
     }
   },
   "home.contactform.fieldLabel": {
     "text": "Your email",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 28,
+      "line": 34,
       "column": 98
     }
   },
@@ -571,7 +1435,7 @@
     "text": "Subject",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 47,
+      "line": 60,
       "column": 100
     }
   },
@@ -579,7 +1443,7 @@
     "text": "Your message",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 66,
+      "line": 86,
       "column": 100
     }
   },
@@ -587,7 +1451,7 @@
     "text": "Send message",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 82,
+      "line": 103,
       "column": 13
     }
   },
@@ -595,7 +1459,7 @@
     "text": "Comprehensive solutions for your business",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesHero.tsx",
-      "line": 20,
+      "line": 23,
       "column": 16
     }
   },
@@ -603,23 +1467,23 @@
     "text": "Our Services",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesHero.tsx",
-      "line": 23,
-      "column": 142
+      "line": 26,
+      "column": 78
     }
   },
   "service.serviceshero.paragraph": {
     "text": "Comprehensive solutions tailored to your business needs. From consulting to\n          implementation, we provide end-to-end services that drive results and accelerate your\n          digital transformation.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesHero.tsx",
-      "line": 27,
-      "column": 114
+      "line": 30,
+      "column": 78
     }
   },
   "service.serviceshero.buttonText": {
     "text": "Get started",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesHero.tsx",
-      "line": 39,
+      "line": 42,
       "column": 11
     }
   },
@@ -627,135 +1491,207 @@
     "text": "Schedule a demo",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesHero.tsx",
-      "line": 50,
+      "line": 53,
       "column": 11
+    }
+  },
+  "service.serviceslist.services.0.title": {
+    "text": "Cloud Solutions",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 18,
+      "column": 13
+    }
+  },
+  "service.serviceslist.services.0.description": {
+    "text": "Migrate and manage your infrastructure in the cloud with our expert guidance and comprehensive support services.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 20,
+      "column": 8
+    }
+  },
+  "service.serviceslist.services.1.title": {
+    "text": "IT Consulting",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 24,
+      "column": 13
+    }
+  },
+  "service.serviceslist.services.1.description": {
+    "text": "Strategic technology consulting to align your IT infrastructure with business goals and drive growth.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 26,
+      "column": 8
+    }
+  },
+  "service.serviceslist.services.2.title": {
+    "text": "Performance Optimization",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 30,
+      "column": 13
+    }
+  },
+  "service.serviceslist.services.2.description": {
+    "text": "Enhance your application's speed and efficiency with our comprehensive optimization and tuning services.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 32,
+      "column": 8
+    }
+  },
+  "service.serviceslist.services.3.title": {
+    "text": "Security Audits",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 36,
+      "column": 13
+    }
+  },
+  "service.serviceslist.services.3.description": {
+    "text": "Comprehensive security assessments and penetration testing to protect your business from emerging threats.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 38,
+      "column": 8
+    }
+  },
+  "service.serviceslist.services.4.title": {
+    "text": "Custom Development",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 42,
+      "column": 13
+    }
+  },
+  "service.serviceslist.services.4.description": {
+    "text": "Bespoke software solutions built to your exact specifications using modern technologies and best practices.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 44,
+      "column": 8
+    }
+  },
+  "service.serviceslist.services.5.title": {
+    "text": "Data Analytics",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 48,
+      "column": 13
+    }
+  },
+  "service.serviceslist.services.5.description": {
+    "text": "Turn your data into actionable insights with our advanced analytics and business intelligence services.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
+      "line": 50,
+      "column": 8
     }
   },
   "service.serviceslist.heading": {
     "text": "What We Offer",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
-      "line": 64,
-      "column": 100
+      "line": 66,
+      "column": 62
     }
   },
   "service.serviceslist.paragraph": {
     "text": "Explore our comprehensive range of services designed to help your business succeed in\n            the digital age.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServicesList.tsx",
-      "line": 67,
-      "column": 69
+      "line": 69,
+      "column": 56
     }
   },
   "service.bentofeatures.heading": {
     "text": "Everything You Need",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 16,
-      "column": 100
+      "line": 18,
+      "column": 62
     }
   },
   "service.bentofeatures.paragraph": {
     "text": "Powerful features designed to help your business thrive.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 19,
-      "column": 87
+      "line": 21,
+      "column": 74
     }
   },
   "service.bentofeatures.subheading": {
     "text": "Enterprise Security",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 33,
-      "column": 77
+      "line": 51,
+      "column": 15
     }
   },
   "service.bentofeatures.paragraph_2": {
     "text": "Bank-level encryption and security protocols to keep your data safe.\n                Compliance with industry standards including SOC 2, GDPR, and HIPAA.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 36,
-      "column": 78
-    }
-  },
-  "service.bentofeatures.text": {
-    "text": "256-bit Encryption",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 41,
-      "column": 142
-    }
-  },
-  "service.bentofeatures.text_2": {
-    "text": "SOC 2 Certified",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 44,
-      "column": 142
-    }
-  },
-  "service.bentofeatures.text_3": {
-    "text": "GDPR Compliant",
-    "_meta": {
-      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 47,
-      "column": 142
+      "line": 54,
+      "column": 65
     }
   },
   "service.bentofeatures.subheading_2": {
     "text": "Lightning Fast",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 59,
-      "column": 70
+      "line": 76,
+      "column": 64
     }
   },
   "service.bentofeatures.paragraph_3": {
     "text": "Optimized for speed with sub-100ms response times globally.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 62,
-      "column": 63
+      "line": 79,
+      "column": 55
     }
   },
   "service.bentofeatures.subheading_3": {
     "text": "Real-time Analytics",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 72,
-      "column": 70
+      "line": 89,
+      "column": 64
     }
   },
   "service.bentofeatures.paragraph_4": {
     "text": "Comprehensive insights and metrics updated in real-time.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 75,
-      "column": 63
+      "line": 92,
+      "column": 55
     }
   },
   "service.bentofeatures.subheading_4": {
     "text": "Fully Customizable",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 88,
-      "column": 72
+      "line": 111,
+      "column": 66
     }
   },
   "service.bentofeatures.paragraph_5": {
     "text": "Tailor every aspect of the platform to match your unique workflow and branding requirements.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 91,
-      "column": 73
+      "line": 114,
+      "column": 60
     }
   },
   "service.bentofeatures.linkText": {
     "text": "Explore Features",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/BentoFeatures.tsx",
-      "line": 98,
+      "line": 121,
       "column": 13
     }
   },
@@ -763,87 +1699,231 @@
     "text": "Our Process",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServiceProcess.tsx",
-      "line": 15,
-      "column": 100
+      "line": 16,
+      "column": 62
     }
   },
   "service.serviceprocess.paragraph": {
     "text": "We follow a proven methodology that ensures successful project delivery every time. From\n            initial consultation to final deployment and beyond, we work closely with you at every\n            step to ensure your vision becomes reality.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServiceProcess.tsx",
-      "line": 18,
-      "column": 54
+      "line": 19,
+      "column": 41
     }
   },
   "service.serviceprocess.paragraph_2": {
     "text": "Our agile approach allows for flexibility while maintaining laser focus on your\n            objectives. We prioritize communication, transparency, and continuous improvement\n            throughout the entire engagement, ensuring you're always in the loop.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServiceProcess.tsx",
+      "line": 24,
+      "column": 36
+    }
+  },
+  "service.stats.stats.0.value": {
+    "text": "50K+",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 11,
+      "column": 13
+    }
+  },
+  "service.stats.stats.0.label": {
+    "text": "Active Users",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 12,
+      "column": 13
+    }
+  },
+  "service.stats.stats.0.description": {
+    "text": "Growing every day",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 13,
+      "column": 19
+    }
+  },
+  "service.stats.stats.1.value": {
+    "text": "120+",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 17,
+      "column": 13
+    }
+  },
+  "service.stats.stats.1.label": {
+    "text": "Countries",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 18,
+      "column": 13
+    }
+  },
+  "service.stats.stats.1.description": {
+    "text": "Worldwide reach",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 19,
+      "column": 19
+    }
+  },
+  "service.stats.stats.2.value": {
+    "text": "99.9%",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
       "line": 23,
-      "column": 49
+      "column": 13
+    }
+  },
+  "service.stats.stats.2.label": {
+    "text": "Uptime",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 24,
+      "column": 13
+    }
+  },
+  "service.stats.stats.2.description": {
+    "text": "Reliable service",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 25,
+      "column": 19
+    }
+  },
+  "service.stats.stats.3.value": {
+    "text": "2.5x",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 29,
+      "column": 13
+    }
+  },
+  "service.stats.stats.3.label": {
+    "text": "Faster",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 30,
+      "column": 13
+    }
+  },
+  "service.stats.stats.3.description": {
+    "text": "Than competitors",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
+      "line": 31,
+      "column": 19
     }
   },
   "service.stats.heading": {
     "text": "Trusted by Thousands",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
-      "line": 47,
-      "column": 108
+      "line": 55,
+      "column": 70
     }
   },
   "service.stats.paragraph": {
     "text": "Our platform powers businesses worldwide with enterprise-grade reliability.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Stats.tsx",
-      "line": 50,
-      "column": 106
+      "line": 58,
+      "column": 93
     }
   },
   "service.servicebenefits.heading": {
     "text": "Why Partner With Us",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServiceBenefits.tsx",
-      "line": 27,
-      "column": 100
+      "line": 30,
+      "column": 62
     }
   },
   "service.servicebenefits.paragraph": {
     "text": "When you choose our services, you're not just getting technical expertise – you're\n            gaining a dedicated partner committed to your success. We bring years of industry\n            experience, cutting-edge technology, and a customer-first approach to every project.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServiceBenefits.tsx",
-      "line": 30,
-      "column": 54
+      "line": 33,
+      "column": 41
     }
   },
   "service.servicebenefits.paragraph_2": {
     "text": "Our team stays ahead of the curve, continuously learning and adapting to ensure we\n            deliver solutions that not only meet today's needs but are ready for tomorrow's\n            challenges.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ServiceBenefits.tsx",
-      "line": 35,
-      "column": 49
+      "line": 38,
+      "column": 36
+    }
+  },
+  "service.testimonials.testimonials.0.quote": {
+    "text": "This platform has completely transformed how we operate. The efficiency gains have been remarkable, and our team couldn't be happier with the results.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 10,
+      "column": 13
+    }
+  },
+  "service.testimonials.testimonials.0.author": {
+    "text": "Sarah Johnson",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 11,
+      "column": 14
+    }
+  },
+  "service.testimonials.testimonials.0.role": {
+    "text": "CEO, TechCorp",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 12,
+      "column": 12
+    }
+  },
+  "service.testimonials.testimonials.1.quote": {
+    "text": "Outstanding service and support. They went above and beyond to ensure our success. I would recommend them to anyone looking for a reliable partner.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 17,
+      "column": 13
+    }
+  },
+  "service.testimonials.testimonials.1.author": {
+    "text": "Michael Chen",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 18,
+      "column": 14
+    }
+  },
+  "service.testimonials.testimonials.1.role": {
+    "text": "CTO, InnovateLabs",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
+      "line": 19,
+      "column": 12
     }
   },
   "service.testimonials.heading": {
     "text": "What Our Clients Say",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 35,
-      "column": 100
+      "line": 38,
+      "column": 62
     }
   },
   "service.testimonials.paragraph": {
     "text": "Don't just take our word for it - hear from some of our satisfied customers.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 38,
-      "column": 87
+      "line": 41,
+      "column": 74
     }
   },
   "service.testimonials.div": {
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 50,
+      "line": 54,
       "column": 143
     }
   },
@@ -851,15 +1931,15 @@
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 61,
-      "column": 102
+      "line": 72,
+      "column": 17
     }
   },
   "service.testimonials.paragraph_3": {
     "text": "\"",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/Testimonials.tsx",
-      "line": 62,
+      "line": 73,
       "column": 38
     }
   },
@@ -867,47 +1947,239 @@
     "text": "Let's create more tools and ideas that brings us together",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 35,
-      "column": 100
+      "line": 50,
+      "column": 64
     }
   },
   "service.cta.paragraph": {
-    "text": "Flowbite helps you connect with friends and communities of people who share your interests.\n            Connecting with your friends and family as well as discovering new ones is easy with features\n            like Groups.",
+    "text": "Our platform helps you connect with friends and communities of people who share your interests.\n              Connecting with your friends and family as well as discovering new ones is easy with features\n              like Groups.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 38,
-      "column": 74
+      "line": 53,
+      "column": 63
     }
   },
   "service.cta.buttonText": {
     "text": "Get started",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/CTA.tsx",
-      "line": 48,
+      "line": 63,
+      "column": 13
+    }
+  },
+  "service.pricingtables.pricingPlans.0.name": {
+    "text": "Starter",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 19,
+      "column": 10
+    }
+  },
+  "service.pricingtables.pricingPlans.0.description": {
+    "text": "Best option for personal use & for your next project.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 20,
+      "column": 17
+    }
+  },
+  "service.pricingtables.pricingPlans.0.price": {
+    "text": "$29",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 21,
       "column": 11
+    }
+  },
+  "service.pricingtables.pricingPlans.0.features.0.text": {
+    "text": "Individual configuration",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 23,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.0.features.1.text": {
+    "text": "No setup, or hidden fees",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 24,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.0.features.2.text": {
+    "text": "Team size: <span class=\"font-semibold\">1 developer</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 25,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.0.features.3.text": {
+    "text": "Premium support: <span class=\"font-semibold\">6 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 26,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.0.features.4.text": {
+    "text": "Free updates: <span class=\"font-semibold\">6 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 27,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.1.name": {
+    "text": "Company",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 31,
+      "column": 10
+    }
+  },
+  "service.pricingtables.pricingPlans.1.description": {
+    "text": "Relevant for multiple users, extended & premium support.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 32,
+      "column": 17
+    }
+  },
+  "service.pricingtables.pricingPlans.1.price": {
+    "text": "$99",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 33,
+      "column": 11
+    }
+  },
+  "service.pricingtables.pricingPlans.1.features.0.text": {
+    "text": "Individual configuration",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 35,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.1.features.1.text": {
+    "text": "No setup, or hidden fees",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 36,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.1.features.2.text": {
+    "text": "Team size: <span class=\"font-semibold\">10 developers</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 37,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.1.features.3.text": {
+    "text": "Premium support: <span class=\"font-semibold\">24 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 38,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.1.features.4.text": {
+    "text": "Free updates: <span class=\"font-semibold\">24 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 39,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.2.name": {
+    "text": "Enterprise",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 43,
+      "column": 10
+    }
+  },
+  "service.pricingtables.pricingPlans.2.description": {
+    "text": "Best for large scale uses and extended redistribution rights.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 44,
+      "column": 17
+    }
+  },
+  "service.pricingtables.pricingPlans.2.price": {
+    "text": "$499",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 45,
+      "column": 11
+    }
+  },
+  "service.pricingtables.pricingPlans.2.features.0.text": {
+    "text": "Individual configuration",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 47,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.2.features.1.text": {
+    "text": "No setup, or hidden fees",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 48,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.2.features.2.text": {
+    "text": "Team size: <span class=\"font-semibold\">100+ developers</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 49,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.2.features.3.text": {
+    "text": "Premium support: <span class=\"font-semibold\">36 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 50,
+      "column": 14
+    }
+  },
+  "service.pricingtables.pricingPlans.2.features.4.text": {
+    "text": "Free updates: <span class=\"font-semibold\">36 months</span>",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
+      "line": 51,
+      "column": 14
     }
   },
   "service.pricingtables.heading": {
     "text": "Designed for business teams like yours",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
-      "line": 72,
-      "column": 100
+      "line": 77,
+      "column": 62
     }
   },
   "service.pricingtables.paragraph": {
     "text": "Here at Flowbite we focus on markets where technology, innovation, and capital can unlock\n            long-term value and drive economic growth.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
-      "line": 75,
-      "column": 69
+      "line": 80,
+      "column": 56
     }
   },
   "service.pricingtables.text": {
     "text": "/month",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
-      "line": 98,
+      "line": 117,
       "column": 62
     }
   },
@@ -915,39 +2187,255 @@
     "text": "Get started",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/PricingTables.tsx",
-      "line": 129,
+      "line": 155,
       "column": 15
+    }
+  },
+  "service.faqsection.faqs.0.question": {
+    "text": "What do you mean by \"Figma assets\"?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 13,
+      "column": 14
+    }
+  },
+  "service.faqsection.faqs.0.answers.0": {
+    "text": "You will have access to download the full Figma project including all of the pages, the components, responsive pages, and also the icons, illustrations, and images included in the screens.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 15,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.1.question": {
+    "text": "What does \"lifetime access\" exactly mean?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 19,
+      "column": 14
+    }
+  },
+  "service.faqsection.faqs.1.answers.0": {
+    "text": "Once you have purchased either the design, code, or both packages, you will have access to all of the future updates based on the roadmap, free of charge.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 21,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.2.question": {
+    "text": "How does support work?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 25,
+      "column": 14
+    }
+  },
+  "service.faqsection.faqs.2.answers.0": {
+    "text": "We're aware of the importance of well qualified support, that is why we decided that support will only be provided by the authors that actually worked on this project.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 27,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.2.answers.1": {
+    "text": "Feel free to {contact us} and we'll help you out as soon as we can.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 28,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.2.links.0.text": {
+    "text": "contact us",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 30,
+      "column": 20
+    }
+  },
+  "service.faqsection.faqs.3.question": {
+    "text": "I want to build more than one project. Is that allowed?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 33,
+      "column": 14
+    }
+  },
+  "service.faqsection.faqs.3.answers.0": {
+    "text": "You can use Windster for an unlimited amount of projects, whether it's a personal website, a SaaS app, or a website for a client. As long as you don't build a product that will directly compete with Windster either as a UI kit, theme, or template, it's fine.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 35,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.3.answers.1": {
+    "text": "Find out more information by {reading the license}.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 36,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.3.links.0.text": {
+    "text": "reading the license",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 38,
+      "column": 20
+    }
+  },
+  "service.faqsection.faqs.4.question": {
+    "text": "What does \"free updates\" include?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 41,
+      "column": 14
+    }
+  },
+  "service.faqsection.faqs.4.answers.0": {
+    "text": "The free updates that will be provided is based on the {roadmap} that we have laid out for this project. It is also possible that we will provide extra updates outside of the roadmap as well.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 43,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.4.links.0.text": {
+    "text": "roadmap",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 45,
+      "column": 20
+    }
+  },
+  "service.faqsection.faqs.5.question": {
+    "text": "What does the free version include?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 48,
+      "column": 14
+    }
+  },
+  "service.faqsection.faqs.5.answers.0": {
+    "text": "The {free version} of Windster includes a minimal style guidelines, component variants, and a dashboard page with the mobile version alongside it.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 50,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.5.answers.1": {
+    "text": "You can use this version for any purposes, because it is open-source under the MIT license.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 51,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.5.links.0.text": {
+    "text": "free version",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 53,
+      "column": 20
+    }
+  },
+  "service.faqsection.faqs.6.question": {
+    "text": "What is the difference between Windster and Tailwind UI?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 56,
+      "column": 14
+    }
+  },
+  "service.faqsection.faqs.6.answers.0": {
+    "text": "Although both Windster and Tailwind UI are built for integration with Tailwind CSS, the main difference is in the design, the pages, the extra components and UI elements that Windster includes.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 58,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.6.answers.1": {
+    "text": "Additionally, Windster is a project that is still in development, and later it will include both the application, marketing, and e-commerce UI interfaces.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 59,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.7.question": {
+    "text": "Can I use Windster in open-source projects?",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 63,
+      "column": 14
+    }
+  },
+  "service.faqsection.faqs.7.answers.0": {
+    "text": "Generally, it is accepted to use Windster in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to Windster itself.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 65,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.7.answers.1": {
+    "text": "With that being said, feel free to use this design kit for your open-source projects.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 66,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.7.answers.2": {
+    "text": "Find out more information by {reading the license}.",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 67,
+      "column": 6
+    }
+  },
+  "service.faqsection.faqs.7.links.0.text": {
+    "text": "reading the license",
+    "_meta": {
+      "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
+      "line": 69,
+      "column": 20
     }
   },
   "service.faqsection.heading": {
     "text": "Frequently asked questions",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/FAQSection.tsx",
-      "line": 119,
-      "column": 99
+      "line": 121,
+      "column": 61
     }
   },
   "service.contactform.heading": {
     "text": "Contact Us",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 17,
-      "column": 110
+      "line": 20,
+      "column": 72
     }
   },
   "service.contactform.paragraph": {
     "text": "Got a technical issue? Want to send feedback about a beta feature? Need details about our\n          Business plan? Let us know.",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 20,
-      "column": 85
+      "line": 23,
+      "column": 72
     }
   },
   "service.contactform.fieldLabel": {
     "text": "Your email",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 28,
+      "line": 34,
       "column": 98
     }
   },
@@ -955,7 +2443,7 @@
     "text": "Subject",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 47,
+      "line": 60,
       "column": 100
     }
   },
@@ -963,7 +2451,7 @@
     "text": "Your message",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 66,
+      "line": 86,
       "column": 100
     }
   },
@@ -971,7 +2459,7 @@
     "text": "Send message",
     "_meta": {
       "file": "/Users/manjunathm/codedesign/tailwind-templates/flowbite-react-app/src/blocks/ContactForm.tsx",
-      "line": 82,
+      "line": 103,
       "column": 13
     }
   }

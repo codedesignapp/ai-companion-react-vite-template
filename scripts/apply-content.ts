@@ -30,7 +30,7 @@ function replaceTextInFile(
   oldText: string,
   newText: string,
   line: number
-): boolean {
+): "updated" | "already" | "failed" {
   try {
     let content = fs.readFileSync(filePath, "utf-8");
     const lines = content.split("\n");
@@ -39,7 +39,7 @@ function replaceTextInFile(
     if (lines[line - 1] && lines[line - 1].includes(oldText)) {
       lines[line - 1] = lines[line - 1].replace(oldText, newText);
       fs.writeFileSync(filePath, lines.join("\n"));
-      return true;
+      return "updated";
     }
 
     // Fallback: search the entire file
@@ -49,16 +49,21 @@ function replaceTextInFile(
     if (content.includes(oldText)) {
       content = content.replace(regex, newText);
       fs.writeFileSync(filePath, content);
-      return true;
+      return "updated";
+    }
+
+    // Check if the new text already exists (for shared components)
+    if (content.includes(newText)) {
+      return "already";
     }
 
     console.warn(
       `⚠️  Could not find text in ${path.basename(filePath)} at line ${line}`
     );
-    return false;
+    return "failed";
   } catch (error: any) {
     console.error(`Error updating ${filePath}:`, error.message);
-    return false;
+    return "failed";
   }
 }
 
@@ -92,10 +97,13 @@ function applyUpdates(
     console.log(`   Old: "${oldText.substring(0, 60)}${oldText.length > 60 ? "..." : ""}"`);
     console.log(`   New: "${newText.substring(0, 60)}${newText.length > 60 ? "..." : ""}"`);
 
-    const success = replaceTextInFile(file, oldText, newText, line);
-    if (success) {
+    const result = replaceTextInFile(file, oldText, newText, line);
+    if (result === "updated") {
       console.log(`   ✅ Updated`);
       successfulUpdates++;
+    } else if (result === "already") {
+      console.log(`   ⏭️  Already applied (shared component)`);
+      skippedUpdates++;
     } else {
       console.log(`   ❌ Failed`);
     }

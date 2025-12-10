@@ -61,6 +61,90 @@ function getSemanticName(elementType: string, index: number): string {
   return index === 0 ? baseName : `${baseName}_${index + 1}`;
 }
 
+function extractStringsFromObject(
+  obj: any,
+  arrayName: string,
+  itemIndex: number,
+  filePath: string,
+  pageName: string,
+  blockName: string,
+  contentMap: ContentMap,
+  prefix: string = ""
+): void {
+  if (!obj || !obj.properties) return;
+
+  // Skip non-content properties
+  const skipProps = [
+    "icon",
+    "image",
+    "imageAlt",
+    "imageSrc",
+    "href",
+    "src",
+    "alt",
+    "url",
+    "link",
+    "className",
+    "style",
+    "id",
+    "key",
+  ];
+
+  obj.properties.forEach((prop: any) => {
+    if (prop.type !== "ObjectProperty" || !prop.key) return;
+
+    const propName = prop.key.name || prop.key.value;
+    if (!propName) return;
+
+    // Skip non-content properties
+    if (skipProps.includes(propName)) return;
+
+    const value = prop.value;
+
+    // Handle string literals
+    if (value.type === "StringLiteral" && isTextContent(value.value)) {
+      const key = `${pageName}.${blockName}.${arrayName}.${itemIndex}.${prefix}${propName}`;
+      contentMap[key] = {
+        text: value.value,
+        _meta: {
+          file: filePath,
+          line: value.loc?.start.line || 0,
+          column: value.loc?.start.column || 0,
+        },
+      };
+    }
+
+    // Handle array of strings (like answers in FAQs)
+    if (value.type === "ArrayExpression") {
+      value.elements.forEach((element: any, elemIndex: number) => {
+        if (element && element.type === "StringLiteral" && isTextContent(element.value)) {
+          const key = `${pageName}.${blockName}.${arrayName}.${itemIndex}.${prefix}${propName}.${elemIndex}`;
+          contentMap[key] = {
+            text: element.value,
+            _meta: {
+              file: filePath,
+              line: element.loc?.start.line || 0,
+              column: element.loc?.start.column || 0,
+            },
+          };
+        } else if (element && element.type === "ObjectExpression") {
+          // Handle array of objects (like links in FAQs or features in pricing)
+          extractStringsFromObject(
+            element,
+            arrayName,
+            itemIndex,
+            filePath,
+            pageName,
+            blockName,
+            contentMap,
+            `${prefix}${propName}.${elemIndex}.`
+          );
+        }
+      });
+    }
+  });
+}
+
 function extractTextFromFile(
   filePath: string,
   pageName: string,
@@ -78,6 +162,43 @@ function extractTextFromFile(
     const elementCounts: Record<string, number> = {};
 
     traverse(ast, {
+      // Extract data from variable declarations (arrays of objects)
+      VariableDeclarator(path: any) {
+        const id = path.node.id;
+        const init = path.node.init;
+
+        // Check if this is an array assignment
+        if (
+          id &&
+          id.type === "Identifier" &&
+          init &&
+          init.type === "ArrayExpression"
+        ) {
+          const arrayName = id.name;
+
+          // Skip icon-only arrays or non-content arrays
+          const skipArrays = ["icons", "images", "colors", "config"];
+          if (skipArrays.some((skip) => arrayName.toLowerCase().includes(skip))) {
+            return;
+          }
+
+          // Process each item in the array
+          init.elements.forEach((element: any, index: number) => {
+            if (element && element.type === "ObjectExpression") {
+              extractStringsFromObject(
+                element,
+                arrayName,
+                index,
+                filePath,
+                pageName,
+                blockName,
+                contentMap
+              );
+            }
+          });
+        }
+      },
+
       JSXText(path: any) {
         const text = path.node.value.trim();
         if (isTextContent(text)) {
