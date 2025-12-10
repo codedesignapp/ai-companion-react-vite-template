@@ -74,9 +74,9 @@ export const ANIMATION_CONFIG = {
    */
   scrollTrigger: {
     enabled: true,           // Enable scroll-triggered animations
-    start: "top 80%",        // Start animation when element is 80% from top
-    end: "bottom 20%",      // End animation when element is 20% from bottom
-    toggleActions: "play none none reverse", // Play on enter, reverse on leave
+    start: "top bottom",     // Start animation IMMEDIATELY when top of element hits bottom of viewport
+    end: "bottom 20%",       // End animation when element is 20% from bottom
+    toggleActions: "play none none none", // Play on enter, don't reverse (stay visible)
   },
 
   /**

@@ -10,28 +10,30 @@ export function Content() {
       enabled={config.enabled}
       className="bg-surface"
     >
-      <div className="gap-12 items-center py-16 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-24 lg:px-6">
+      <div className="ds-section ds-grid items-center mx-auto max-w-screen-xl lg:grid lg:grid-cols-2">
         <div className="text-text-secondary">
-          <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
+          <h2 className="ds-heading-2 mb-6 text-text-primary">
             We didn't reinvent the wheel
           </h2>
-          <p className="mb-6 text-lg leading-relaxed">
+          <p className="ds-body-lg mb-6">
             We are strategists, designers and developers. Innovators and problem solvers. Small enough to
             be simple and quick, but big enough to deliver the scope you want at the pace you need.
           </p>
-          <p className="text-lg leading-relaxed">
+          <p className="ds-body-lg">
             Our approach combines deep expertise with agile methodology, ensuring you get results that
             matter without the overhead of traditional agencies.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-6 mt-8 lg:mt-0">
+        <div className="grid grid-cols-2 gap-6 mt-8 lg:mt-0" style={{ gap: 'var(--grid-gap)' }}>
           <img
-            className="w-full rounded-2xl object-cover h-64 shadow-lg"
+            className="w-full object-cover h-64"
+            style={{ borderRadius: 'var(--card-radius)', boxShadow: 'var(--card-shadow)' }}
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
             alt="office content 1"
           />
           <img
-            className="mt-8 w-full rounded-2xl object-cover h-64 shadow-lg"
+            className="mt-8 w-full object-cover h-64"
+            style={{ borderRadius: 'var(--card-radius)', boxShadow: 'var(--card-shadow)' }}
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
             alt="office content 2"
           />

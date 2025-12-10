@@ -52,45 +52,61 @@ export function TeamSection() {
       staggerSelector="div.grid > div"
       className="bg-surface-elevated relative overflow-hidden"
     >
-      {/* Decorative blobs - subtle and positioned away from content */}
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary-100/40 dark:bg-primary-900/10 rounded-full blur-3xl opacity-50" />
-      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-secondary-100/40 dark:bg-secondary-900/10 rounded-full blur-3xl opacity-50" />
+      {/* Decorative blobs */}
+      <div className="ds-blob absolute top-0 right-0 -mr-20 -mt-20 bg-primary-600/20 rounded-full" />
+      <div className="ds-blob absolute bottom-0 left-0 -ml-20 -mb-20 bg-secondary-600/20 rounded-full" />
 
-
-      <div className="relative py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
-        <div className="mx-auto max-w-screen-md text-center mb-12 lg:mb-20">
-          <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
+      <div className="ds-section relative mx-auto max-w-screen-xl">
+        {/* Section Header */}
+        <div className="mx-auto max-w-screen-md text-center mb-[var(--section-gap)]">
+          <h2 className="ds-heading-2 mb-6 text-text-primary">
             Our Team
           </h2>
-          <p className="text-text-secondary text-lg leading-relaxed">
+          <p className="ds-body-lg text-text-secondary">
             Explore the whole collection of open-source web components and elements built with the
             utility classes from Tailwind
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2">
+
+        {/* Team Grid */}
+        <div className="grid ds-grid md:grid-cols-2">
           {teamMembers.map((member) => (
             <div
               key={member.name}
-              className="items-center bg-surface/50 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl sm:flex border border-border transition-all duration-300 hover:border-primary-300 dark:hover:border-primary-700 overflow-hidden group hover:-translate-y-1"
+              className="ds-card items-center bg-surface/[var(--card-bg-opacity)] sm:flex border border-border hover:border-primary-300 dark:hover:border-primary-700 overflow-hidden group"
             >
+              {/* Member Image */}
               <a href="#" className="block sm:w-48 flex-shrink-0 relative overflow-hidden">
-                <div className="absolute inset-0 bg-primary-600/10 group-hover:bg-transparent transition-colors duration-300 z-10" />
+                <div className="absolute inset-0 bg-primary-600/10 group-hover:bg-transparent ds-transition z-10" />
                 <img
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 ds-transition"
+                  style={{ transitionDuration: 'calc(var(--transition-duration) * 2)' }}
                   src={member.image}
                   alt={member.imageAlt}
                 />
               </a>
-              <div className="p-6 relative">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primary-500/5 to-transparent rounded-bl-3xl -mr-6 -mt-6 transition-all duration-300 group-hover:from-primary-500/10" />
 
-                <h3 className="text-xl font-bold tracking-tight text-text-primary mb-1 relative">
-                  <a href="#" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{member.name}</a>
+              {/* Member Info */}
+              <div className="p-6 relative" style={{ padding: 'var(--card-padding)' }}>
+                <div
+                  className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primary-500/5 to-transparent rounded-bl-3xl -mr-6 -mt-6 ds-transition group-hover:from-primary-500/10"
+                  style={{ opacity: 'var(--deco-gradient-opacity)' }}
+                />
+
+                <h3 className="ds-heading-3 text-text-primary mb-1 relative">
+                  <a href="#" className="hover:text-primary-600 dark:hover:text-primary-400 ds-transition">{member.name}</a>
                 </h3>
-                <span className="text-sm font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-500 uppercase tracking-wider">{member.role}</span>
-                <p className="mt-4 mb-6 text-text-secondary leading-relaxed">
+                <span
+                  className="text-sm font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-500 uppercase tracking-wider"
+                  style={{ fontFamily: 'var(--body-font)' }}
+                >
+                  {member.role}
+                </span>
+                <p className="ds-body mt-4 mb-6 text-text-secondary">
                   {member.description}
                 </p>
+
+                {/* Social Links */}
                 <ul className="flex gap-4">
                   {[
                     { Icon: FaFacebook, label: "Facebook" },
@@ -101,7 +117,7 @@ export function TeamSection() {
                     <li key={i}>
                       <a
                         href="#"
-                        className="text-text-tertiary hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-110 block"
+                        className="text-text-tertiary hover:text-primary-600 dark:hover:text-primary-400 ds-transition hover:scale-110 block"
                         aria-label={label}
                       >
                         <Icon className="w-5 h-5" />
@@ -117,4 +133,3 @@ export function TeamSection() {
     </AnimatedSection>
   );
 }
-

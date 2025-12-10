@@ -12,37 +12,42 @@ export function Hero() {
       enabled={config.enabled}
       className="bg-surface relative overflow-hidden"
     >
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-secondary-500/10 dark:from-primary-900/20 dark:to-secondary-900/20 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-primary-500/20 blur-[100px] opacity-20 rounded-full pointer-events-none" />
+      {/* Decorative background elements - controlled by design system */}
+      <div
+        className="absolute inset-0 bg-gradient-to-br from-primary-500/[var(--deco-gradient-opacity)] via-transparent to-secondary-500/[var(--deco-gradient-opacity)] dark:from-primary-900/[var(--deco-gradient-opacity)] dark:to-secondary-900/[var(--deco-gradient-opacity)] pointer-events-none"
+        style={{ opacity: 'var(--deco-gradient-opacity)' }}
+      />
+      <div
+        className="ds-blob absolute top-0 left-1/2 -translate-x-1/2 bg-primary-500/20 rounded-full pointer-events-none"
+      />
 
-      <div className="relative py-24 px-4 mx-auto max-w-screen-xl text-center lg:py-36 lg:px-12 z-10">
+      <div className="ds-section relative mx-auto max-w-screen-xl text-center z-10">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-sm font-medium text-primary-700 dark:text-primary-300 bg-primary-50/50 dark:bg-primary-900/30 backdrop-blur-md rounded-full border border-primary-200 dark:border-primary-700/50 shadow-sm">
-          <HiSparkles className="w-4 h-4 text-primary-600 dark:text-primary-400" />
+        <div className="ds-badge inline-flex items-center gap-2 mb-[var(--heading-gap)] text-sm font-medium text-primary-400 bg-primary-600/20 backdrop-blur-md border border-primary-500/30 shadow-sm ds-transition">
+          <HiSparkles className="w-4 h-4 text-primary-400" />
           <span>Introducing our latest innovation</span>
         </div>
 
-        {/* Main Heading with better typography */}
-        <h1 className="mb-8 text-5xl font-extrabold tracking-tight leading-tight md:text-6xl lg:text-7xl max-w-5xl mx-auto">
+        {/* Main Heading with design system typography */}
+        <h1 className="ds-heading-1 mb-[var(--heading-gap)] max-w-5xl mx-auto">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-text-primary via-primary-600 to-secondary-500 animate-gradient-x">
             We invest in the world's potential
           </span>
         </h1>
 
-        {/* Description with better spacing */}
-        <p className="mb-12 text-lg font-normal text-text-secondary lg:text-xl max-w-3xl mx-auto leading-relaxed">
+        {/* Description with design system body text */}
+        <p className="ds-body-lg mb-[calc(var(--heading-gap)*1.5)] text-text-secondary max-w-3xl mx-auto">
           Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
           long-term value and drive economic growth.
         </p>
 
-        {/* Action Buttons with modern styling */}
+        {/* Action Buttons with design system button styling */}
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-center sm:gap-6">
           <Button
             as="a"
             href="#"
             color="blue"
-            className="inline-flex justify-center items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-primary-600 hover:bg-primary-500 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-glow-primary shadow-lg shadow-primary-500/20 active:scale-95"
+            className="ds-button inline-flex justify-center items-center gap-2 text-white bg-primary-600 hover:bg-primary-500 hover:shadow-glow-primary shadow-primary-500/20 active:scale-95"
           >
             Get started
             <svg
@@ -63,7 +68,7 @@ export function Hero() {
             as="a"
             href="#"
             outline
-            className="inline-flex justify-center items-center gap-2 px-8 py-4 text-base font-semibold text-text-primary bg-white/5 backdrop-blur-sm hover:bg-surface-elevated/80 rounded-xl border border-border transition-all duration-300 hover:shadow-lg active:scale-95"
+            className="ds-button inline-flex justify-center items-center gap-2 text-text-primary bg-white/5 backdrop-blur-sm hover:bg-surface-elevated/80 border border-border hover:shadow-lg active:scale-95"
           >
             <svg
               className="w-5 h-5"
@@ -88,8 +93,8 @@ export function Hero() {
           </Button>
         </div>
 
-        {/* Trust indicators - more subtle and modern */}
-        <div className="mt-16 pt-8 border-t border-border">
+        {/* Trust indicators */}
+        <div className="mt-[calc(var(--section-gap)*1.5)] pt-[calc(var(--section-gap)*0.75)] border-t border-border">
           <p className="text-sm font-medium text-text-tertiary mb-6 uppercase tracking-wider">
             Trusted by industry leaders
           </p>
@@ -104,4 +109,3 @@ export function Hero() {
     </AnimatedSection>
   );
 }
-

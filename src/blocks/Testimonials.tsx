@@ -28,23 +28,26 @@ export function Testimonials() {
       enabled={config.enabled}
       className="relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-surface-elevated to-surface pointer-events-none" />
+      {/* Decorative gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-surface-elevated to-surface pointer-events-none ds-gradient-overlay" />
 
-      <div className="relative py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
-        <div className="text-center mb-12 lg:mb-20">
-          <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
+      <div className="ds-section relative mx-auto max-w-screen-xl">
+        {/* Section Header */}
+        <div className="text-center mb-[var(--section-gap)]">
+          <h2 className="ds-heading-2 mb-6 text-text-primary">
             What Our Clients Say
           </h2>
-          <p className="text-text-secondary text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="ds-body-lg text-text-secondary max-w-2xl mx-auto">
             Don't just take our word for it - hear from some of our satisfied customers.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        {/* Testimonials Grid */}
+        <div className="grid ds-grid lg:grid-cols-2">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative p-10 bg-surface/60 backdrop-blur-md border border-border rounded-3xl hover:border-primary-300 dark:hover:border-primary-700 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group"
+              className="ds-card relative bg-surface/[var(--card-bg-opacity)] backdrop-blur-md border border-border hover:border-primary-300 dark:hover:border-primary-700 group"
             >
               {/* Quote mark decoration */}
               <div className="absolute top-8 left-8 text-7xl text-primary-200/50 dark:text-primary-800/30 font-serif leading-none select-none">"</div>
@@ -58,7 +61,14 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote */}
-                <p className="text-xl md:text-2xl text-text-primary leading-relaxed mb-8 font-medium">
+                <p
+                  className="text-text-primary mb-8 font-medium"
+                  style={{
+                    fontFamily: 'var(--heading-font)',
+                    fontSize: 'var(--heading-3-size)',
+                    lineHeight: 'var(--body-leading)'
+                  }}
+                >
                   "{testimonial.quote}"
                 </p>
 
@@ -68,12 +78,16 @@ export function Testimonials() {
                     src={testimonial.image}
                     alt={testimonial.author}
                     className="w-14 h-14 rounded-full border-2 border-primary-200 dark:border-primary-700 object-cover"
+                    style={{ borderRadius: 'var(--badge-radius)' === '9999px' ? '9999px' : 'var(--card-radius)' }}
                   />
                   <div>
-                    <div className="font-bold text-text-primary text-lg">
+                    <div
+                      className="font-bold text-text-primary"
+                      style={{ fontFamily: 'var(--heading-font)' }}
+                    >
                       {testimonial.author}
                     </div>
-                    <div className="text-text-secondary text-sm font-medium">
+                    <div className="ds-body text-text-secondary text-sm font-medium">
                       {testimonial.role}
                     </div>
                   </div>

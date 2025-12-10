@@ -11,14 +11,24 @@ export function CTA() {
       enabled={config.enabled}
       className="bg-surface relative overflow-hidden"
     >
-      {/* Decorative elements - Vibrant Nebula */}
-      <div className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-primary-500/20 dark:bg-primary-600/20 rounded-full blur-[100px] opacity-40 mix-blend-screen" />
-      <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-secondary-500/20 dark:bg-secondary-600/20 rounded-full blur-[100px] opacity-40 mix-blend-screen" />
+      {/* Decorative elements - controlled by design system */}
+      <div className="ds-blob absolute -top-20 -right-20 bg-primary-500/20 dark:bg-primary-600/20 rounded-full mix-blend-screen" />
+      <div className="ds-blob absolute -bottom-20 -left-20 bg-secondary-500/20 dark:bg-secondary-600/20 rounded-full mix-blend-screen" />
 
-      <div className="relative gap-12 items-center py-16 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-24 lg:px-6">
+      <div className="ds-section relative ds-grid items-center mx-auto max-w-screen-xl md:grid md:grid-cols-2">
+        {/* Image Container */}
         <div className="relative group">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-          <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-3xl blur-2xl ds-transition"
+            style={{ opacity: 'var(--deco-glow-opacity)' }}
+          />
+          <div
+            className="relative overflow-hidden ring-1 ring-white/10 ds-transition group-hover:scale-[1.02]"
+            style={{
+              borderRadius: 'var(--card-radius)',
+              boxShadow: 'var(--card-shadow-hover)'
+            }}
+          >
             <img
               className="w-full dark:hidden"
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
@@ -31,11 +41,13 @@ export function CTA() {
             />
           </div>
         </div>
+
+        {/* Content */}
         <div className="mt-8 md:mt-0">
-          <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
+          <h2 className="ds-heading-2 mb-6 text-text-primary">
             Let's create more tools and ideas that brings us together
           </h2>
-          <p className="mb-8 text-lg text-text-secondary leading-relaxed">
+          <p className="ds-body-lg mb-8 text-text-secondary">
             Flowbite helps you connect with friends and communities of people who share your interests.
             Connecting with your friends and family as well as discovering new ones is easy with features
             like Groups.
@@ -44,7 +56,7 @@ export function CTA() {
             as="a"
             href="#"
             color="blue"
-            className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-primary-600 hover:bg-primary-500 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-glow-primary shadow-lg shadow-primary-500/20 active:scale-95"
+            className="ds-button inline-flex items-center gap-2 text-white bg-primary-600 hover:bg-primary-500 hover:shadow-glow-primary shadow-primary-500/20 active:scale-95"
           >
             Get started
             <svg

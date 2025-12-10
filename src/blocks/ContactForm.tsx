@@ -9,20 +9,25 @@ export function ContactForm() {
     <AnimatedSection
       type={config.type}
       enabled={config.enabled}
-      className="relative overflow-hidden"
+      className="bg-surface-elevated relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-surface to-surface-elevated pointer-events-none" />
+      {/* Decorative blob */}
+      <div className="ds-blob absolute -top-20 -right-20 bg-primary-600/20 rounded-full pointer-events-none" />
 
-      <div className="relative py-16 sm:py-24 px-4 mx-auto max-w-screen-md">
-        <h2 className="mb-6 text-4xl tracking-tight font-extrabold text-center text-text-primary lg:text-5xl">
+      <div className="ds-section relative mx-auto max-w-screen-md">
+        {/* Section Header */}
+        <h2 className="ds-heading-2 mb-6 text-center text-text-primary">
           Contact Us
         </h2>
-        <p className="mb-12 text-center text-text-secondary text-lg leading-relaxed">
+        <p className="ds-body-lg mb-12 text-center text-text-secondary">
           Got a technical issue? Want to send feedback about a beta feature? Need details about our
           Business plan? Let us know.
         </p>
 
-        <div className="p-8 bg-surface/50 backdrop-blur-md border border-border rounded-3xl shadow-2xl">
+        {/* Form Card */}
+        <div
+          className="ds-card bg-surface border border-border"
+        >
           <form action="#" className="space-y-6">
             <div>
               <Label htmlFor="email" className="block mb-2 text-sm font-medium text-text-primary">
@@ -37,10 +42,17 @@ export function ContactForm() {
                   base: "w-full",
                   field: {
                     input: {
-                      base: "block w-full p-4 text-sm text-text-primary bg-surface-elevated border border-border rounded-xl shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 placeholder:text-text-tertiary",
+                      base: "block w-full p-4 text-sm text-text-primary bg-surface-elevated border border-border shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent ds-transition placeholder:text-text-tertiary",
+                      sizes: {},
+                      colors: {},
+                      withRightIcon: {},
+                      withIcon: {},
+                      withAddon: {},
+                      withShadow: {},
                     },
                   },
                 }}
+                style={{ borderRadius: 'var(--button-radius)' }}
               />
             </div>
             <div>
@@ -56,10 +68,17 @@ export function ContactForm() {
                   base: "w-full",
                   field: {
                     input: {
-                      base: "block w-full p-4 text-sm text-text-primary bg-surface-elevated border border-border rounded-xl shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 placeholder:text-text-tertiary",
+                      base: "block w-full p-4 text-sm text-text-primary bg-surface-elevated border border-border shadow-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent ds-transition placeholder:text-text-tertiary",
+                      sizes: {},
+                      colors: {},
+                      withRightIcon: {},
+                      withIcon: {},
+                      withAddon: {},
+                      withShadow: {},
                     },
                   },
                 }}
+                style={{ borderRadius: 'var(--button-radius)' }}
               />
             </div>
             <div className="sm:col-span-2">
@@ -71,14 +90,15 @@ export function ContactForm() {
                 rows={6}
                 placeholder="Leave a comment..."
                 theme={{
-                  base: "block p-4 w-full text-sm text-text-primary bg-surface-elevated rounded-xl shadow-sm border border-border focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 placeholder:text-text-tertiary resize-y",
+                  base: "block p-4 w-full text-sm text-text-primary bg-surface-elevated shadow-sm border border-border focus:ring-2 focus:ring-primary-500 focus:border-transparent ds-transition placeholder:text-text-tertiary resize-y",
                 }}
+                style={{ borderRadius: 'var(--button-radius)' }}
               />
             </div>
             <Button
               type="submit"
               color="blue"
-              className="w-full sm:w-auto px-8 py-4 text-base font-semibold text-center text-white rounded-xl bg-primary-600 hover:bg-primary-500 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-500 dark:focus:ring-primary-800 transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-primary-500/20 active:scale-95"
+              className="ds-button w-full sm:w-auto text-center text-white bg-primary-600 hover:bg-primary-500 focus:ring-4 focus:outline-none focus:ring-primary-500/30 active:scale-95"
             >
               Send message
             </Button>
@@ -88,4 +108,3 @@ export function ContactForm() {
     </AnimatedSection>
   );
 }
-

@@ -82,11 +82,11 @@ export function FAQSection() {
         if (answer.includes(placeholder)) {
           const parts = answer.split(placeholder);
           return (
-            <p key={answerIndex} className="text-text-secondary leading-relaxed">
+            <p key={answerIndex} className="ds-body text-text-secondary">
               {parts[0]}
               <a
                 href={link.href}
-                className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline transition-colors"
+                className="font-medium underline text-primary-500 hover:text-primary-400 ds-transition"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -99,7 +99,7 @@ export function FAQSection() {
       }
     }
     return (
-      <p key={answerIndex} className="text-text-secondary leading-relaxed">
+      <p key={answerIndex} className="ds-body text-text-secondary">
         {answer}
       </p>
     );
@@ -111,40 +111,45 @@ export function FAQSection() {
     <AnimatedSection
       type={config.type}
       enabled={config.enabled}
-      className="relative overflow-hidden"
+      className="bg-surface relative overflow-hidden"
     >
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-500/10 dark:bg-primary-600/10 rounded-full blur-[100px] pointer-events-none" />
+      {/* Decorative blob */}
+      <div className="ds-blob absolute -top-40 -right-40 bg-primary-600/20 rounded-full pointer-events-none" />
 
-      <div className="relative py-16 px-4 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
-        <h2 className="mb-10 text-4xl tracking-tight font-extrabold text-text-primary lg:text-5xl">
+      <div className="ds-section relative mx-auto max-w-screen-xl">
+        <h2 className="ds-heading-2 mb-10 text-text-primary">
           Frequently asked questions
         </h2>
-        <div className="grid pt-10 text-left border-t border-border md:gap-16 md:grid-cols-2">
+
+        <div className="grid pt-10 text-left border-t border-border md:gap-16 md:grid-cols-2" style={{ gap: 'var(--grid-gap)' }}>
+          {/* Left Column */}
           <div>
             {leftColumn.map((faq, index) => (
-              <div key={index} className="mb-12">
-                <h3 className="flex items-center mb-4 text-xl font-bold text-text-primary">
-                  <div className="flex-shrink-0 mr-4 w-8 h-8 rounded-lg bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center">
-                    <HiQuestionMarkCircle className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+              <div key={index} className="mb-[var(--section-gap)]">
+                <h3 className="ds-heading-3 flex items-center mb-4 text-text-primary">
+                  <div className="ds-icon-container flex-shrink-0 mr-4 bg-primary-600/20 text-primary-500">
+                    <HiQuestionMarkCircle className="ds-icon" />
                   </div>
                   {faq.question}
                 </h3>
-                <div className="space-y-3 pl-12">
+                <div className="space-y-3" style={{ paddingLeft: 'calc(var(--icon-container-size) + 1rem)' }}>
                   {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Right Column */}
           <div>
             {rightColumn.map((faq, index) => (
-              <div key={index} className="mb-12">
-                <h3 className="flex items-center mb-4 text-xl font-bold text-text-primary">
-                  <div className="flex-shrink-0 mr-4 w-8 h-8 rounded-lg bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center">
-                    <HiQuestionMarkCircle className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+              <div key={index} className="mb-[var(--section-gap)]">
+                <h3 className="ds-heading-3 flex items-center mb-4 text-text-primary">
+                  <div className="ds-icon-container flex-shrink-0 mr-4 bg-primary-600/20 text-primary-500">
+                    <HiQuestionMarkCircle className="ds-icon" />
                   </div>
                   {faq.question}
                 </h3>
-                <div className="space-y-3 pl-12">
+                <div className="space-y-3" style={{ paddingLeft: 'calc(var(--icon-container-size) + 1rem)' }}>
                   {faq.answers.map((answer, answerIndex) => renderAnswer(answer, answerIndex, faq))}
                 </div>
               </div>
@@ -155,4 +160,3 @@ export function FAQSection() {
     </AnimatedSection>
   );
 }
-
