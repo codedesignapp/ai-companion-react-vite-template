@@ -25,32 +25,26 @@ const faqs: FAQ[] = [
     question: "How does support work?",
     answers: [
       "We're aware of the importance of well qualified support, that is why we decided that support will only be provided by the authors that actually worked on this project.",
-      "Feel free to {contact us} and we'll help you out as soon as we can.",
     ],
-    links: [{ text: "contact us", href: "#" }],
   },
   {
     question: "I want to build more than one project. Is that allowed?",
     answers: [
       "You can use Windster for an unlimited amount of projects, whether it's a personal website, a SaaS app, or a website for a client. As long as you don't build a product that will directly compete with Windster either as a UI kit, theme, or template, it's fine.",
-      "Find out more information by {reading the license}.",
     ],
-    links: [{ text: "reading the license", href: "#" }],
   },
   {
     question: 'What does "free updates" include?',
     answers: [
-      "The free updates that will be provided is based on the {roadmap} that we have laid out for this project. It is also possible that we will provide extra updates outside of the roadmap as well.",
+      "The free updates that will be provided are based on the roadmap that we have laid out for this project. It is also possible that we will provide extra updates outside of the roadmap as well.",
     ],
-    links: [{ text: "roadmap", href: "#" }],
   },
   {
     question: "What does the free version include?",
     answers: [
-      "The {free version} of Windster includes a minimal style guidelines, component variants, and a dashboard page with the mobile version alongside it.",
+      "The free version of Windster includes a minimal style guidelines, component variants, and a dashboard page with the mobile version alongside it.",
       "You can use this version for any purposes, because it is open-source under the MIT license.",
     ],
-    links: [{ text: "free version", href: "#" }],
   },
   {
     question: "What is the difference between Windster and Tailwind UI?",
@@ -64,9 +58,7 @@ const faqs: FAQ[] = [
     answers: [
       "Generally, it is accepted to use Windster in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to Windster itself.",
       "With that being said, feel free to use this design kit for your open-source projects.",
-      "Find out more information by {reading the license}.",
     ],
-    links: [{ text: "reading the license", href: "#" }],
   },
 ];
 
