@@ -25,6 +25,21 @@ function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+// Sanitize text to prevent TypeScript syntax errors from special characters
+function sanitizeText(text: string): string {
+  return text
+    // Replace curly apostrophes with straight ones
+    .replace(/[\u2018\u2019\u201A\u201B]/g, "'")
+    // Replace curly double quotes with straight ones
+    .replace(/[\u201C\u201D\u201E\u201F]/g, '"')
+    // Replace en-dash and em-dash with regular hyphen
+    .replace(/[\u2013\u2014]/g, "-")
+    // Replace ellipsis character with three dots
+    .replace(/\u2026/g, "...")
+    // Replace non-breaking space with regular space
+    .replace(/\u00A0/g, " ");
+}
+
 function replaceTextInFile(
   filePath: string,
   oldText: string,
@@ -35,20 +50,41 @@ function replaceTextInFile(
     let content = fs.readFileSync(filePath, "utf-8");
     const lines = content.split("\n");
 
+    // Helper to escape apostrophes if the string is single-quoted
+    const escapeForQuoteType = (text: string, contextLine: string): string => {
+      // Check if the old text is within single quotes
+      const singleQuotePattern = `'${escapeRegex(oldText)}'`;
+      const doubleQuotePattern = `"${escapeRegex(oldText)}"`;
+
+      if (new RegExp(singleQuotePattern).test(contextLine)) {
+        // Single-quoted string: escape apostrophes with backslash
+        return text.replace(/'/g, "\\'");
+      }
+      // Double-quoted strings don't need apostrophe escaping
+      return text;
+    };
+
     // Try to find and replace on the specific line first
     if (lines[line - 1] && lines[line - 1].includes(oldText)) {
-      lines[line - 1] = lines[line - 1].replace(oldText, newText);
+      const escapedNewText = escapeForQuoteType(newText, lines[line - 1]);
+      lines[line - 1] = lines[line - 1].replace(oldText, escapedNewText);
       fs.writeFileSync(filePath, lines.join("\n"));
       return "updated";
     }
 
-    // Fallback: search the entire file
-    const oldTextEscaped = escapeRegex(oldText);
-    const regex = new RegExp(oldTextEscaped, "g");
+    // Fallback: search the entire file line by line
+    let found = false;
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].includes(oldText)) {
+        const escapedNewText = escapeForQuoteType(newText, lines[i]);
+        lines[i] = lines[i].replace(oldText, escapedNewText);
+        found = true;
+        break; // Only replace first occurrence
+      }
+    }
 
-    if (content.includes(oldText)) {
-      content = content.replace(regex, newText);
-      fs.writeFileSync(filePath, content);
+    if (found) {
+      fs.writeFileSync(filePath, lines.join("\n"));
       return "updated";
     }
 
@@ -90,6 +126,9 @@ function applyUpdates(
       return;
     }
 
+    // Sanitize text to prevent syntax errors from curly quotes, etc.
+    const sanitizedNewText = sanitizeText(String(newText));
+
     totalUpdates++;
 
     const oldText = original.text;
@@ -101,18 +140,18 @@ function applyUpdates(
       return;
     }
 
-    if (oldText === newText) {
+    if (oldText === sanitizedNewText) {
       skippedUpdates++;
       return;
     }
 
     const oldDisplay = String(oldText).substring(0, 60);
-    const newDisplay = String(newText).substring(0, 60);
+    const newDisplay = sanitizedNewText.substring(0, 60);
     console.log(`\n📝 ${key}`);
     console.log(`   Old: "${oldDisplay}${oldText.length > 60 ? "..." : ""}"`);
-    console.log(`   New: "${newDisplay}${newText.length > 60 ? "..." : ""}"`);
+    console.log(`   New: "${newDisplay}${sanitizedNewText.length > 60 ? "..." : ""}"`);
 
-    const result = replaceTextInFile(file, oldText, newText, line);
+    const result = replaceTextInFile(file, oldText, sanitizedNewText, line);
     if (result === "updated") {
       console.log(`   ✅ Updated`);
       successfulUpdates++;
