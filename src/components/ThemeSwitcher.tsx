@@ -12,6 +12,9 @@ import { useState, useEffect } from 'react';
  */
 
 const themes = [
+    // 🚀 FUTURE 2026 THEMES
+    { id: 'holographic', name: 'Holographic', emoji: '✨', description: 'Ethereal glass & neon' },
+    { id: 'bauhaus', name: 'Bauhaus', emoji: '🟥', description: 'Neo-constructivist bold' },
     // 🆕 LIGHTER 2025 THEMES
     { id: 'zen', name: 'Zen', emoji: '🪷', description: 'Ultra-minimal white space' },
     { id: 'pastel', name: 'Pastel', emoji: '🎀', description: 'Soft & playful gradients' },

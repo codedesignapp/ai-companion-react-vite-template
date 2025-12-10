@@ -162,3 +162,30 @@ const themes = [
    // ...existing themes
 ];
 ```
+
+## 🐛 Why It Broke: Common Pitfalls (From Experience)
+
+### 1. The "Invisible Text" on Cards Issue
+**Scenario:** You create a theme with a dark/colored background and global white text.
+**Result:** Cards differ from the background (e.g., white cards), but they inherit the global white text. **Text becomes invisible.**
+
+**Fix:** ALWAYS scope card text colors explicitly if you change global text colors.
+```css
+/* ❌ BAD - Makes card text bright white (invisible on white card) */
+:root[data-theme="bauhaus"] { --text-primary: #fff; }
+
+/* ✅ GOOD - Force card text to be legible */
+:root[data-theme="bauhaus"] .ds-card,
+:root[data-theme="bauhaus"] .ds-card * {
+   color: #000 !important;
+}
+```
+
+### 2. The "Global Selector" Leak
+**Scenario:** You start styling a layout mode with broad selectors.
+**Result:** H1s in the Features section turn white because your Hero usage was `:root[data-hero-layout="background"] h1`.
+
+**Fix:** Always scope to `[data-section="hero"]`.
+```css
+:root[data-hero-layout="background"] [data-section="hero"] h1 { ... }
+```

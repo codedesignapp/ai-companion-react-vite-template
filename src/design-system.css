@@ -4058,3 +4058,222 @@
 :root[data-theme="pastel"] .ds-hero-description {
    color: #7e22ce !important;
 }
+
+/* ============================================
+   THEME 13: HOLOGRAPHIC (2026 FUTURE)
+   Ethereal, dark mode, iridescent gradients, glassmorphism
+   ============================================ */
+:root[data-theme="holographic"] {
+   --primary: #00f0ff;
+   --secondary: #bd00ff;
+   --surface: #030014;
+   --surface-elevated: rgba(255, 255, 255, 0.03);
+   --text-primary: #ffffff;
+   --text-secondary: rgba(255, 255, 255, 0.7);
+   --text-tertiary: rgba(255, 255, 255, 0.4);
+   --border: rgba(255, 255, 255, 0.1);
+   --card-radius: 2rem;
+   --button-radius: 9999px;
+   --deco-gradient-opacity: 0.2;
+}
+
+/* Holographic Global Styles */
+:root[data-theme="holographic"] body {
+   background-color: var(--surface);
+   background-image:
+      radial-gradient(circle at 15% 50%, rgba(189, 0, 255, 0.08), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.08), transparent 25%);
+   background-attachment: fixed;
+}
+
+/* Glassmorphic Cards */
+:root[data-theme="holographic"] .ds-card {
+   backdrop-filter: blur(20px);
+   -webkit-backdrop-filter: blur(20px);
+   border: 1px solid rgba(255, 255, 255, 0.08);
+   box-shadow:
+      0 4px 24px -1px rgba(0, 0, 0, 0.2),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Glowing Buttons */
+:root[data-theme="holographic"] .ds-button {
+   background: rgba(255, 255, 255, 0.1);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(10px);
+   box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   font-size: 0.75rem;
+   font-weight: 600;
+}
+
+:root[data-theme="holographic"] .ds-button:hover {
+   background: rgba(255, 255, 255, 0.2);
+   box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+   border-color: var(--primary);
+}
+
+/* Hero Typography */
+:root[data-theme="holographic"] .ds-hero-heading {
+   font-weight: 200;
+   letter-spacing: -0.04em;
+   text-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+}
+
+:root[data-theme="holographic"] .ds-hero-heading span {
+   background: linear-gradient(to right, #00f0ff, #bd00ff, #00f0ff) !important;
+   background-size: 200% auto !important;
+   -webkit-background-clip: text !important;
+   background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+   animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+   to {
+      background-position: 200% center;
+   }
+}
+
+/* Holographic Images */
+:root[data-theme="holographic"] img {
+   border-radius: 2rem;
+   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure text readability on all sections */
+:root[data-theme="holographic"] .ds-section div,
+:root[data-theme="holographic"] .ds-section p,
+:root[data-theme="holographic"] .ds-section h2,
+:root[data-theme="holographic"] .ds-section h3 {
+   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+   /* Boost contrast */
+}
+
+/* ============================================
+   THEME 14: BAUHAUS (2026 FUTURE)
+   Neo-constructivist, primary colors, geometric shapes
+   ============================================ */
+:root[data-theme="bauhaus"] {
+   --primary: #002FA7;
+   /* Klein Blue */
+   --secondary: #FF3B30;
+   /* Primary Red */
+   --surface: #ffffff;
+   --surface-elevated: #f0f0f0;
+   --text-primary: #000000;
+   --text-secondary: #000000;
+   --text-tertiary: #444444;
+   --border: #000000;
+   --card-radius: 0px;
+   --button-radius: 9999px;
+   --deco-gradient-opacity: 0;
+}
+
+/* Bauhaus Global Layout */
+:root[data-theme="bauhaus"] body {
+   background-image:
+      linear-gradient(#000 1px, transparent 1px),
+      linear-gradient(90deg, #000 1px, transparent 1px);
+   background-size: 40px 40px;
+   background-position: center top;
+}
+
+/* Grid overlay effect */
+:root[data-theme="bauhaus"] body::after {
+   content: '';
+   position: fixed;
+   inset: 0;
+   background: #fff;
+   opacity: 0.96;
+   pointer-events: none;
+   z-index: -1;
+}
+
+/* Brutalist Cards */
+:root[data-theme="bauhaus"] .ds-card {
+   border: 3px solid #000000;
+   box-shadow: 8px 8px 0px #000000;
+   background: #fff;
+   transition: transform 0.2s, box-shadow 0.2s;
+   color: #000 !important;
+   /* Force black text on white cards */
+}
+
+:root[data-theme="bauhaus"] .ds-card * {
+   color: #000 !important;
+   /* Ensure all children are black */
+}
+
+:root[data-theme="bauhaus"] .ds-card:hover {
+   transform: translate(-4px, -4px);
+   box-shadow: 12px 12px 0px #000000;
+}
+
+/* Geometric Buttons */
+:root[data-theme="bauhaus"] .ds-button {
+   background: #000;
+   color: #fff;
+   border: none;
+   border-radius: 999px !important;
+   /* Circle/Pill */
+   font-weight: 800;
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   box-shadow: 4px 4px 0px var(--secondary);
+}
+
+:root[data-theme="bauhaus"] .ds-button:hover {
+   background: var(--primary);
+   box-shadow: 4px 4px 0px #000;
+   transform: translate(-2px, -2px);
+}
+
+/* Typography */
+:root[data-theme="bauhaus"] h1,
+:root[data-theme="bauhaus"] h2,
+:root[data-theme="bauhaus"] h3 {
+   font-family: 'Arial Black', 'Helvetica Black', sans-serif !important;
+   text-transform: uppercase;
+   letter-spacing: -0.02em;
+   line-height: 0.9;
+}
+
+:root[data-theme="bauhaus"] .ds-hero-heading {
+   font-size: clamp(4rem, 10vw, 8rem);
+   -webkit-text-stroke: 2px black;
+   /* Outline effect possibility */
+}
+
+/* Hero specific: Make heading pop */
+:root[data-theme="bauhaus"] .ds-hero-heading span {
+   background: none !important;
+   -webkit-text-fill-color: #000 !important;
+   color: #000 !important;
+   background-clip: unset !important;
+   -webkit-background-clip: unset !important;
+   text-decoration: underline;
+   text-decoration-color: var(--secondary);
+   text-decoration-thickness: 0.2em;
+}
+
+/* Section Dividers */
+:root[data-theme="bauhaus"] .ds-section {
+   border-bottom: 3px solid #000;
+   padding-bottom: 4rem;
+   margin-bottom: 4rem;
+}
+
+/* Images */
+:root[data-theme="bauhaus"] img {
+   border-radius: 0 !important;
+   border: 3px solid #000;
+   filter: grayscale(100%) contrast(120%);
+}
+
+:root[data-theme="bauhaus"] img:hover {
+   filter: none;
+}
