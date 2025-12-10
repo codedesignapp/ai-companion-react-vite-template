@@ -11,6 +11,7 @@ export function ServicesHero() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface relative overflow-hidden"
+      data-section="services-hero"
     >
       {/* Decorative blob */}
       <div className="ds-blob absolute -top-40 -right-40 bg-primary-600/20 rounded-full pointer-events-none" />

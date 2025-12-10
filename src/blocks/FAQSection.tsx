@@ -112,6 +112,7 @@ export function FAQSection() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface relative overflow-hidden"
+      data-section="faq"
     >
       {/* Decorative blob */}
       <div className="ds-blob absolute -top-40 -right-40 bg-primary-600/20 rounded-full pointer-events-none" />
@@ -121,7 +122,7 @@ export function FAQSection() {
           Frequently asked questions
         </h2>
 
-        <div className="grid pt-10 text-left border-t border-border md:gap-16 md:grid-cols-2" style={{ gap: 'var(--grid-gap)' }}>
+        <div className="ds-grid-responsive pt-10 text-left border-t border-border">
           {/* Left Column */}
           <div>
             {leftColumn.map((faq, index) => (

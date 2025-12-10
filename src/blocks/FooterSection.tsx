@@ -12,6 +12,7 @@ export function FooterSection() {
       as="footer"
       className="bg-surface-elevated"
       style={{ padding: 'var(--card-padding)' }}
+      data-section="footer"
     >
       <div className="mx-auto max-w-screen-xl text-center">
         <Link

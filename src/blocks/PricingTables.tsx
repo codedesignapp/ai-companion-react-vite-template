@@ -61,8 +61,9 @@ export function PricingTables() {
       type={config.type}
       enabled={config.enabled}
       stagger={config.stagger}
-      staggerSelector=".space-y-8 > div, .lg\\:grid > div"
+      staggerSelector=".ds-grid-responsive > div"
       className="relative overflow-hidden bg-surface-elevated"
+      data-section="pricing"
     >
       {/* Decorative radial gradient */}
       <div
@@ -82,8 +83,8 @@ export function PricingTables() {
           </p>
         </div>
 
-        {/* Pricing Grid */}
-        <div className="space-y-8 lg:grid lg:grid-cols-3 lg:space-y-0 ds-grid">
+        {/* Pricing Grid - theme-controlled columns */}
+        <div className="ds-grid-responsive">
           {pricingPlans.map((plan) => (
             <div
               key={plan.name}

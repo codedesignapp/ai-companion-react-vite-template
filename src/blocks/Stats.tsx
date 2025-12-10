@@ -37,6 +37,7 @@ export function Stats() {
       type={config.type}
       enabled={config.enabled}
       className="bg-primary-950 relative overflow-hidden"
+      data-section="stats"
     >
       {/* Decorative blobs - controlled by design system */}
       <div
@@ -59,8 +60,8 @@ export function Stats() {
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid ds-grid md:grid-cols-2 lg:grid-cols-4">
+        {/* Stats Grid - theme-controlled columns */}
+        <div className="ds-grid-responsive">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (

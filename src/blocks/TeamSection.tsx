@@ -49,8 +49,9 @@ export function TeamSection() {
       type={config.type}
       enabled={config.enabled}
       stagger={config.stagger}
-      staggerSelector="div.grid > div"
+      staggerSelector=".ds-grid-responsive > div"
       className="bg-surface-elevated relative overflow-hidden"
+      data-section="team"
     >
       {/* Decorative blobs */}
       <div className="ds-blob absolute top-0 right-0 -mr-20 -mt-20 bg-primary-600/20 rounded-full" />
@@ -68,8 +69,8 @@ export function TeamSection() {
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="grid ds-grid md:grid-cols-2">
+        {/* Team Grid - theme-controlled columns */}
+        <div className="ds-grid-responsive">
           {teamMembers.map((member) => (
             <div
               key={member.name}

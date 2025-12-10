@@ -56,8 +56,9 @@ export function Values() {
       type={config.type}
       enabled={config.enabled}
       stagger={config.stagger}
-      staggerSelector=".grid > div"
+      staggerSelector=".ds-grid-responsive > div"
       className="bg-surface-elevated"
+      data-section="values"
     >
       <div className="ds-section mx-auto max-w-screen-xl">
         {/* Section Header */}
@@ -70,8 +71,8 @@ export function Values() {
           </p>
         </div>
 
-        {/* Values Grid */}
-        <div className="grid ds-grid md:grid-cols-2 lg:grid-cols-3">
+        {/* Values Grid - theme-controlled columns */}
+        <div className="ds-grid-responsive">
           {values.map((value, index) => {
             const Icon = value.icon;
             return (

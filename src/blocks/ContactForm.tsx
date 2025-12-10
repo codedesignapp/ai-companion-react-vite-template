@@ -10,6 +10,7 @@ export function ContactForm() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface-elevated relative overflow-hidden"
+      data-section="contact"
     >
       {/* Decorative blob */}
       <div className="ds-blob absolute -top-20 -right-20 bg-primary-600/20 rounded-full pointer-events-none" />

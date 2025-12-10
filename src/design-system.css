@@ -209,6 +209,88 @@
 
    /* Grid Tokens */
    --grid-gap: var(--ds-grid-gap);
+
+   /* ============================================
+      NEW DIMENSION 8: LAYOUT PHILOSOPHY
+      ============================================
+      Controls overall page flow and structure.
+      Values: desktop-first, mobile-first, magazine, dashboard
+   */
+   --layout-content-max-width: var(--ds-layout-content-max-width);
+   --layout-section-max-width: var(--ds-layout-section-max-width);
+   --layout-grid-template: var(--ds-layout-grid-template);
+   --layout-content-direction: var(--ds-layout-content-direction);
+   --layout-content-gap: var(--ds-layout-content-gap);
+   --layout-stack-breakpoint: var(--ds-layout-stack-breakpoint);
+
+   /* ============================================
+      NEW DIMENSION 9: BACKGROUND TREATMENT
+      ============================================
+      Controls section backgrounds: solid, gradient, image, pattern
+      Each major section gets its own background tokens.
+   */
+   --bg-hero-image: var(--ds-bg-hero-image);
+   --bg-hero-overlay: var(--ds-bg-hero-overlay);
+   --bg-hero-position: var(--ds-bg-hero-position);
+   --bg-features-image: var(--ds-bg-features-image);
+   --bg-features-overlay: var(--ds-bg-features-overlay);
+   --bg-cta-image: var(--ds-bg-cta-image);
+   --bg-cta-overlay: var(--ds-bg-cta-overlay);
+   --bg-testimonials-image: var(--ds-bg-testimonials-image);
+   --bg-testimonials-overlay: var(--ds-bg-testimonials-overlay);
+   --bg-stats-image: var(--ds-bg-stats-image);
+   --bg-stats-overlay: var(--ds-bg-stats-overlay);
+   --bg-pricing-image: var(--ds-bg-pricing-image);
+   --bg-pricing-overlay: var(--ds-bg-pricing-overlay);
+   --bg-contact-image: var(--ds-bg-contact-image);
+   --bg-contact-overlay: var(--ds-bg-contact-overlay);
+   --bg-team-image: var(--ds-bg-team-image);
+   --bg-team-overlay: var(--ds-bg-team-overlay);
+
+   /* ============================================
+      NEW DIMENSION 10: SECTION STRUCTURE
+      ============================================
+      Controls how sections are bounded and overflow.
+      Values: contained, full-bleed, split, overlapping
+   */
+   --section-structure: var(--ds-section-structure);
+   --section-overflow: var(--ds-section-overflow);
+   --section-margin-y: var(--ds-section-margin-y);
+   --section-border-radius: var(--ds-section-border-radius);
+
+   /* ============================================
+      NEW DIMENSION 11: IMAGE TREATMENT
+      ============================================
+      Controls how images are styled across the site.
+   */
+   --image-radius: var(--ds-image-radius);
+   --image-shadow: var(--ds-image-shadow);
+   --image-filter: var(--ds-image-filter);
+   --image-hover-scale: var(--ds-image-hover-scale);
+   --image-aspect-ratio: var(--ds-image-aspect-ratio);
+   --image-object-fit: var(--ds-image-object-fit);
+
+   /* ============================================
+      NEW DIMENSION 12: GRID PERSONALITY
+      ============================================
+      Controls grid behavior: standard, bento, masonry, asymmetric
+   */
+   --grid-style: var(--ds-grid-style);
+   --grid-columns-sm: var(--ds-grid-columns-sm);
+   --grid-columns-md: var(--ds-grid-columns-md);
+   --grid-columns-lg: var(--ds-grid-columns-lg);
+   --grid-auto-rows: var(--ds-grid-auto-rows);
+
+   /* ============================================
+      NEW DIMENSION 13: CONTENT FLOW
+      ============================================
+      Controls content arrangement within sections.
+      Values: stacked, side-by-side, reversed, alternating
+   */
+   --content-flow: var(--ds-content-flow);
+   --content-align: var(--ds-content-align);
+   --content-justify: var(--ds-content-justify);
+   --content-text-align: var(--ds-content-text-align);
 }
 
 /* ============================================
@@ -309,6 +391,64 @@
    --ds-deco-blob-opacity: 0.2;
    --ds-deco-blob-blur: 100px;
    --ds-deco-blob-size: 500px;
+
+   /* ============================================
+      NEW DIMENSIONS - DEFAULT VALUES (Corporate)
+      ============================================ */
+
+   /* Layout Philosophy: Desktop-First */
+   --ds-layout-content-max-width: 80rem;
+   --ds-layout-section-max-width: 100%;
+   --ds-layout-grid-template: repeat(12, 1fr);
+   --ds-layout-content-direction: row;
+   --ds-layout-content-gap: 4rem;
+   --ds-layout-stack-breakpoint: 768px;
+
+   /* Background Treatment: Solid (no images by default) */
+   --ds-bg-hero-image: none;
+   --ds-bg-hero-overlay: rgba(0, 0, 0, 0);
+   --ds-bg-hero-position: center center;
+   --ds-bg-features-image: none;
+   --ds-bg-features-overlay: rgba(0, 0, 0, 0);
+   --ds-bg-cta-image: none;
+   --ds-bg-cta-overlay: rgba(0, 0, 0, 0);
+   --ds-bg-testimonials-image: none;
+   --ds-bg-testimonials-overlay: rgba(0, 0, 0, 0);
+   --ds-bg-stats-image: none;
+   --ds-bg-stats-overlay: rgba(0, 0, 0, 0);
+   --ds-bg-pricing-image: none;
+   --ds-bg-pricing-overlay: rgba(0, 0, 0, 0);
+   --ds-bg-contact-image: none;
+   --ds-bg-contact-overlay: rgba(0, 0, 0, 0);
+   --ds-bg-team-image: none;
+   --ds-bg-team-overlay: rgba(0, 0, 0, 0);
+
+   /* Section Structure: Contained */
+   --ds-section-structure: contained;
+   --ds-section-overflow: hidden;
+   --ds-section-margin-y: 0;
+   --ds-section-border-radius: 0;
+
+   /* Image Treatment: Soft */
+   --ds-image-radius: 1rem;
+   --ds-image-shadow: var(--shadow-lg);
+   --ds-image-filter: none;
+   --ds-image-hover-scale: 1.02;
+   --ds-image-aspect-ratio: auto;
+   --ds-image-object-fit: cover;
+
+   /* Grid Personality: Standard */
+   --ds-grid-style: standard;
+   --ds-grid-columns-sm: 1;
+   --ds-grid-columns-md: 2;
+   --ds-grid-columns-lg: 3;
+   --ds-grid-auto-rows: auto;
+
+   /* Content Flow: Side-by-Side */
+   --ds-content-flow: row;
+   --ds-content-align: center;
+   --ds-content-justify: space-between;
+   --ds-content-text-align: left;
 }
 
 /* ============================================
@@ -737,6 +877,268 @@
 }
 
 /* ============================================
+   THEME: MAGAZINE EDITORIAL 📰
+   ============================================
+   An elegant, publication-style design:
+   - Large full-bleed hero images
+   - Serif typography for headings
+   - Asymmetric layouts
+   - Minimal UI, content-focused
+   - Alternating content flow
+*/
+
+:root[data-theme="magazine"] {
+   /* Typography: Editorial Elegance */
+   --ds-heading-font: var(--font-family-serif);
+   --ds-body-font: var(--font-family-sans);
+   --ds-heading-1-size: 3.5rem;
+   --ds-heading-1-size-md: 5rem;
+   --ds-heading-1-size-lg: 6.5rem;
+   --ds-heading-2-size: 2.5rem;
+   --ds-heading-2-size-lg: 3.5rem;
+   --ds-heading-3-size: 1.5rem;
+   --ds-heading-weight: 400;
+   --ds-heading-tracking: -0.02em;
+   --ds-heading-leading: 1.1;
+   --ds-heading-gap: 2rem;
+   --ds-body-size: 1.125rem;
+   --ds-body-size-lg: 1.25rem;
+   --ds-body-leading: 1.85;
+
+   /* Spatial Rhythm: Dramatic Whitespace */
+   --ds-section-padding: 8rem;
+   --ds-section-gap: 6rem;
+   --ds-card-padding: 3rem;
+   --ds-grid-gap: 3rem;
+   --ds-button-padding-x: 2.5rem;
+   --ds-button-padding-y: 1rem;
+   --ds-badge-padding-x: 1.25rem;
+   --ds-badge-padding-y: 0.5rem;
+   --ds-icon-container-size: 3rem;
+   --ds-icon-size: 1.5rem;
+
+   /* Surface Treatment: Minimal */
+   --ds-card-shadow: var(--shadow-none);
+   --ds-card-shadow-hover: var(--shadow-sm);
+   --ds-card-border-width: 0;
+   --ds-card-backdrop-blur: 0;
+   --ds-card-bg-opacity: 0;
+   --ds-button-shadow: var(--shadow-none);
+
+   /* Border Character: Sharp Editorial */
+   --ds-card-radius: 0;
+   --ds-button-radius: 0;
+   --ds-badge-radius: 0;
+   --ds-icon-container-radius: 0;
+
+   /* Animation Intensity: Subtle Elegance */
+   --ds-transition-duration: 500ms;
+   --ds-transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+   --ds-hover-lift: 0;
+   --ds-hover-scale: 1.01;
+   --ds-button-hover-scale: 1;
+   --ds-button-font-weight: 500;
+
+   /* Decorative Elements: None (content is king) */
+   --ds-deco-gradient-opacity: 0;
+   --ds-deco-glow-opacity: 0;
+   --ds-deco-blob-opacity: 0;
+   --ds-deco-blob-blur: 0;
+   --ds-deco-blob-size: 0;
+
+   /* NEW DIMENSIONS */
+   /* Layout Philosophy: Magazine */
+   --ds-layout-content-max-width: 70rem;
+   --ds-layout-section-max-width: 100%;
+   --ds-layout-content-direction: column;
+   --ds-layout-content-gap: 5rem;
+
+   /* Background Treatment: Hero Images */
+   --ds-bg-hero-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80');
+   --ds-bg-hero-overlay: rgba(0, 0, 0, 0.4);
+   --ds-bg-hero-position: center center;
+   --ds-bg-cta-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&q=80');
+   --ds-bg-cta-overlay: rgba(0, 0, 0, 0.6);
+   --ds-bg-team-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80');
+   --ds-bg-team-overlay: rgba(255, 255, 255, 0.9);
+
+   /* Section Structure: Full-bleed */
+   --ds-section-structure: full-bleed;
+   --ds-section-overflow: visible;
+   --ds-section-margin-y: 0;
+
+   /* Image Treatment: Sharp Editorial */
+   --ds-image-radius: 0;
+   --ds-image-shadow: var(--shadow-none);
+   --ds-image-filter: grayscale(0.1) contrast(1.05);
+   --ds-image-hover-scale: 1;
+   --ds-image-aspect-ratio: 16/9;
+
+   /* Grid Personality: Asymmetric */
+   --ds-grid-style: asymmetric;
+   --ds-grid-columns-sm: 1;
+   --ds-grid-columns-md: 2;
+   --ds-grid-columns-lg: 2;
+
+   /* Content Flow: Alternating */
+   --ds-content-flow: column;
+   --ds-content-align: stretch;
+   --ds-content-justify: flex-start;
+   --ds-content-text-align: left;
+}
+
+/* Magazine: Special overrides */
+:root[data-theme="magazine"] {
+   --surface: #faf9f7;
+   --surface-elevated: #ffffff;
+   --surface-subtle: #f5f3f0;
+   --text-primary: #1a1a1a;
+   --text-secondary: #4a4a4a;
+   --border: #e0ddd8;
+}
+
+:root[data-theme="magazine"],
+:root[data-theme="magazine"] body {
+   background-color: #faf9f7;
+}
+
+:root[data-theme="magazine"] section {
+   background-color: var(--surface);
+}
+
+/* ============================================
+   THEME: MOBILE-FIRST APP 📱
+   ============================================
+   A touch-friendly, app-like design:
+   - Stacked layouts (column-first)
+   - Large touch targets
+   - Card-heavy UI
+   - Generous spacing
+   - Rounded, friendly shapes
+*/
+
+:root[data-theme="mobile-first"] {
+   /* Typography: Clear & Readable */
+   --ds-heading-font: var(--font-family-sans);
+   --ds-body-font: var(--font-family-sans);
+   --ds-heading-1-size: 2rem;
+   --ds-heading-1-size-md: 2.5rem;
+   --ds-heading-1-size-lg: 3rem;
+   --ds-heading-2-size: 1.75rem;
+   --ds-heading-2-size-lg: 2rem;
+   --ds-heading-3-size: 1.25rem;
+   --ds-heading-weight: 700;
+   --ds-heading-tracking: -0.01em;
+   --ds-heading-leading: 1.3;
+   --ds-heading-gap: 1.5rem;
+   --ds-body-size: 1rem;
+   --ds-body-size-lg: 1.125rem;
+   --ds-body-leading: 1.6;
+
+   /* Spatial Rhythm: Mobile-Optimized */
+   --ds-section-padding: 3rem;
+   --ds-section-gap: 2rem;
+   --ds-card-padding: 1.5rem;
+   --ds-grid-gap: 1.25rem;
+   --ds-button-padding-x: 1.5rem;
+   --ds-button-padding-y: 1rem;
+   /* Taller buttons for touch */
+   --ds-badge-padding-x: 0.875rem;
+   --ds-badge-padding-y: 0.5rem;
+   --ds-icon-container-size: 3.5rem;
+   /* Larger touch targets */
+   --ds-icon-size: 1.75rem;
+
+   /* Surface Treatment: Card-centric */
+   --ds-card-shadow: var(--shadow-lg);
+   --ds-card-shadow-hover: var(--shadow-xl);
+   --ds-card-border-width: 0;
+   --ds-card-backdrop-blur: 0;
+   --ds-card-bg-opacity: 1;
+   --ds-button-shadow: var(--shadow-md);
+
+   /* Border Character: Friendly Rounded */
+   --ds-card-radius: 1.5rem;
+   --ds-button-radius: 9999px;
+   /* Full pill buttons */
+   --ds-badge-radius: 9999px;
+   --ds-icon-container-radius: 9999px;
+
+   /* Animation Intensity: Responsive Feedback */
+   --ds-transition-duration: 150ms;
+   --ds-transition-timing: ease-out;
+   --ds-hover-lift: -0.125rem;
+   --ds-hover-scale: 1.02;
+   --ds-button-hover-scale: 0.98;
+   /* Press effect */
+   --ds-button-font-weight: 600;
+
+   /* Decorative Elements: Subtle */
+   --ds-deco-gradient-opacity: 0.05;
+   --ds-deco-glow-opacity: 0.1;
+   --ds-deco-blob-opacity: 0.1;
+   --ds-deco-blob-blur: 80px;
+   --ds-deco-blob-size: 300px;
+
+   /* NEW DIMENSIONS */
+   /* Layout Philosophy: Mobile-First (stacked) */
+   --ds-layout-content-max-width: 100%;
+   --ds-layout-section-max-width: 100%;
+   --ds-layout-content-direction: column;
+   --ds-layout-content-gap: 1.5rem;
+
+   /* Background Treatment: Solid (no distracting images) */
+   --ds-bg-hero-image: none;
+   --ds-bg-hero-overlay: rgba(0, 0, 0, 0);
+   --ds-bg-cta-image: none;
+   --ds-bg-cta-overlay: rgba(0, 0, 0, 0);
+
+   /* Section Structure: Contained with padding */
+   --ds-section-structure: contained;
+   --ds-section-overflow: hidden;
+   --ds-section-margin-y: 0;
+   --ds-section-border-radius: 0;
+
+   /* Image Treatment: Rounded & Friendly */
+   --ds-image-radius: 1.5rem;
+   --ds-image-shadow: var(--shadow-lg);
+   --ds-image-filter: none;
+   --ds-image-hover-scale: 1;
+   --ds-image-aspect-ratio: 4/3;
+
+   /* Grid Personality: Single Column (stacked) */
+   --ds-grid-style: standard;
+   --ds-grid-columns-sm: 1;
+   --ds-grid-columns-md: 1;
+   --ds-grid-columns-lg: 2;
+
+   /* Content Flow: Stacked, Centered */
+   --ds-content-flow: column;
+   --ds-content-align: center;
+   --ds-content-justify: center;
+   --ds-content-text-align: center;
+}
+
+/* Mobile-First: Light mode optimized */
+:root[data-theme="mobile-first"] {
+   --surface: #f8fafc;
+   --surface-elevated: #ffffff;
+   --surface-subtle: #f1f5f9;
+   --text-primary: #0f172a;
+   --text-secondary: #475569;
+   --border: #e2e8f0;
+}
+
+:root[data-theme="mobile-first"],
+:root[data-theme="mobile-first"] body {
+   background-color: #f8fafc;
+}
+
+:root[data-theme="mobile-first"] section {
+   background-color: var(--surface);
+}
+
+/* ============================================
    UTILITY CLASSES FOR BLOCKS
    ============================================
    These classes apply the semantic tokens directly.
@@ -894,4 +1296,615 @@
    .ds-heading-2 {
       font-size: var(--heading-2-size-lg);
    }
+}
+
+/* ============================================
+   NEW DIMENSION UTILITIES
+   ============================================ */
+
+/* Background Image Utilities */
+.ds-bg-hero {
+   background-image: var(--bg-hero-image);
+   background-size: cover;
+   background-position: var(--bg-hero-position);
+   background-repeat: no-repeat;
+}
+
+.ds-bg-features {
+   background-image: var(--bg-features-image);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.ds-bg-cta {
+   background-image: var(--bg-cta-image);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.ds-bg-testimonials {
+   background-image: var(--bg-testimonials-image);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.ds-bg-stats {
+   background-image: var(--bg-stats-image);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.ds-bg-pricing {
+   background-image: var(--bg-pricing-image);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.ds-bg-contact {
+   background-image: var(--bg-contact-image);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.ds-bg-team {
+   background-image: var(--bg-team-image);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+/* Background Overlay (apply to ::before pseudo-element) */
+.ds-bg-overlay {
+   position: relative;
+}
+
+.ds-bg-overlay::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: var(--bg-hero-overlay);
+   z-index: 0;
+   pointer-events: none;
+}
+
+.ds-bg-overlay>* {
+   position: relative;
+   z-index: 1;
+}
+
+/* Section Structure Utilities */
+.ds-section-contained {
+   max-width: var(--layout-section-max-width);
+   margin-left: auto;
+   margin-right: auto;
+   overflow: var(--section-overflow);
+   border-radius: var(--section-border-radius);
+}
+
+.ds-section-full-bleed {
+   max-width: none;
+   padding-left: 0;
+   padding-right: 0;
+   width: 100vw;
+   margin-left: calc(-50vw + 50%);
+}
+
+.ds-section-split {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: var(--layout-content-gap);
+   align-items: var(--content-align);
+}
+
+.ds-section-overlapping {
+   position: relative;
+   margin-top: calc(var(--section-margin-y) * -1);
+   z-index: 10;
+}
+
+/* Image Treatment Utilities */
+.ds-image {
+   border-radius: var(--image-radius);
+   box-shadow: var(--image-shadow);
+   filter: var(--image-filter);
+   aspect-ratio: var(--image-aspect-ratio);
+   object-fit: var(--image-object-fit);
+   transition: transform var(--transition-duration) var(--transition-timing),
+      box-shadow var(--transition-duration) var(--transition-timing);
+}
+
+.ds-image:hover {
+   transform: scale(var(--image-hover-scale));
+   box-shadow: var(--card-shadow-hover);
+}
+
+.ds-image-sharp {
+   border-radius: 0;
+}
+
+.ds-image-rounded {
+   border-radius: var(--card-radius);
+}
+
+.ds-image-circle {
+   border-radius: 9999px;
+   aspect-ratio: 1;
+   object-fit: cover;
+}
+
+.ds-image-masked {
+   clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+}
+
+/* Grid Personality Utilities */
+.ds-grid-standard {
+   display: grid;
+   grid-template-columns: repeat(var(--grid-columns-sm), 1fr);
+   gap: var(--grid-gap);
+}
+
+@media (min-width: 768px) {
+   .ds-grid-standard {
+      grid-template-columns: repeat(var(--grid-columns-md), 1fr);
+   }
+}
+
+@media (min-width: 1024px) {
+   .ds-grid-standard {
+      grid-template-columns: repeat(var(--grid-columns-lg), 1fr);
+   }
+}
+
+.ds-grid-bento {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-auto-rows: var(--grid-auto-rows);
+   gap: var(--grid-gap);
+}
+
+.ds-grid-bento> :first-child {
+   grid-column: span 2;
+   grid-row: span 2;
+}
+
+.ds-grid-masonry {
+   columns: var(--grid-columns-lg);
+   column-gap: var(--grid-gap);
+}
+
+.ds-grid-masonry>* {
+   break-inside: avoid;
+   margin-bottom: var(--grid-gap);
+}
+
+.ds-grid-asymmetric {
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   gap: var(--grid-gap);
+}
+
+/* Content Flow Utilities */
+.ds-content-stacked {
+   display: flex;
+   flex-direction: column;
+   align-items: var(--content-align);
+   gap: var(--layout-content-gap);
+   text-align: var(--content-text-align);
+}
+
+.ds-content-side-by-side {
+   display: flex;
+   flex-direction: var(--content-flow);
+   align-items: var(--content-align);
+   justify-content: var(--content-justify);
+   gap: var(--layout-content-gap);
+}
+
+@media (max-width: 768px) {
+   .ds-content-side-by-side {
+      flex-direction: column;
+   }
+}
+
+.ds-content-reversed {
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: var(--content-align);
+   gap: var(--layout-content-gap);
+}
+
+@media (max-width: 768px) {
+   .ds-content-reversed {
+      flex-direction: column;
+   }
+}
+
+.ds-content-alternating> :nth-child(even) {
+   flex-direction: row-reverse;
+}
+
+/* Layout Philosophy Utilities */
+.ds-layout-desktop-first {
+   max-width: var(--layout-content-max-width);
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.ds-layout-mobile-first {
+   max-width: 100%;
+   padding-left: var(--spacing-4);
+   padding-right: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+   .ds-layout-mobile-first {
+      max-width: var(--layout-content-max-width);
+      margin-left: auto;
+      margin-right: auto;
+   }
+}
+
+.ds-layout-magazine {
+   display: grid;
+   grid-template-columns: 1fr min(65ch, 100%) 1fr;
+}
+
+.ds-layout-magazine>* {
+   grid-column: 2;
+}
+
+.ds-layout-magazine>.ds-full-bleed {
+   grid-column: 1 / -1;
+}
+
+.ds-layout-dashboard {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: var(--grid-gap);
+}
+
+/* Center Text Utility (for mobile-first stacked layouts) */
+.ds-text-center {
+   text-align: center;
+}
+
+.ds-text-left {
+   text-align: left;
+}
+
+/* Full Height Section */
+.ds-section-hero-height {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* ============================================
+   GRAND DESIGN SYSTEM - FORCED LAYOUT OVERRIDES
+   ============================================
+   These use theme-scoped selectors to FORCE different layouts.
+   Not just variable tweaks - actual structural changes.
+*/
+
+/* NEW UTILITY CLASSES */
+.ds-grid-responsive {
+   display: grid;
+   gap: var(--grid-gap);
+}
+
+.ds-layout-split {
+   display: flex;
+   align-items: center;
+   gap: var(--grid-gap);
+}
+
+.ds-layout-split>* {
+   flex: 1;
+}
+
+/* ============================================
+   CORPORATE THEME - Professional, Balanced
+   ============================================ */
+:root:not([data-theme]),
+:root[data-theme="corporate"] {
+   /* Corporate: 3-column-focused grid and balanced layouts */
+   --theme-grid-base: 3;
+}
+
+:root:not([data-theme]) .ds-grid-responsive,
+:root[data-theme="corporate"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+
+   :root:not([data-theme]) .ds-grid-responsive,
+   :root[data-theme="corporate"] .ds-grid-responsive {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 480px) {
+
+   :root:not([data-theme]) .ds-grid-responsive,
+   :root[data-theme="corporate"] .ds-grid-responsive {
+      grid-template-columns: 1fr;
+   }
+}
+
+:root:not([data-theme]) .ds-layout-split,
+:root[data-theme="corporate"] .ds-layout-split {
+   flex-direction: row;
+}
+
+@media (max-width: 768px) {
+
+   :root:not([data-theme]) .ds-layout-split,
+   :root[data-theme="corporate"] .ds-layout-split {
+      flex-direction: column;
+   }
+}
+
+/* ============================================
+   MOBILE-FIRST THEME - 100% STACKED LAYOUTS
+   ============================================ */
+:root[data-theme="mobile-first"] .ds-grid-responsive {
+   grid-template-columns: 1fr !important;
+}
+
+:root[data-theme="mobile-first"] .ds-layout-split {
+   flex-direction: column !important;
+   text-align: center;
+}
+
+:root[data-theme="mobile-first"] .ds-layout-split>* {
+   width: 100%;
+   max-width: 600px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* Mobile-first: Center all section headers */
+:root[data-theme="mobile-first"] [data-section] h1,
+:root[data-theme="mobile-first"] [data-section] h2 {
+   text-align: center !important;
+}
+
+/* Mobile-first: Full-width cards */
+:root[data-theme="mobile-first"] .ds-card {
+   border-radius: 1.5rem !important;
+   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Mobile-first: Larger touch targets */
+:root[data-theme="mobile-first"] .ds-button {
+   padding: 1rem 2rem !important;
+   border-radius: 9999px !important;
+   font-size: 1rem !important;
+}
+
+/* ============================================
+   MAGAZINE THEME - Editorial, Full-Bleed
+   ============================================ */
+:root[data-theme="magazine"] .ds-grid-responsive {
+   grid-template-columns: 1fr 1fr !important;
+}
+
+:root[data-theme="magazine"] .ds-layout-split {
+   flex-direction: row;
+   gap: 6rem !important;
+}
+
+@media (max-width: 768px) {
+   :root[data-theme="magazine"] .ds-grid-responsive {
+      grid-template-columns: 1fr !important;
+   }
+
+   :root[data-theme="magazine"] .ds-layout-split {
+      flex-direction: column;
+   }
+}
+
+/* Magazine: Hero with background image */
+:root[data-theme="magazine"] [data-section="hero"] {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+      url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80');
+   background-size: cover;
+   background-position: center;
+   min-height: 80vh;
+   display: flex;
+   align-items: center;
+}
+
+:root[data-theme="magazine"] [data-section="hero"] * {
+   color: white !important;
+}
+
+:root[data-theme="magazine"] [data-section="hero"] .ds-badge {
+   background: rgba(255, 255, 255, 0.2) !important;
+   border-color: rgba(255, 255, 255, 0.3) !important;
+   color: white !important;
+}
+
+/* Magazine: Minimal cards (borderless) */
+:root[data-theme="magazine"] .ds-card {
+   background: transparent !important;
+   box-shadow: none !important;
+   border: none !important;
+   border-bottom: 1px solid var(--border) !important;
+   border-radius: 0 !important;
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+}
+
+/* Magazine: Serif headings */
+:root[data-theme="magazine"] h1,
+:root[data-theme="magazine"] h2,
+:root[data-theme="magazine"] h3 {
+   font-family: var(--font-family-serif) !important;
+   font-weight: 400 !important;
+}
+
+/* Magazine: CTA section with background */
+:root[data-theme="magazine"] [data-section="cta"] {
+   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+      url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&q=80');
+   background-size: cover;
+   background-position: center;
+}
+
+:root[data-theme="magazine"] [data-section="cta"] * {
+   color: white !important;
+}
+
+/* Magazine: Images with editorial treatment */
+:root[data-theme="magazine"] .ds-image,
+:root[data-theme="magazine"] img:not([class*="avatar"]) {
+   border-radius: 0 !important;
+   filter: grayscale(0.15) contrast(1.05);
+}
+
+/* ============================================
+   CYBERPUNK THEME - Dense, Neon, Futuristic
+   ============================================ */
+:root[data-theme="cyberpunk"] .ds-grid-responsive {
+   grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media (max-width: 1024px) {
+   :root[data-theme="cyberpunk"] .ds-grid-responsive {
+      grid-template-columns: repeat(3, 1fr) !important;
+   }
+}
+
+@media (max-width: 768px) {
+   :root[data-theme="cyberpunk"] .ds-grid-responsive {
+      grid-template-columns: repeat(2, 1fr) !important;
+   }
+}
+
+@media (max-width: 480px) {
+   :root[data-theme="cyberpunk"] .ds-grid-responsive {
+      grid-template-columns: 1fr !important;
+   }
+}
+
+/* Cyberpunk: Glass cards with neon glow */
+:root[data-theme="cyberpunk"] .ds-card {
+   background: rgba(10, 10, 20, 0.8) !important;
+   border: 1px solid rgba(34, 211, 238, 0.4) !important;
+   box-shadow: 0 0 30px rgba(34, 211, 238, 0.15), inset 0 0 20px rgba(34, 211, 238, 0.05) !important;
+   border-radius: 0 !important;
+}
+
+:root[data-theme="cyberpunk"] .ds-card:hover {
+   box-shadow: 0 0 50px rgba(34, 211, 238, 0.3), inset 0 0 30px rgba(34, 211, 238, 0.1) !important;
+   border-color: rgba(34, 211, 238, 0.7) !important;
+}
+
+/* Cyberpunk: Hero with mesh pattern */
+:root[data-theme="cyberpunk"] [data-section="hero"] {
+   background:
+      linear-gradient(135deg, rgba(5, 5, 10, 0.95) 0%, rgba(10, 10, 30, 0.9) 100%),
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(34, 211, 238, 0.03) 2px, rgba(34, 211, 238, 0.03) 4px);
+}
+
+/* Cyberpunk: Neon text on headings */
+:root[data-theme="cyberpunk"] h1,
+:root[data-theme="cyberpunk"] h2 {
+   text-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 20px rgba(34, 211, 238, 0.3) !important;
+}
+
+/* Cyberpunk: Images with neon border */
+:root[data-theme="cyberpunk"] .ds-image,
+:root[data-theme="cyberpunk"] img {
+   border-radius: 0 !important;
+   box-shadow: 0 0 20px rgba(34, 211, 238, 0.3) !important;
+}
+
+/* Cyberpunk: Buttons with neon glow */
+:root[data-theme="cyberpunk"] .ds-button {
+   border: 1px solid rgba(34, 211, 238, 0.6) !important;
+   box-shadow: 0 0 15px rgba(34, 211, 238, 0.4) !important;
+   text-transform: uppercase !important;
+   letter-spacing: 0.1em !important;
+}
+
+:root[data-theme="cyberpunk"] .ds-button:hover {
+   box-shadow: 0 0 30px rgba(34, 211, 238, 0.6) !important;
+}
+
+/* ============================================
+   LUXURY THEME - Elegant, Refined
+   ============================================ */
+:root[data-theme="luxury"] .ds-grid-responsive {
+   grid-template-columns: repeat(2, 1fr) !important;
+}
+
+:root[data-theme="luxury"] .ds-card {
+   border-radius: 0.25rem !important;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+   border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+:root[data-theme="luxury"] h1,
+:root[data-theme="luxury"] h2,
+:root[data-theme="luxury"] h3 {
+   font-family: var(--font-family-serif) !important;
+   font-weight: 400 !important;
+   letter-spacing: 0.02em !important;
+}
+
+/* ============================================
+   CREATIVE THEME - Bold, Expressive
+   ============================================ */
+:root[data-theme="creative"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr);
+}
+
+:root[data-theme="creative"] .ds-card {
+   border-radius: 1.5rem !important;
+   border-width: 2px !important;
+   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+:root[data-theme="creative"] .ds-card:hover {
+   transform: translateY(-0.5rem) scale(1.02) !important;
+}
+
+/* ============================================
+   BOLD THEME - Playful, Energetic
+   ============================================ */
+:root[data-theme="bold"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr);
+}
+
+:root[data-theme="bold"] .ds-card {
+   border-radius: 2rem !important;
+   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1) !important;
+}
+
+:root[data-theme="bold"] .ds-button {
+   border-radius: 9999px !important;
+   font-weight: 800 !important;
+}
+
+/* ============================================
+   TECH THEME - Modern, Glassmorphic
+   ============================================ */
+:root[data-theme="tech"] .ds-grid-responsive {
+   grid-template-columns: repeat(3, 1fr);
+}
+
+:root[data-theme="tech"] .ds-card {
+   background: rgba(255, 255, 255, 0.05) !important;
+   backdrop-filter: blur(16px) !important;
+   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }

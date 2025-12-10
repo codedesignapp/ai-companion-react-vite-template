@@ -11,10 +11,13 @@ export function Hero() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface relative overflow-hidden"
+      data-section="hero"
     >
-      {/* Decorative background elements - controlled by design system */}
+      {/* Background overlay is handled by ds-bg-overlay ::before pseudo-element */}
+
+      {/* Decorative gradient (visible when no bg image) */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-primary-500/[var(--deco-gradient-opacity)] via-transparent to-secondary-500/[var(--deco-gradient-opacity)] dark:from-primary-900/[var(--deco-gradient-opacity)] dark:to-secondary-900/[var(--deco-gradient-opacity)] pointer-events-none"
+        className="absolute inset-0 bg-gradient-to-br from-primary-500/[var(--deco-gradient-opacity)] via-transparent to-secondary-500/[var(--deco-gradient-opacity)] pointer-events-none"
         style={{ opacity: 'var(--deco-gradient-opacity)' }}
       />
       <div

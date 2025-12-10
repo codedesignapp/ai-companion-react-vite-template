@@ -27,6 +27,7 @@ export function Testimonials() {
       type={config.type}
       enabled={config.enabled}
       className="relative overflow-hidden"
+      data-section="testimonials"
     >
       {/* Decorative gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-surface-elevated to-surface pointer-events-none ds-gradient-overlay" />
@@ -42,8 +43,8 @@ export function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid ds-grid lg:grid-cols-2">
+        {/* Testimonials Grid - theme-controlled columns */}
+        <div className="ds-grid-responsive">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -78,7 +79,6 @@ export function Testimonials() {
                     src={testimonial.image}
                     alt={testimonial.author}
                     className="w-14 h-14 rounded-full border-2 border-primary-200 dark:border-primary-700 object-cover"
-                    style={{ borderRadius: 'var(--badge-radius)' === '9999px' ? '9999px' : 'var(--card-radius)' }}
                   />
                   <div>
                     <div

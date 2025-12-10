@@ -9,8 +9,9 @@ export function ServiceBenefits() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface-elevated"
+      data-section="benefits"
     >
-      <div className="ds-section ds-grid items-center mx-auto max-w-screen-xl lg:grid lg:grid-cols-2">
+      <div className="ds-section ds-layout-split items-center mx-auto max-w-screen-xl">
         <div className="grid grid-cols-2" style={{ gap: 'var(--grid-gap)' }}>
           <img
             className="w-full object-cover h-72 ds-transition hover:shadow-2xl"

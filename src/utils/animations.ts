@@ -2,6 +2,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ANIMATION_CONFIG, type AnimationType } from "../animation.config";
 
+// Re-export AnimationType for use in components
+export type { AnimationType };
+
 // Register GSAP plugins
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +19,7 @@ if (typeof window !== "undefined") {
  */
 export function getDuration(type: "fast" | "normal" | "slow" | "verySlow" = "normal"): number {
   if (!ANIMATION_CONFIG.enabled) return 0;
-  
+
   const multiplier = {
     subtle: 0.7,
     moderate: 1.0,
@@ -117,10 +120,10 @@ export function createAnimation(
 
   // Handle stagger
   if (options.stagger) {
-    const staggerAmount = typeof options.stagger === "number" 
-      ? options.stagger 
+    const staggerAmount = typeof options.stagger === "number"
+      ? options.stagger
       : ANIMATION_CONFIG.delay.stagger;
-    
+
     toValues.stagger = staggerAmount;
   }
 
@@ -129,10 +132,10 @@ export function createAnimation(
     const scrollTriggerConfig: ScrollTrigger.Vars = typeof options.scrollTrigger === "object"
       ? options.scrollTrigger
       : {
-          start: ANIMATION_CONFIG.scrollTrigger.start,
-          end: ANIMATION_CONFIG.scrollTrigger.end,
-          toggleActions: ANIMATION_CONFIG.scrollTrigger.toggleActions,
-        };
+        start: ANIMATION_CONFIG.scrollTrigger.start,
+        end: ANIMATION_CONFIG.scrollTrigger.end,
+        toggleActions: ANIMATION_CONFIG.scrollTrigger.toggleActions,
+      };
 
     toValues.scrollTrigger = {
       trigger: element,

@@ -17,6 +17,7 @@ export function HeaderNavigation() {
       enabled={config.enabled}
       scrollTrigger={false}
       as="header"
+      data-section="header"
     >
       <nav className="bg-surface border-border px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
@@ -99,8 +100,8 @@ export function HeaderNavigation() {
                 <Link
                   to="/"
                   className={`block py-2 pr-4 pl-3 lg:p-0 ds-transition ${isActive("/")
-                      ? "text-white bg-primary-700 lg:bg-transparent lg:text-primary-700"
-                      : "text-text-primary border-b border-border hover:bg-surface-subtle lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700"
+                    ? "text-white bg-primary-700 lg:bg-transparent lg:text-primary-700"
+                    : "text-text-primary border-b border-border hover:bg-surface-subtle lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700"
                     }`}
                   style={{ borderRadius: 'var(--button-radius)' }}
                   aria-current={isActive("/") ? "page" : undefined}
@@ -112,8 +113,8 @@ export function HeaderNavigation() {
                 <Link
                   to="/about"
                   className={`block py-2 pr-4 pl-3 lg:p-0 ds-transition ${isActive("/about")
-                      ? "text-white bg-primary-700 lg:bg-transparent lg:text-primary-700"
-                      : "text-text-primary border-b border-border hover:bg-surface-subtle lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700"
+                    ? "text-white bg-primary-700 lg:bg-transparent lg:text-primary-700"
+                    : "text-text-primary border-b border-border hover:bg-surface-subtle lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700"
                     }`}
                   style={{ borderRadius: 'var(--button-radius)' }}
                   aria-current={isActive("/about") ? "page" : undefined}
@@ -125,8 +126,8 @@ export function HeaderNavigation() {
                 <Link
                   to="/service"
                   className={`block py-2 pr-4 pl-3 lg:p-0 ds-transition ${isActive("/service")
-                      ? "text-white bg-primary-700 lg:bg-transparent lg:text-primary-700"
-                      : "text-text-primary border-b border-border hover:bg-surface-subtle lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700"
+                    ? "text-white bg-primary-700 lg:bg-transparent lg:text-primary-700"
+                    : "text-text-primary border-b border-border hover:bg-surface-subtle lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700"
                     }`}
                   style={{ borderRadius: 'var(--button-radius)' }}
                   aria-current={isActive("/service") ? "page" : undefined}

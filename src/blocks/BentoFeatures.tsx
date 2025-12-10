@@ -10,6 +10,7 @@ export function BentoFeatures() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface"
+      data-section="bento-features"
     >
       <div className="ds-section mx-auto max-w-screen-xl">
         {/* Section Header */}
@@ -23,7 +24,7 @@ export function BentoFeatures() {
         </div>
 
         {/* Bento Grid - Asymmetric Layout */}
-        <div className="grid ds-grid md:grid-cols-3 md:grid-rows-2">
+        <div className="ds-grid-responsive md:grid-cols-3 md:grid-rows-2">
           {/* Large featured item - spans 2 columns and 2 rows */}
           <div
             className="md:col-span-2 md:row-span-2 bg-surface-elevated border border-border group relative overflow-hidden ds-transition"

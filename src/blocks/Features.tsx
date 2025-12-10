@@ -56,8 +56,9 @@ export function Features() {
       type={config.type}
       enabled={config.enabled}
       stagger={config.stagger}
-      staggerSelector=".grid > div"
+      staggerSelector=".ds-grid-responsive > div"
       className="relative overflow-hidden"
+      data-section="features"
     >
       {/* Decorative gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-surface-elevated to-surface pointer-events-none ds-gradient-overlay" />
@@ -74,8 +75,8 @@ export function Features() {
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid ds-grid md:grid-cols-2 lg:grid-cols-3">
+        {/* Features Grid - theme-controlled columns */}
+        <div className="ds-grid-responsive">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (

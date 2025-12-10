@@ -9,8 +9,9 @@ export function Content() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface"
+      data-section="content"
     >
-      <div className="ds-section ds-grid items-center mx-auto max-w-screen-xl lg:grid lg:grid-cols-2">
+      <div className="ds-section ds-layout-split items-center mx-auto max-w-screen-xl">
         <div className="text-text-secondary">
           <h2 className="ds-heading-2 mb-6 text-text-primary">
             We didn't reinvent the wheel

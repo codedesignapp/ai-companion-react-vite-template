@@ -29,9 +29,10 @@ export function SocialProof() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface"
+      data-section="social-proof"
     >
       <div className="ds-section max-w-screen-xl mx-auto text-center">
-        <div className="grid max-w-screen-lg ds-grid mx-auto md:grid-cols-3">
+        <div className="ds-grid-responsive max-w-screen-lg mx-auto">
           {stats.map((stat, index) => (
             <div
               key={index}

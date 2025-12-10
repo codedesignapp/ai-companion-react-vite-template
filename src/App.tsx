@@ -4,7 +4,7 @@ import { FooterSection } from "./blocks/FooterSection";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ServicePage } from "./pages/ServicePage";
-
+import { ThemeSwitcher } from "./components/ThemeSwitcher";
 
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -48,6 +48,7 @@ export default function App() {
         <Route path="/service" element={<ServicePage />} />
       </Routes>
       <FooterSection />
+      <ThemeSwitcher />
     </>
   );
 }

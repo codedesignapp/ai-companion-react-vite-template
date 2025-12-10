@@ -9,8 +9,9 @@ export function ServiceProcess() {
       type={config.type}
       enabled={config.enabled}
       className="bg-surface"
+      data-section="process"
     >
-      <div className="ds-section ds-grid items-center mx-auto max-w-screen-xl lg:grid lg:grid-cols-2">
+      <div className="ds-section ds-layout-split items-center mx-auto max-w-screen-xl">
         <div className="text-text-secondary">
           <h2 className="ds-heading-1 mb-8 text-text-primary">
             Our Process
