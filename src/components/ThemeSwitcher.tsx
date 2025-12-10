@@ -49,15 +49,16 @@ const imageLayouts: { id: ImageLayout; label: string; icon: string; desc: string
 ];
 
 export function ThemeSwitcher() {
-    // Only show in development mode
-    const isDev = import.meta.env.DEV;
+    // Only show when VITE_SHOW_THEME_SWITCHER=true in .env
+    // This ensures it ONLY shows in the template repo, never in cloned projects
+    const showSwitcher = import.meta.env.VITE_SHOW_THEME_SWITCHER === 'true';
 
     const [isOpen, setIsOpen] = useState(false);
     const [currentTheme, setCurrentTheme] = useState('');
     const [imageLayout, setImageLayout] = useState<ImageLayout>('off');
 
-    // Don't render in production
-    if (!isDev) return null;
+    // Don't render unless explicitly enabled
+    if (!showSwitcher) return null;
 
     // Load saved settings on mount
     useEffect(() => {

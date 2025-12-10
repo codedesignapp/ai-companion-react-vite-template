@@ -1,61 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Brand Name - Modern Website Template</title>
-    <meta name="description" content="Build stunning websites with our modern, customizable template. Features 18+ themes, responsive design, and AI-powered content management." />
-    <meta name="keywords" content="website template, landing page, React, responsive design" />
-    
-    <!-- Open Graph / Social -->
-    <meta property="og:title" content="Brand Name - Modern Website Template" />
-    <meta property="og:description" content="Build stunning websites with our modern, customizable template." />
-    <meta property="og:type" content="website" />
-    
-    <!-- Theme initialization script - prevents flash of wrong theme -->
-    <script>
-      (function() {
-        try {
-          const STORAGE_KEY = "design-system-theme";
-          
-          // Check localStorage for saved theme
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Brand Name - Modern Website Template</title>
+  <meta name="description"
+    content="Build stunning websites with our modern, customizable template. Features 18+ themes, responsive design, and AI-powered content management." />
+  <meta name="keywords" content="website template, landing page, React, responsive design" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Brand Name - Modern Website Template" />
+  <meta property="og:description" content="Build stunning websites with our modern, customizable template." />
+  <meta property="og:type" content="website" />
+
+  <!-- AI-generated theme (created by apply-design script) -->
+  <script src="/theme-init.js"></script>
+
+  <!-- Theme initialization fallback - prevents flash of wrong theme -->
+  <script>
+    (function () {
+      try {
+        const STORAGE_KEY = "design-system-theme";
+
+        // Check localStorage for saved theme (if not already set by theme-init.js)
+        if (!document.documentElement.getAttribute('data-theme')) {
           const stored = window.localStorage.getItem(STORAGE_KEY);
           if (stored) {
             document.documentElement.setAttribute('data-theme', stored);
           }
-          
-          // Also handle dark mode
-          const darkModeKey = "theme-mode";
-          const darkStored = window.localStorage.getItem(darkModeKey);
-          const isStoredValid = darkStored === "light" || darkStored === "dark" || darkStored === "auto";
-          
-          let initialMode = "light";
-          if (isStoredValid) {
-            initialMode = darkStored;
-          } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            initialMode = "dark";
-          }
-          
-          const computedMode = initialMode === "auto"
-            ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-            : initialMode;
+        }
 
-          if (computedMode === "dark") {
-            document.documentElement.classList.add("dark");
-          } else {
-            document.documentElement.classList.remove("dark");
-          }
-        } catch (e) {
+        // Also handle dark mode
+        const darkModeKey = "theme-mode";
+        const darkStored = window.localStorage.getItem(darkModeKey);
+        const isStoredValid = darkStored === "light" || darkStored === "dark" || darkStored === "auto";
+
+        let initialMode = "light";
+        if (isStoredValid) {
+          initialMode = darkStored;
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          initialMode = "dark";
+        }
+
+        const computedMode = initialMode === "auto"
+          ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+          : initialMode;
+
+        if (computedMode === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
           document.documentElement.classList.remove("dark");
         }
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script src="https://ai-companion-edit-mode-assistant.scripts.codedesign.ai/"></script>
-  </body>
+      } catch (e) {
+        document.documentElement.classList.remove("dark");
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script src="https://ai-companion-edit-mode-assistant.scripts.codedesign.ai/"></script>
+</body>
+
 </html>
