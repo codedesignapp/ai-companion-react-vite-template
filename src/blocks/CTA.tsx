@@ -51,7 +51,7 @@ export function CTA() {
               Let's create more tools and ideas that brings us together
             </h2>
             <p className="ds-body-lg mb-8 text-text-secondary">
-              Flowbite helps you connect with friends and communities of people who share your interests.
+              Our platform helps you connect with friends and communities of people who share your interests.
               Connecting with your friends and family as well as discovering new ones is easy with features
               like Groups.
             </p>

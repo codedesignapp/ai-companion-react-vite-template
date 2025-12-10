@@ -11,7 +11,9 @@
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "extract-content": "tsx scripts/extract-content.ts",
-    "apply-content": "tsx scripts/apply-content.ts"
+    "apply-content": "tsx scripts/apply-content.ts",
+    "extract-design": "tsx scripts/extract-design.ts",
+    "apply-design": "tsx scripts/apply-design.ts"
   },
   "dependencies": {
     "@floating-ui/core": "^1.7.3",

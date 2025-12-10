@@ -49,9 +49,15 @@ const imageLayouts: { id: ImageLayout; label: string; icon: string; desc: string
 ];
 
 export function ThemeSwitcher() {
+    // Only show in development mode
+    const isDev = import.meta.env.DEV;
+
     const [isOpen, setIsOpen] = useState(false);
     const [currentTheme, setCurrentTheme] = useState('');
     const [imageLayout, setImageLayout] = useState<ImageLayout>('off');
+
+    // Don't render in production
+    if (!isDev) return null;
 
     // Load saved settings on mount
     useEffect(() => {

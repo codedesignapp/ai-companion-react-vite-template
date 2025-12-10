@@ -24,9 +24,9 @@ export function FooterSection() {
             className="mr-2 h-8 w-8 bg-primary-600 flex items-center justify-center"
             style={{ borderRadius: 'var(--icon-container-radius)' }}
           >
-            <span className="text-white font-bold text-lg">L</span>
+            <span className="text-white font-bold text-lg">S</span>
           </div>
-          Logo
+          Brand name
         </Link>
         <p className="ds-body my-6 text-text-secondary">
           Open-source library of over 400+ web components and interactive elements built for better web.
@@ -49,7 +49,7 @@ export function FooterSection() {
           </li>
         </ul>
         <span className="text-sm text-text-secondary sm:text-center">
-          © 2021-2022 <Link to="/" className="hover:underline ds-transition">Flowbite™</Link>. All Rights Reserved.
+          © 2024-2025 <Link to="/" className="hover:underline ds-transition">Starter™</Link>. All Rights Reserved.
         </span>
       </div>
     </AnimatedSection>
