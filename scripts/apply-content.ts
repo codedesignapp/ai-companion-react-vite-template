@@ -52,16 +52,21 @@ function replaceTextInFile(
 
     // Helper to escape quotes based on the surrounding quote type
     const escapeForQuoteType = (text: string, contextLine: string): string => {
-      // Check if the old text is within single or double quotes
-      const singleQuotePattern = `'${escapeRegex(oldText)}'`;
-      const doubleQuotePattern = `"${escapeRegex(oldText)}"`;
+      // Look for the quote character that wraps the old text in the context line
+      // More flexible pattern: look for quotes before and after the text
+      const escapedOldText = escapeRegex(oldText);
 
-      if (new RegExp(singleQuotePattern).test(contextLine)) {
-        // Single-quoted string: escape apostrophes with backslash
-        return text.replace(/'/g, "\\'");
-      } else if (new RegExp(doubleQuotePattern).test(contextLine)) {
-        // Double-quoted string: escape double quotes with backslash
-        return text.replace(/"/g, '\\"');
+      // Check if surrounded by double quotes (with possible content around it)
+      const doubleQuoteMatch = contextLine.match(new RegExp(`"[^"]*${escapedOldText}[^"]*"`));
+      // Check if surrounded by single quotes (with possible content around it)  
+      const singleQuoteMatch = contextLine.match(new RegExp(`'[^']*${escapedOldText}[^']*'`));
+
+      if (doubleQuoteMatch && !singleQuoteMatch) {
+        // Double-quoted string: escape only unescaped double quotes
+        return text.replace(/(?<!\\)"/g, '\\"');
+      } else if (singleQuoteMatch && !doubleQuoteMatch) {
+        // Single-quoted string: escape only unescaped apostrophes
+        return text.replace(/(?<!\\)'/g, "\\'");
       }
 
       // If we can't determine quote type, don't escape (safer default)
