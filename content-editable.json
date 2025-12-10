@@ -1,4 +1,19 @@
 {
+  "global.headernavigation.text": "S",
+  "global.headernavigation.text_2": "Brand name",
+  "global.headernavigation.text_3": "Open main menu",
+  "global.headernavigation.Link": "Home",
+  "global.headernavigation.Link_2": "About",
+  "global.headernavigation.Link_3": "Service",
+  "global.footersection.text": "S",
+  "global.footersection.Link": "Brand name",
+  "global.footersection.paragraph": "Open-source library of over 400+ web components and interactive elements built for better web.",
+  "global.footersection.Link_2": "Home",
+  "global.footersection.Link_3": "About",
+  "global.footersection.Link_4": "Service",
+  "global.footersection.text_2": "© 2024-2025",
+  "global.footersection.Link_5": "Starter™",
+  "global.footersection.text_3": ". All Rights Reserved.",
   "about.abouthero.text": "Meet the team behind the innovation",
   "about.abouthero.mainHeading": "About Our Company",
   "about.abouthero.paragraph": "We are a team of passionate professionals dedicated to delivering innovative solutions\n          that empower businesses to thrive in the digital age.",
@@ -306,5 +321,9 @@
   "service.contactform.fieldLabel": "Your email",
   "service.contactform.fieldLabel_2": "Subject",
   "service.contactform.fieldLabel_3": "Your message",
-  "service.contactform.buttonText": "Send message"
+  "service.contactform.buttonText": "Send message",
+  "meta.title": "Brand Name - Modern Website Template",
+  "meta.description": "Build stunning websites with our modern, customizable template. Features 18+ themes, responsive design, and AI-powered content management.",
+  "meta.og_title": "Brand Name - Modern Website Template",
+  "meta.og_description": "Build stunning websites with our modern, customizable template."
 }

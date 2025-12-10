@@ -2,42 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flowbite React Template Vite</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Brand Name - Modern Website Template</title>
+    <meta name="description" content="Build stunning websites with our modern, customizable template. Features 18+ themes, responsive design, and AI-powered content management." />
+    <meta name="keywords" content="website template, landing page, React, responsive design" />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Brand Name - Modern Website Template" />
+    <meta property="og:description" content="Build stunning websites with our modern, customizable template." />
+    <meta property="og:type" content="website" />
+    
     <!-- Theme initialization script - prevents flash of wrong theme -->
-    <!-- React will immediately override this with the correct value from theme.config.ts -->
     <script>
       (function() {
         try {
-          const STORAGE_KEY = "flowbite-theme-mode";
+          const STORAGE_KEY = "design-system-theme";
           
-          // Check localStorage first (user preference)
+          // Check localStorage for saved theme
           const stored = window.localStorage.getItem(STORAGE_KEY);
-          const isStoredValid = stored === "light" || stored === "dark" || stored === "auto";
+          if (stored) {
+            document.documentElement.setAttribute('data-theme', stored);
+          }
           
-          // Use stored value, or check system preference, or default to light
+          // Also handle dark mode
+          const darkModeKey = "theme-mode";
+          const darkStored = window.localStorage.getItem(darkModeKey);
+          const isStoredValid = darkStored === "light" || darkStored === "dark" || darkStored === "auto";
+          
           let initialMode = "light";
           if (isStoredValid) {
-            initialMode = stored;
+            initialMode = darkStored;
           } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            // If no stored preference, check system preference
             initialMode = "dark";
           }
           
-          // Compute final mode (handle "auto")
           const computedMode = initialMode === "auto"
             ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
             : initialMode;
 
-          // Apply theme immediately to prevent flash
           if (computedMode === "dark") {
             document.documentElement.classList.add("dark");
           } else {
             document.documentElement.classList.remove("dark");
           }
         } catch (e) {
-          // Fallback: light mode
           document.documentElement.classList.remove("dark");
         }
       })();

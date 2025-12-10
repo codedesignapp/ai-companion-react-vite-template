@@ -333,6 +333,23 @@ function getBlocksFromPage(pageFilePath: string): string[] {
 function extractContent(): ContentMap {
   const allContent: ContentMap = {};
 
+  // ✅ Extract from global layout components first (App.tsx imports)
+  const globalBlocks = ['HeaderNavigation', 'FooterSection'];
+  globalBlocks.forEach((blockName) => {
+    const blockFile = `${blockName}.tsx`;
+    const blockFilePath = path.join(BLOCKS_DIR, blockFile);
+
+    if (fs.existsSync(blockFilePath)) {
+      const blockContent = extractTextFromFile(
+        blockFilePath,
+        'global',  // Use 'global' as the page name
+        blockName.toLowerCase()
+      );
+      Object.assign(allContent, blockContent);
+    }
+  });
+
+  // Extract from page-specific blocks
   const pageFiles = fs
     .readdirSync(PAGES_DIR)
     .filter((f) => f.endsWith(".tsx"));
@@ -372,10 +389,61 @@ function createEditableVersion(content: ContentMap): Record<string, string> {
   return editable;
 }
 
+function extractMetaTags(): ContentMap {
+  const metaContent: ContentMap = {};
+  const indexPath = path.join(process.cwd(), "index.html");
+
+  if (!fs.existsSync(indexPath)) return metaContent;
+
+  const html = fs.readFileSync(indexPath, "utf-8");
+
+  // Extract title
+  const titleMatch = html.match(/<title>([^<]+)<\/title>/);
+  if (titleMatch) {
+    metaContent["meta.title"] = {
+      text: titleMatch[1],
+      _meta: { file: indexPath, line: 8, column: 0 }
+    };
+  }
+
+  // Extract meta description
+  const descMatch = html.match(/<meta name="description" content="([^"]+)"/);
+  if (descMatch) {
+    metaContent["meta.description"] = {
+      text: descMatch[1],
+      _meta: { file: indexPath, line: 9, column: 0 }
+    };
+  }
+
+  // Extract OG title
+  const ogTitleMatch = html.match(/<meta property="og:title" content="([^"]+)"/);
+  if (ogTitleMatch) {
+    metaContent["meta.og_title"] = {
+      text: ogTitleMatch[1],
+      _meta: { file: indexPath, line: 13, column: 0 }
+    };
+  }
+
+  // Extract OG description
+  const ogDescMatch = html.match(/<meta property="og:description" content="([^"]+)"/);
+  if (ogDescMatch) {
+    metaContent["meta.og_description"] = {
+      text: ogDescMatch[1],
+      _meta: { file: indexPath, line: 14, column: 0 }
+    };
+  }
+
+  return metaContent;
+}
+
 function main() {
   console.log("🔍 Extracting content from pages and blocks...\n");
 
   const content = extractContent();
+
+  // Also extract meta tags from index.html
+  const metaContent = extractMetaTags();
+  Object.assign(content, metaContent);
 
   // Write full content with metadata
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(content, null, 2));
