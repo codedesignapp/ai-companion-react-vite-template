@@ -27,6 +27,11 @@ const themes = [
     { id: 'vaporwave', name: 'Vaporwave', emoji: '🌅', description: '80s retro sunset' },
     { id: 'photography', name: 'Photography', emoji: '📷', description: 'Cinematic full-bleed' },
     { id: 'organic', name: 'Organic', emoji: '🌿', description: 'Earth tones & nature' },
+    // Professional Standard Themes (New)
+    { id: 'minimal', name: 'Minimal SaaS', emoji: '✨', description: 'Clean & high-end' },
+    { id: 'finance', name: 'Modern Finance', emoji: '🏦', description: 'Trustworthy & stable' },
+    { id: 'notion', name: 'Notion', emoji: '📝', description: 'Clean minimal workspace' },
+    { id: 'fitsweat', name: 'FitSweat', emoji: '💪', description: 'Bold fitness energy' },
     // Refined themes
     { id: 'aurora', name: 'Aurora', emoji: '🌈', description: 'Dreamy gradient mesh' },
     { id: 'noir', name: 'Noir', emoji: '🖤', description: 'Elegant dark + gold' },
