@@ -1,4 +1,4 @@
-import type React from "react";
+import React from "react";
 import type { ThemeMode } from "../hooks/use-theme-mode";
 
 const defaultOptions = {
@@ -63,7 +63,7 @@ export function ThemeModeScript({
   prefix = defaultOptions.prefix,
   version = defaultOptions.version,
   ...others
-}: ThemeModeScriptProps): JSX.Element {
+}: ThemeModeScriptProps): React.ReactElement {
   return (
     <script
       {...others}
@@ -242,5 +242,5 @@ export function initThemeMode(
       }
     });
     // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-empty
-  } catch (e) {}
+  } catch (e) { }
 }

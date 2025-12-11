@@ -138,7 +138,7 @@ export function createAnimation(
       };
 
     toValues.scrollTrigger = {
-      trigger: element,
+      trigger: element as gsap.DOMTarget,
       ...scrollTriggerConfig,
     };
   }

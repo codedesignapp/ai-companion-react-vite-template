@@ -60,7 +60,7 @@ export interface CarouselProps extends ComponentProps<"div">, ThemingProps<Carou
   pauseOnHover?: boolean;
 }
 
-export interface DefaultLeftRightControlProps extends ComponentProps<"div">, ThemingProps<CarouselTheme> {}
+export interface DefaultLeftRightControlProps extends ComponentProps<"div">, ThemingProps<CarouselTheme> { }
 
 export const Carousel = forwardRef<HTMLDivElement, CarouselProps>((props, ref) => {
   const provider = useThemeProvider();
@@ -96,7 +96,8 @@ export const Carousel = forwardRef<HTMLDivElement, CarouselProps>((props, ref) =
     () =>
       Children.map(children as ReactElement[], (child: ReactElement) =>
         cloneElement(child, {
-          className: twMerge(theme.item.base, child.props.className),
+          // @ts-expect-error - className type inference issue
+          className: twMerge(theme.item.base, (child.props as { className?: string }).className),
         }),
       ),
     [children, theme.item.base],

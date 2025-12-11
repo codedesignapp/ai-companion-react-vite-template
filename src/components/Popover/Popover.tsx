@@ -91,6 +91,7 @@ export function Popover(props: PopoverProps) {
       getReferenceProps({
         ref,
         "data-testid": "flowbite-popover-target",
+        // @ts-expect-error - spread props type complexity
         ...children?.props,
       }),
     );

@@ -32,8 +32,8 @@ export function useResolveTheme<T>(...input: Parameters<typeof resolveTheme<T>>)
  * @returns {T} The memoized value that only changes when dependencies change (using deep equality)
  */
 export function useStableMemo<T>(factory: () => T, dependencies: unknown[]): T {
-  const prevDepsRef = useRef<unknown[]>();
-  const prevResultRef = useRef<T>();
+  const prevDepsRef = useRef<unknown[]>([]);
+  const prevResultRef = useRef<T | undefined>(undefined);
 
   const hasChanged = !prevDepsRef.current || !isEqual(prevDepsRef.current, dependencies);
 

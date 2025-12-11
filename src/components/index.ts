@@ -5,3 +5,4 @@
 // Only export directly-used standalone components
 export { AnimatedSection } from "./AnimatedSection";
 export { ThemeSwitcher } from "./ThemeSwitcher";
+export { Button } from "./Button";

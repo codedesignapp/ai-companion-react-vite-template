@@ -14,10 +14,10 @@ export function forceThemeFromConfig(): void {
   if (typeof window === "undefined") return;
 
   const { defaultMode } = THEME_CONFIG;
-  
+
   // Compute the actual mode (handle "auto")
   const computedMode =
-    defaultMode === "auto"
+    (defaultMode as string) === "auto"
       ? window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light"

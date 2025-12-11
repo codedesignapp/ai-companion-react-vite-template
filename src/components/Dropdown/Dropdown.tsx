@@ -45,8 +45,8 @@ export interface DropdownTheme {
 
 export interface DropdownProps
   extends Pick<FloatingProps, "placement" | "trigger">,
-    Omit<ButtonProps, keyof ThemingProps<DropdownTheme>>,
-    ThemingProps<DropdownTheme> {
+  Omit<ButtonProps, keyof ThemingProps<DropdownTheme>>,
+  ThemingProps<DropdownTheme> {
   arrowIcon?: boolean;
   dismissOnClick?: boolean;
   floatingArrow?: boolean;
@@ -95,6 +95,7 @@ function Trigger({
 
   if (renderTrigger) {
     const triggerElement = renderTrigger(theme);
+    // @ts-expect-error - spread props type complexity
     return cloneElement(triggerElement, { ref: refs.setReference, disabled, ...a11yProps, ...triggerElement.props });
   }
 

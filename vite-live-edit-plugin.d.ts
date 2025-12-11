@@ -1,4 +1,3 @@
-/// <reference types="vite/client" />
 declare module '@codedesignai/vite-live-edit-plugin' {
     import type { Plugin } from 'vite';
 

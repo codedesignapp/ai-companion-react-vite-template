@@ -69,7 +69,7 @@ export default class ScrollContainer extends PureComponent<Props> {
     style: {},
     buttons: [LEFT_BUTTON],
   };
-  container: RefObject<HTMLElement>;
+  container: RefObject<HTMLElement | null>;
   scrolling: boolean;
   started: boolean;
   pressed: boolean;

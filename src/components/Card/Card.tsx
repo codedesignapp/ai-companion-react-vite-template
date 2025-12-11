@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef, type ComponentProps } from "react";
+import React, { forwardRef, type ComponentProps } from "react";
 import { get } from "../../helpers/get";
 import { resolveProps } from "../../helpers/resolve-props";
 import { useResolveTheme } from "../../helpers/resolve-theme";
@@ -34,12 +34,12 @@ interface CommonCardProps extends ComponentProps<"div">, ThemingProps<CardTheme>
 export type CardProps = (
   | { imgAlt?: string; imgSrc?: string; renderImage?: never }
   | {
-      /** Allows to provide a custom render function for the image component. Useful in Next.JS and Gatsby. **Setting this will disable `imgSrc` and `imgAlt`**.
-       */
-      renderImage?: (theme: DeepPartial<CardTheme>, horizontal: boolean) => JSX.Element;
-      imgAlt?: never;
-      imgSrc?: never;
-    }
+    /** Allows to provide a custom render function for the image component. Useful in Next.JS and Gatsby. **Setting this will disable `imgSrc` and `imgAlt`**.
+     */
+    renderImage?: (theme: DeepPartial<CardTheme>, horizontal: boolean) => React.ReactElement;
+    imgAlt?: never;
+    imgSrc?: never;
+  }
 ) &
   CommonCardProps;
 

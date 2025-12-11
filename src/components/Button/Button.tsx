@@ -1,7 +1,7 @@
 "use client";
 
 import type { ElementType } from "react";
-import { forwardRef } from "react";
+import React, { forwardRef } from "react";
 import type { PolymorphicComponentPropWithRef, PolymorphicRef } from "../../helpers/generic-as-prop";
 import { get } from "../../helpers/get";
 import { resolveProps } from "../../helpers/resolve-props";
@@ -58,10 +58,11 @@ export type ButtonProps<T extends ElementType = "button"> = PolymorphicComponent
 > &
   ThemingProps<ButtonTheme>;
 
-type ButtonComponentType = (<C extends ElementType = "button">(props: ButtonProps<C>) => JSX.Element) & {
+type ButtonComponentType = (<C extends ElementType = "button">(props: ButtonProps<C>) => React.ReactElement) & {
   displayName?: string;
 };
 
+// @ts-expect-error - Polymorphic component forwardRef type complexity
 export const Button = forwardRef(<T extends ElementType = "button">(props: ButtonProps<T>, ref: PolymorphicRef<T>) => {
   const provider = useThemeProvider();
   const theme = useResolveTheme(

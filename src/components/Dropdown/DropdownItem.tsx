@@ -1,7 +1,7 @@
 "use client";
 
 import { useListItem, useMergeRefs } from "@floating-ui/react";
-import { forwardRef, type ComponentProps, type ElementType, type FC, type RefCallback } from "react";
+import React, { forwardRef, type ComponentProps, type ElementType, type FC, type RefCallback } from "react";
 import type { PolymorphicComponentPropWithRef, PolymorphicRef } from "../../helpers/generic-as-prop";
 import { get } from "../../helpers/get";
 import { resolveProps } from "../../helpers/resolve-props";
@@ -29,11 +29,12 @@ export type DropdownItemProps<T extends ElementType = "button"> = PolymorphicCom
 > &
   ThemingProps<DropdownItemTheme>;
 
-type DropdownItemType = (<C extends ElementType = "button">(props: DropdownItemProps<C>) => JSX.Element) & {
+type DropdownItemType = (<C extends ElementType = "button">(props: DropdownItemProps<C>) => React.ReactElement) & {
   displayName?: string;
 };
 
 export const DropdownItem = forwardRef(
+  // @ts-expect-error - Polymorphic component forwardRef type complexity
   <T extends ElementType = "button">(props: DropdownItemProps<T>, forwardedRef: PolymorphicRef<T>) => {
     const {
       theme: rootTheme,

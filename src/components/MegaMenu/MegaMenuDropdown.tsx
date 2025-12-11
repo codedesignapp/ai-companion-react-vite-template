@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type ComponentProps } from "react";
+import React, { useEffect, useId, useRef, useState, type ComponentProps } from "react";
 import { get } from "../../helpers/get";
 import { resolveProps } from "../../helpers/resolve-props";
 import { useResolveTheme } from "../../helpers/resolve-theme";
@@ -16,7 +16,7 @@ export interface MegaMenuDropdownTheme {
 }
 
 export interface MegaMenuDropdownProps extends ComponentProps<"div">, ThemingProps<MegaMenuDropdownTheme> {
-  toggle?: JSX.Element;
+  toggle?: React.ReactElement;
 }
 
 export function MegaMenuDropdown(props: MegaMenuDropdownProps) {

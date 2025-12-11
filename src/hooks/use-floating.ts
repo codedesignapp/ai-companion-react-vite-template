@@ -15,7 +15,7 @@ import { getMiddleware, getPlacement } from "../components/Floating/helpers";
 export type UseBaseFloatingParams = {
   placement?: "auto" | Placement;
   open: boolean;
-  arrowRef?: RefObject<HTMLDivElement>;
+  arrowRef?: RefObject<HTMLDivElement | null>;
   setOpen: Dispatch<SetStateAction<boolean>>;
 };
 
